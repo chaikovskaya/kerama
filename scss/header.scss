@@ -49,24 +49,29 @@
         text-decoration: none;
     }
     &-phone {
-        display: flex;
-        align-items: center;
         margin-right: auto;
     }
-    &-phone-switcher {
+    &-phone-block {
         display: flex;
         align-items: center;
-        text-decoration: none;
+    }
+    &-phone-label {
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
         letter-spacing: 0.03em;
         color: #111;
+        a {
+            text-decoration: none;
+        }
+    }
+    &-phone-switcher {
+        line-height: 0;
+        margin-top: -2px;
     }
     &-phone-icon {
         margin-left: 10px;
     }
-
     &-menu {
         display: flex;
         align-items: center;
@@ -91,6 +96,7 @@
 
     @media screen
     and (max-width: $tablet){
+        margin-bottom: 14px;
         &-top {
             padding-top: 16px;
             padding-bottom: 15px;
@@ -106,10 +112,49 @@
         &-callback-link {
             font-size: 12px;
         }
+        &-menu {
+            position: relative;
+            padding-right: 50px;
+        }
+        &-phone-switcher-icon {
+            display: block;
+        }
     }
 
     @media screen
     and (max-width: $mobile){
+        margin-bottom: 15px;
+        &-top {
+            padding-top: 10px;
+            padding-bottom: 13px;
+        }
+        &-logo {
+            margin-right: auto;
+            font-size: 19px;
+            line-height: 28px;
+        }
+        &-menu {
+            padding-right: 0;
+        }
+        &-callback-link {
+            display: none;
+        }
+        &-phone {
+            margin-left: 15px;
+            margin-right: 0;
+        }
+        &-phone-switcher {
+            display: none;
+        }
+        &-phone-label {
+            text-indent: -1000px;
+            a {
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: url("../images/header/header-icons/phone.svg") no-repeat 0 0;
+            }
+        }
     }
 }
 
@@ -136,20 +181,24 @@
         margin-bottom: 5px;
         line-height: 0;
     }
-    &-icon_basket svg {
+    &-item_basket &-icon svg {
+        min-width: 22px;
         width: 22px;
         height: 22px;
     }
-    &-icon_compare svg {
+    &-item_compare &-icon svg {
+        min-width: 20px;
         width: 20px;
         height: 18px;
         margin-top: 1px;
     }
-    &-icon_wishlist svg {
+    &-item_wishlist &-icon svg {
+        min-width: 20px;
         width: 20px;
         height: 19px;
     }
-    &-icon_auth svg {
+    &-item_auth &-icon svg {
+        min-width: 17px;
         width: 17px;
         height: 19px;
     }
@@ -194,6 +243,10 @@
         }
         &-element {
             min-width: auto;
+            line-height: 0;
+        }
+        &-icon {
+            margin-bottom: 0;
         }
     }
     @media screen
@@ -201,8 +254,21 @@
     }
     @media screen
     and (max-width: $mobile){
+        margin-left: 11px;
+        margin-right: 10px;
+        &-item_basket {
+            margin-right: 0;
+        }
+        &-item_compare {
+            display: none;
+        }
+        &-item_wishlist {
+            display: none;
+        }
+        &-item_auth {
+            display: none;
+        }
     }
-
 }
 
 .menu-catalog {
@@ -246,6 +312,10 @@
             margin-right: 0;
         }
     }
+    @media screen
+    and (max-width: $mobile){
+        display: none;
+    }
 }
 
 .main-menu {
@@ -266,6 +336,9 @@
         line-height: 16px;
         color: #111111;
         text-decoration: none;
+        &:hover {
+            font-weight: 700;
+        }
     }
     &-icon {
         width: 9px;
@@ -279,25 +352,32 @@
             margin-right: 19px;
         }
     }
+    @media screen
+    and (max-width: $mobile){
+        display: none;
+    }
 }
 
 .search {
     flex-grow: 1;
     margin-left: auto;
     max-width: 498px;
+    transition: width 0.2s linear, visibility 0.2s linear;
     &-button {
         position: absolute;
         top: 0;
         right: 0;
         width: 33px;
         height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         line-height: 0;
         border-radius: 50%;
         background-color: #BA001A;
     }
     &-link {
         display: none;
-        line-height: 0;
     }
     &-container {
         display: flex;
@@ -309,7 +389,7 @@
     }
     &-input-wrapper {
         flex-grow: 1;
-        transition: width 0.2s linear, visibility 0.2s linear;
+
     }
     &-input {
         position: relative;
@@ -353,7 +433,6 @@
         border-radius: 0 0 8px 8px;
     }
 
-
     @media screen
     and (max-width: $desktop){
     }
@@ -361,25 +440,64 @@
     and (max-width: $notebook){
     }
     @media screen
-    and (max-width: $tablet){
-        &-input {
-            width: 0;
+    and (min-width: $mobile) and (max-width: $tablet){
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: none;
+        width: 33px;
+        flex-grow: initial;
+        overflow: hidden;
+        &-input-wrapper {
+            visibility: hidden;
+        }
+        &-button {
+            display: none;
+        }
+        &-link {
+            display: flex;
+        }
+        &_active {
+            width: calc(100% + 2px);
+        }
+        &_active &-input-wrapper {
+            visibility: visible;
+        }
+        &_active &-button {
+            display: flex;
+        }
+        &_active &-link {
+            display: none;
         }
     }
     @media screen
+    and (max-width: $tablet){
+    }
+    @media screen
     and (max-width: $mobile){
+        margin-left: 0;
+        max-width: none;
     }
 }
 
 .mob {
     &-menu {
+        display: none;
         overflow: hidden;
-        width: 28px;
+        margin-right: 12px;
+        min-width: 33px;
     }
     &-menu-switcher {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         line-height: 0;
-        margin-left: auto;
+        min-width: 33px;
+        width: 33px;
+        height: 33px;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: #000000;
     }
     &-menu-switcher-close {
         display: block;
@@ -388,6 +506,8 @@
     }
     &-menu-switcher-icon {
         display: block;
+        width: 15px;
+        height: 11px;
     }
     &-menu-close-icon {
         width: 18px;
@@ -438,7 +558,7 @@
         border: solid #eaeaea;
         border-width: 0 1px 1px 0;
         transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-        transform: translateX(100%);
+        transform: translateX(-100%);
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -983,6 +1103,9 @@
     }
     @media screen
     and (max-width: $mobile){
+        &-menu {
+            display: block;
+        }
         .header-menu-panel_fix &-menu-switcher {
             top: 5px;
             right: 1px;

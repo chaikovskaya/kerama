@@ -233,30 +233,38 @@ label.form-error {
 .button {
     position: relative;
     display: inline-block;
-    height: 49px;
-    padding: 15px 30px 15px 30px;
+    height: 33px;
+    padding: 7px 20px 7px;
     text-decoration: none;
     white-space: nowrap;
-    border-width: 0;
+    border: 1px solid #333333;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 17px;
     -webkit-appearance: none;
     text-align: center;
-    background-color: #D50A0A;
-    font-family: 'Manrope', sans-serif;
+    background-color: transparent;
+    font-family: 'Aeonik Pro TRIAL', sans-serif;
     font-size: 14px;
-    line-height: 19px;
-    letter-spacing: 0.04em;
-    color: #FFFFFF;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000000;
     &:hover {
-        color: #fff;
-    }
-    &:active {
-        color: #fff;
+        color: #000000;
     }
     &:disabled {
         opacity: 0.8;
         cursor: not-allowed;
+    }
+
+    &_light {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        border-color: #fff;
+        &:hover {
+            color: #fff;
+        }
     }
 }
 
