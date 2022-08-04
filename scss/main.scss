@@ -1,19 +1,21 @@
 
 .main-banner {
     position: relative;
+    margin-bottom: 58px;
     &-item {
         display: flex;
         overflow: hidden;
+        width: 100%;
         height: 350px;
         border-radius: 10px;
     }
     &-detail {
-        width: 50%;
+        width: 49.5%;
         padding: 107px 20px 20px;
-        background: linear-gradient(0deg, #BA001A, #BA001A), #ECEFF5;
+        background-color: #BA001A;
     }
     &-img {
-        width: 50%;
+        width: 50.5%;
     }
     &-pic {
         display: block;
@@ -53,5 +55,60 @@
         top: 45px;
         left: 22px;
         z-index: 1;
+    }
+    &-item_blue {}
+    &-item_blue &-detail {
+         background-color: #003589;
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 46px;
+        &-detail {
+            width: 52%;
+        }
+        &-img {
+            width: 48%;
+        }
+        &-name {
+            font-size: 24px;
+            line-height: 25px;
+        }
+        &-button {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+    }
+
+    @media screen
+    and (max-width: $mobile){
+        margin-bottom: 41px;
+        &-item {
+            flex-direction: column;
+            height: auto;
+            width: 266px;
+        }
+        &-detail {
+            width: 100%;
+            height: 100%;
+            padding-top: 27px;
+            padding-bottom: 30px;
+        }
+        &-img {
+            width: 100%;
+            margin-top: auto;
+        }
+        &-pic {
+            height: 220px;
+        }
+        &-slider-nav {
+            display: none;
+        }
+        &-name {
+            margin-bottom: 12px;
+        }
+        &-description {
+            margin-bottom: 25px;
+        }
     }
 }

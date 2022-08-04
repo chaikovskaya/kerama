@@ -143,7 +143,8 @@ var sliderMainBanner;
 function initSliderMainBanner() {
     jQuery('.js-slider-main-banner').each(function() {
         var $slider = $(this),
-            sliderLength = $slider.find('.swiper-slide').length;
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
 
         var isStart = sliderLength > 1 ? true : false;
 
@@ -155,13 +156,14 @@ function initSliderMainBanner() {
                 prevEl: $slider.find('.js-slider-prev')[0],
                 disabledClass: "slider-button_disabled",
             },
-            slidesPerView: 1,
+            slidesPerView: 'auto',
             breakpoints: {
                 0: {
                     simulateTouch: false,
                     spaceBetween: 15,
                 },
                 780: {
+                    spaceBetween: 16,
                 },
                 992: {
                     spaceBetween: 28,
@@ -173,6 +175,12 @@ function initSliderMainBanner() {
                 init: function () {
                 },
                 slideChangeTransitionEnd: function () {
+                    let index = $slider.find('.swiper-slide-duplicate-active').data('swiper-slide-index');
+                    index = index + 1;
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
                 },
             },
         });
