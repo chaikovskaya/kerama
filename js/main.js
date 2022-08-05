@@ -149,7 +149,6 @@ function initSliderMainBanner() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderMainBanner = new Swiper($slider[0], {
-            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -161,11 +160,13 @@ function initSliderMainBanner() {
                 0: {
                     simulateTouch: false,
                     spaceBetween: 15,
+                    loop: false,
                 },
                 780: {
                     spaceBetween: 16,
                 },
                 992: {
+                    loop: isStart,
                     spaceBetween: 28,
                 },
             },
@@ -187,6 +188,97 @@ function initSliderMainBanner() {
     });
 }
 
+var sliderMainCategory;
+function initSliderMainCategory() {
+    jQuery('.js-slider-main-category').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-main-category-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderMainCategory = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+            freeMode: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                },
+                780: {
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    let index = $slider.find('.swiper-slide-duplicate-active').data('swiper-slide-index');
+                    index = index + 1;
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+
+var sliderMainActions;
+function initSliderMainActions() {
+    jQuery('.js-slider-main-actions').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-main-category-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderMainActions = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            freeMode: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                },
+                780: {
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    let index = $slider.find('.swiper-slide-duplicate-active').data('swiper-slide-index');
+                    index = index + 1;
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
 
 function initMobileMenu() {
     if (typeof(MobileMenu) === 'undefined' || !jQuery.isFunction(MobileMenu)) {
@@ -303,6 +395,8 @@ $(document).ready(function () {
     initPopup();
     initSelect();
     initSliderMainBanner();
+    initSliderMainCategory();
+    initSliderMainActions();
     initMobileMenu();
     initForm();
     initAjaxMore();

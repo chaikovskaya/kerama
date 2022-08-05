@@ -266,6 +266,17 @@ label.form-error {
             color: #fff;
         }
     }
+
+    &_simple {
+        min-width: 191px;
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        &_simple {
+            min-width: 156px;
+        }
+    }
 }
 
 /*selectric*/

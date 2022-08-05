@@ -7,6 +7,7 @@ $gutters: 40px;
 $gutter: $gutters/2;
 
 $color: #333;
+$color-red: #BA001A;
 
 * {
     box-sizing: border-box;
@@ -423,15 +424,23 @@ blockquote {
 	&-button-icon_right {
 		background: url("../images/icons/arrow-right-dark.svg") no-repeat 0 0;
 	}
-	&-button:hover &-button-icon {
+	&-button:hover:not(&-button_disabled) &-button-icon {
 		background-image: url("../images/icons/arrow-left.svg");
 	}
-	&-button_next:hover &-button-icon_right {
+	&-button_next:hover:not(&-button_disabled) &-button-icon_right {
 		background-image: url("../images/icons/arrow-right.svg");
 	}
 	&-button_prev {
 	}
 	&-button_next {
+	}
+	&-button_disabled {
+	}
+	&-button_disabled:hover {
+		background-color: transparent;
+	}
+	&-button_disabled &-button-icon {
+		opacity: 0.4;
 	}
 	&-count {
 		margin-left: 13px;
@@ -465,6 +474,13 @@ blockquote {
 	}
 	&-nav_light &-button-icon_right {
 		background-image: url("../images/icons/arrow-right.svg");
+	}
+
+	@media screen
+	and (max-width: $mobile) {
+		&-nav {
+			display: none;
+		}
 	}
 }
 /* /slider */
@@ -619,6 +635,11 @@ and (max-width: $notebook){
 
 @media screen
 and (max-width: $tablet){
+	h1,
+	.h1 {
+		font-size: 24px;
+		line-height: 35px;
+	}
 	.container {
 		padding-right: 45px;
 		padding-left: 45px;
