@@ -1,5 +1,5 @@
 
-$mobile: 780px;
+$mobile: 768px;
 $tablet: 992px;
 $notebook: 1200px;
 $desktop: 1340px;
@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-    font: 16px/24px 'Aeonik Pro TRIAL', sans-serif;
+    font: 14px/21px 'Aeonik Pro TRIAL', sans-serif;
     color: $color;
 	background-color: #fff;
 	letter-spacing: 0.04em;
@@ -621,6 +621,43 @@ blockquote {
 }
 /* /pager */
 
+/* show-more */
+.show {
+	&-switcher {
+		display: none;
+	}
+	&-switcher:hover { }
+	&more-start &-switcher {
+		display: inline-block;
+	}
+	&-more {}
+	&-more-label {
+		display: inline-block;
+	}
+	&-more-label:hover { }
+	&-more-icon {
+		margin-top: -3px;
+		margin-left: 14px;
+		vertical-align: middle;
+	}
+	&-switcher_active {
+		display: inline-block;
+	}
+	&-more_hide {
+		display: none;
+	}
+	&more-active &-more_show {
+		display: none;
+	}
+	&more-active &-more_hide {
+		display: block;
+	}
+	&more-active &-more-icon {
+		transform: scaleY(-1);
+	}
+}
+/* /-show-more */
+
 @media screen
 and (max-width: $desktop){
 }
@@ -641,8 +678,8 @@ and (max-width: $tablet){
 		line-height: 35px;
 	}
 	.container {
-		padding-right: 45px;
-		padding-left: 45px;
+		padding-right: 39px;
+		padding-left: 39px;
 	}
 }
 

@@ -271,6 +271,29 @@ label.form-error {
         min-width: 191px;
     }
 
+    &_dark {
+        display: inline-block;
+        background-color: $color-red;
+        border-width: 0;
+        padding-left: 29px;
+        padding-right: 27px;
+        color: #fff;
+        font-size: 13px;
+        line-height: 19px;
+        font-weight: 700;
+        &:hover {
+            color: #fff;
+        }
+        &-icon {
+            display: inline-block;
+            width: 21px;
+            height: 12px;
+            margin-left: 12px;
+            background: url(../images/icons/arrow-right.svg) no-repeat 0 0;
+        }
+    }
+
+
     @media screen
     and (max-width: $tablet){
         &_simple {
