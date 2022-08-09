@@ -477,10 +477,13 @@ blockquote {
 	}
 
 	@media screen
-	and (max-width: $mobile) {
+	and (max-width: $tablet) {
 		&-nav {
-			display: none;
+			visibility: hidden;
 		}
+	}
+	@media screen
+	and (max-width: $mobile) {
 	}
 }
 /* /slider */

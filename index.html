@@ -366,7 +366,7 @@
 
             <div class="main-banner js-slider-main-banner">
                 <div class="main-banner-list swiper-wrapper">
-                    <div class="main-banner-item swiper-slide">
+                    <div class="main-banner-item swiper-slide" data-slider-index="1">
                         <div class="main-banner-detail">
                             <div class="main-banner-name">Italon metropolis plus</div>
                             <div class="main-banner-description">Яркое собрание керамических идей со всего света в фирменной рознице и онлайн. Новые Коллекция уже представлена на нашем сайте.</div>
@@ -380,7 +380,7 @@
                             <img class="main-banner-pic" src="./images/main-banner/main-banner-img-1.png" alt="" />
                         </a>
                     </div>
-                    <div class="main-banner-item main-banner-item_blue swiper-slide">
+                    <div class="main-banner-item main-banner-item_blue swiper-slide" data-slider-index="2">
                         <div class="main-banner-detail">
                             <div class="main-banner-name">Italon metropolis plus</div>
                             <div class="main-banner-description">Яркое собрание керамических идей со всего света в фирменной рознице и онлайн. Новые Коллекция уже представлена на нашем сайте.</div>
@@ -400,7 +400,7 @@
                         <span class="slider-button-icon"></span>
                     </div>
                     <div class="slider-count">
-                        <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">03</span>
+                        <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">02</span>
                     </div>
                     <div class="slider-button slider-button_next js-slider-next">
                         <span class="slider-button-icon slider-button-icon_right"></span>
@@ -411,12 +411,12 @@
             <section class="main-category js-slider-main-category">
                 <div class="main-category-panel">
                     <h2 class="main-category-title h1">Категории товаров</h2>
-                    <div class="slider-nav">
+                    <div class="main-category-slider-nav slider-nav">
                         <div class="slider-button slider-button_prev js-slider-prev">
                             <span class="slider-button-icon"></span>
                         </div>
                         <div class="slider-count">
-                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">03</span>
+                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">02</span>
                         </div>
                         <div class="slider-button slider-button_next js-slider-next">
                             <span class="slider-button-icon slider-button-icon_right"></span>
@@ -426,7 +426,7 @@
 
                 <div class="main-category-block js-slider-list">
                     <div class="main-category-container swiper-wrapper">
-                        <div class="main-category-item swiper-slide">
+                        <div class="main-category-item swiper-slide" data-slider-index="1">
                             <ul class="main-category-list">
                                 <li class="main-category-list-item">
                                     <a class="main-category-list-link" href="#">
@@ -507,7 +507,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="main-category-item swiper-slide">
+                        <div class="main-category-item swiper-slide" data-slider-index="2">
                             <ul class="main-category-list">
                                 <li class="main-category-list-item">
                                     <a class="main-category-list-link" href="#">
@@ -591,14 +591,14 @@
                     </div>
                 </div>
                 <div class="main-category-links">
-                    <a class="button button_simple" href="#">Все категории</a>
+                    <a class="main-category-button button button_simple" href="#">Все категории</a>
                 </div>
             </section>
 
             <section class="main-actions js-slider-main-actions">
                 <div class="main-actions-panel">
                     <h2 class="main-actions-title h1">Акции</h2>
-                    <div class="slider-nav">
+                    <div class="main-actions-slider-nav slider-nav">
                         <div class="slider-button slider-button_prev js-slider-prev">
                             <span class="slider-button-icon"></span>
                         </div>
@@ -613,7 +613,7 @@
 
                 <div class="main-actions-block js-slider-list">
                     <ul class="main-actions-list swiper-wrapper">
-                        <li class="main-actions-list-item swiper-slide">
+                        <li class="main-actions-list-item swiper-slide" data-slider-index="1">
                             <a class="main-actions-link" href="#">
                                 <span class="main-actions-pic">
                                     <span class="main-actions-discount">-15%</span>
@@ -624,7 +624,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="main-actions-list-item swiper-slide">
+                        <li class="main-actions-list-item swiper-slide" data-slider-index="2">
                             <a class="main-actions-link" href="#">
                                 <span class="main-actions-pic">
                                     <!-- Добавлен класс main-actions-discount_white -->
@@ -636,7 +636,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="main-actions-list-item swiper-slide">
+                        <li class="main-actions-list-item swiper-slide" data-slider-index="3">
                             <a class="main-actions-link" href="#">
                                 <span class="main-actions-pic">
                                     <!-- Добавлен класс main-actions-discount_orange -->
@@ -648,7 +648,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="main-actions-list-item swiper-slide">
+                        <li class="main-actions-list-item swiper-slide" data-slider-index="4">
                             <a class="main-actions-link" href="#">
                                 <span class="main-actions-pic">
                                     <span class="main-actions-discount main-actions-discount_white">-15%</span>
@@ -663,7 +663,7 @@
                 </div>
 
                 <div class="main-actions-links">
-                    <a class="button button_simple" href="#">Все акции</a>
+                    <a class="main-actions-button button button_simple" href="#">Все акции</a>
                 </div>
             </section>
 
@@ -697,9 +697,785 @@
                 </div>
             </section>
 
-            <section class="products js-slider-products">
+            <section class="products">
                 <div class="products-panel">
                     <h2 class="products-title h1">Популярные товары</h2>
+                </div>
+
+                <div class="js-slider-products-nav">
+                    <div class="js-slider-list">
+                        <ul class="products-nav swiper-wrapper">
+                            <li class="products-nav-item swiper-slide">
+                                <a class="products-nav-label" href="#">Вся плитка</a>
+                            </li>
+                            <!-- Добавляется класс products-nav-item_active у активного пункта -->
+                            <li class="products-nav-item products-nav-item_active swiper-slide">
+                                <a class="products-nav-label" href="#">Плитка</a>
+                            </li>
+                            <li class="products-nav-item swiper-slide">
+                                <a class="products-nav-label" href="#">Керамогранит</a>
+                            </li>
+                            <li class="products-nav-item swiper-slide">
+                                <a class="products-nav-label" href="#">Декор</a>
+                            </li>
+                            <li class="products-nav-item swiper-slide">
+                                <a class="products-nav-label" href="#">Мозаика</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="js-slider-products">
+                    <div class="products-wrapper js-slider-list">
+                        <ul class="products-list swiper-wrapper">
+                            <li class="products-list-item swiper-slide" data-slider-index="1">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Тrandi</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="2">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark product-mark_simple">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Тrandi</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="3">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Тrandi</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="4">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Тrandi</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="5">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Тrandi</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="6">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Тrandi</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="7">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark product-mark_simple">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Тrandi</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products-slider-nav slider-nav">
+                        <div class="slider-button slider-button_prev js-slider-prev">
+                            <span class="slider-button-icon"></span>
+                        </div>
+                        <div class="slider-count">
+                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">07</span>
+                        </div>
+                        <div class="slider-button slider-button_next js-slider-next">
+                            <span class="slider-button-icon slider-button-icon_right"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products-links">
+                    <a class="button button_simple" href="#">Все коллекции</a>
+                </div>
+            </section>
+
+            <section class="brands js-slider-brands">
+                <div class="brands-panel">
+                    <h2 class="brands-title h1">Бренды</h2>
                     <div class="slider-nav">
                         <div class="slider-button slider-button_prev js-slider-prev">
                             <span class="slider-button-icon"></span>
@@ -713,547 +1489,230 @@
                     </div>
                 </div>
 
-                <ul class="products-nav">
-                    <li class="products-nav-item">
-                        <a class="products-nav-label" href="#">Вся плитка</a>
-                    </li>
-                    <!-- Добавляется класс products-nav-item_active у активного пункта -->
-                    <li class="products-nav-item products-nav-item_active">
-                        <a class="products-nav-label" href="#">Плитка</a>
-                    </li>
-                    <li class="products-nav-item">
-                        <a class="products-nav-label" href="#">Керамогранит</a>
-                    </li>
-                    <li class="products-nav-item">
-                        <a class="products-nav-label" href="#">Декор</a>
-                    </li>
-                    <li class="products-nav-item">
-                        <a class="products-nav-label" href="#">Мозаика</a>
-                    </li>
-                </ul>
-
-                <div class="products-wrapper">
-                    <ul class="products-list">
-                        <li class="products-list-item">
-                            <div class="product">
-                                <div class="product-block">
-                                    <a class="product-link" href="#">
-                                        <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
-                                    </a>
-                                    <span class="product-mark">Акция</span>
-                                    <ul class="links">
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_wishlist"></span>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_compare"></span>
-                                            </a>
-                                        </li>
-                                        <!-- Добавлен класс links-item_search только для этой иконки -->
-                                        <li class="links-item links-item_search">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_search"></span>
-                                                <span class="links-info">Быстрый просмотр</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-name">Тrandi</span>
-                                    <ul class="product-brand">
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
-                                        </li>
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
-                                        </li>
-                                    </ul>
-                                    <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
-                                    <div class="JS-ShowMore" data-showmore="{
-                                        'amount': 6,
-                                        'classHide': 'product-color-item_hide'
-                                    }">
-                                        <ul class="product-color">
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span class="product-more">
-                                            <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                                <span class="show-more show-more_show">
-                                                    <span class="product-more-link show-more-label">Смотреть все</span>
-                                                </span>
-                                                <span class="show-more show-more_hide">
-                                                    <span class="product-more-link show-more-label">Свернуть</span>
-                                                </span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
+                <div class="brands-wrapper">
+                    <div class="brands-inner js-slider-list">
+                        <div class="brands-block swiper-wrapper">
+                            <div class="brands-block-item swiper-slide" data-slider-index="1">
+                                <ul class="brands-list">
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-1.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-2.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-3.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-4.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-5.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-6.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-7.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-8.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-9.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-10.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-11.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-12.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-13.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-14.png" alt="" />
+                                    </li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="products-list-item">
-                            <div class="product">
-                                <div class="product-block">
-                                    <a class="product-link" href="#">
-                                        <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
-                                    </a>
-                                    <span class="product-mark">Акция</span>
-                                    <ul class="links">
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_wishlist"></span>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_compare"></span>
-                                            </a>
-                                        </li>
-                                        <!-- Добавлен класс links-item_search только для этой иконки -->
-                                        <li class="links-item links-item_search">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_search"></span>
-                                                <span class="links-info">Быстрый просмотр</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-name">Тrandi</span>
-                                    <ul class="product-brand">
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
-                                        </li>
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
-                                        </li>
-                                    </ul>
-                                    <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
-                                    <div class="JS-ShowMore" data-showmore="{
-                                        'amount': 6,
-                                        'classHide': 'product-color-item_hide'
-                                    }">
-                                        <ul class="product-color">
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span class="product-more">
-                                            <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                                <span class="show-more show-more_show">
-                                                    <span class="product-more-link show-more-label">Смотреть все</span>
-                                                </span>
-                                                <span class="show-more show-more_hide">
-                                                    <span class="product-more-link show-more-label">Свернуть</span>
-                                                </span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
+                            <div class="brands-block-item swiper-slide" data-slider-index="2">
+                                <ul class="brands-list">
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-1.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-2.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-3.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-4.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-5.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-6.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-7.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-8.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-9.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-10.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-11.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-12.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-13.png" alt="" />
+                                    </li>
+                                    <li class="brands-list-item">
+                                        <img class="brands-list-img" src="./images/brands/brands-img-14.png" alt="" />
+                                    </li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="products-list-item">
-                            <div class="product">
-                                <div class="product-block">
-                                    <a class="product-link" href="#">
-                                        <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
-                                    </a>
-                                    <span class="product-mark">Акция</span>
-                                    <ul class="links">
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_wishlist"></span>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_compare"></span>
-                                            </a>
-                                        </li>
-                                        <!-- Добавлен класс links-item_search только для этой иконки -->
-                                        <li class="links-item links-item_search">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_search"></span>
-                                                <span class="links-info">Быстрый просмотр</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-name">Тrandi</span>
-                                    <ul class="product-brand">
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
-                                        </li>
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
-                                        </li>
-                                    </ul>
-                                    <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
-                                    <div class="JS-ShowMore" data-showmore="{
-                                        'amount': 6,
-                                        'classHide': 'product-color-item_hide'
-                                    }">
-                                        <ul class="product-color">
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span class="product-more">
-                                            <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                                <span class="show-more show-more_show">
-                                                    <span class="product-more-link show-more-label">Смотреть все</span>
-                                                </span>
-                                                <span class="show-more show-more_hide">
-                                                    <span class="product-more-link show-more-label">Свернуть</span>
-                                                </span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="products-list-item">
-                            <div class="product">
-                                <div class="product-block">
-                                    <a class="product-link" href="#">
-                                        <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
-                                    </a>
-                                    <span class="product-mark">Акция</span>
-                                    <ul class="links">
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_wishlist"></span>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_compare"></span>
-                                            </a>
-                                        </li>
-                                        <!-- Добавлен класс links-item_search только для этой иконки -->
-                                        <li class="links-item links-item_search">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_search"></span>
-                                                <span class="links-info">Быстрый просмотр</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-name">Тrandi</span>
-                                    <ul class="product-brand">
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
-                                        </li>
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
-                                        </li>
-                                    </ul>
-                                    <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
-                                    <div class="JS-ShowMore" data-showmore="{
-                                        'amount': 6,
-                                        'classHide': 'product-color-item_hide'
-                                    }">
-                                        <ul class="product-color">
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span class="product-more">
-                                            <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                                <span class="show-more show-more_show">
-                                                    <span class="product-more-link show-more-label">Смотреть все</span>
-                                                </span>
-                                                <span class="show-more show-more_hide">
-                                                    <span class="product-more-link show-more-label">Свернуть</span>
-                                                </span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="products-list-item">
-                            <div class="product">
-                                <div class="product-block">
-                                    <a class="product-link" href="#">
-                                        <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
-                                    </a>
-                                    <span class="product-mark">Акция</span>
-                                    <ul class="links">
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_wishlist"></span>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_compare"></span>
-                                            </a>
-                                        </li>
-                                        <!-- Добавлен класс links-item_search только для этой иконки -->
-                                        <li class="links-item links-item_search">
-                                            <a class="links-label" href="javascript:;">
-                                                <span class="links-icon links-icon_search"></span>
-                                                <span class="links-info">Быстрый просмотр</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-name">Тrandi</span>
-                                    <ul class="product-brand">
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
-                                        </li>
-                                        <li class="product-brand-item">
-                                            <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
-                                        </li>
-                                    </ul>
-                                    <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
-                                    <div class="JS-ShowMore" data-showmore="{
-                                        'amount': 6,
-                                        'classHide': 'product-color-item_hide'
-                                    }">
-                                        <ul class="product-color">
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li class="product-color-item JS-ShowMore-Item">
-                                                <a class="product-color-link" href="javascript:;">
-                                                    <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span class="product-more">
-                                            <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                                <span class="show-more show-more_show">
-                                                    <span class="product-more-link show-more-label">Смотреть все</span>
-                                                </span>
-                                                <span class="show-more show-more_hide">
-                                                    <span class="product-more-link show-more-label">Свернуть</span>
-                                                </span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="products-links">
-                    <a class="button button_simple" href="#">Все коллекции</a>
+                    <a class="button button_simple" href="#">Все бренды</a>
+                </div>
+            </section>
+
+            <section class="inspiration js-slider-brands">
+                <div class="inspiration-panel">
+                    <h2 class="inspiration-title h1">Вдохновение</h2>
+                    <div class="slider-nav">
+                        <div class="slider-button slider-button_prev js-slider-prev">
+                            <span class="slider-button-icon"></span>
+                        </div>
+                        <div class="slider-count">
+                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">03</span>
+                        </div>
+                        <div class="slider-button slider-button_next js-slider-next">
+                            <span class="slider-button-icon slider-button-icon_right"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiration-wrapper js-slider-list">
+                    <ul class="inspiration-list swiper-wrapper">
+                        <li class="inspiration-list-item swiper-slide" data-slider-index="1">
+                            <div class="inspiration-pic">
+                                <div class="inspiration-brand">
+                                    <img class="inspiration-brand-img" src="./images/inspiration/inspiration-brand.png" alt="" />
+                                </div>
+                                <img class="inspiration-img" src="./images/inspiration/inspiration-img-1.jpg" alt="" />
+                                <div class="inspiration-point inspiration-point_wall">
+                                    <span class="inspiration-point-icon">
+                                         <span class="inspiration-point-icon-inner"></span>
+                                    </span>
+                                    <div class="inspiration-popup">
+                                        <div class="inspiration-popup-wrapper">
+                                            <a class="inspiration-popup-panel" href="#">
+                                                <span class="inspiration-popup-name">Монтерано белый</span>
+                                                <span class="inspiration-popup-icon"></span>
+                                            </a>
+                                            <div class="inspiration-popup-info content">Керамическая плит мраморная</div>
+                                            <a class="inspiration-popup-more" href="#">Подробнее</a>
+                                            <div class="inspiration-popup-detail">
+                                                <div class="inspiration-popup-pic">
+                                                    <img class="inspiration-popup-img" src="./images/inspiration/inspiration-popup-img-1.jpg" alt="">
+                                                </div>
+                                                <div class="inspiration-popup-text">
+                                                    <div class="inspiration-popup-text-item">200 х 200 мм</div>
+                                                    <div class="inspiration-popup-text-item">Мраморная</div>
+                                                </div>
+                                            </div>
+                                            <div class="inspiration-popup-actions">
+                                                <span class="inspiration-popup-price">4 200<span class="currency">i</span></span>
+                                                <a class="inspiration-popup-button button button_dark" href="#">
+                                                    <span class="inspiration-popup-button-icon"></span>В корзину
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspiration-point inspiration-point_ceiling">
+                                    <span class="inspiration-point-icon">
+                                         <span class="inspiration-point-icon-inner"></span>
+                                    </span>
+                                    <div class="inspiration-popup">
+                                        <div class="inspiration-popup-wrapper">
+                                            <a class="inspiration-popup-panel" href="#">
+                                                <span class="inspiration-popup-name">Монтерано белый</span>
+                                                <span class="inspiration-popup-icon"></span>
+                                            </a>
+                                            <div class="inspiration-popup-info content">Керамическая плит мраморная</div>
+                                            <a class="inspiration-popup-more" href="#">Подробнее</a>
+                                            <div class="inspiration-popup-detail">
+                                                <div class="inspiration-popup-pic">
+                                                    <img class="inspiration-popup-img" src="./images/inspiration/inspiration-popup-img-1.jpg" alt="">
+                                                </div>
+                                                <div class="inspiration-popup-text">
+                                                    <div class="inspiration-popup-text-item">200 х 200 мм</div>
+                                                    <div class="inspiration-popup-text-item">Мраморная</div>
+                                                </div>
+                                            </div>
+                                            <div class="inspiration-popup-actions">
+                                                <span class="inspiration-popup-price">4 200<span class="currency">i</span></span>
+                                                <a class="inspiration-popup-button button button_dark" href="#">
+                                                    <span class="inspiration-popup-button-icon"></span>В корзину
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspiration-point inspiration-point_floor">
+                                    <span class="inspiration-point-icon">
+                                         <span class="inspiration-point-icon-inner"></span>
+                                    </span>
+                                    <div class="inspiration-popup">
+                                        <div class="inspiration-popup-wrapper">
+                                            <a class="inspiration-popup-panel" href="#">
+                                                <span class="inspiration-popup-name">Монтерано белый</span>
+                                                <span class="inspiration-popup-icon"></span>
+                                            </a>
+                                            <div class="inspiration-popup-info content">Керамическая плит мраморная</div>
+                                            <a class="inspiration-popup-more" href="#">Подробнее</a>
+                                            <div class="inspiration-popup-detail">
+                                                <div class="inspiration-popup-pic">
+                                                    <img class="inspiration-popup-img" src="./images/inspiration/inspiration-popup-img-1.jpg" alt="">
+                                                </div>
+                                                <div class="inspiration-popup-text">
+                                                    <div class="inspiration-popup-text-item">200 х 200 мм</div>
+                                                    <div class="inspiration-popup-text-item">Мраморная</div>
+                                                </div>
+                                            </div>
+                                            <div class="inspiration-popup-actions">
+                                                <span class="inspiration-popup-price">4 200<span class="currency">i</span></span>
+                                                <a class="inspiration-popup-button button button_dark" href="#">
+                                                    <span class="inspiration-popup-button-icon"></span>В корзину
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inspiration-name">Solution for dreams</div>
+                            <div class="inspiration-detail content">KERAMA MARAZZI — международный бренд, входящий в число лидеров глобального рынка керамики. Бизнес компании охватывает весь процесс создания керамических изделий, от глиняных карьеров до фирменной розницы во всех крупных городах РФ и за рубежом.</div>
+                            <a class="inspiration-link" href="#">Смотреть коллекцию<span class="inspiration-link-icon"></span></a>
+                        </li>
+                    </ul>
                 </div>
             </section>
 

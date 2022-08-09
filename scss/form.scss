@@ -296,8 +296,13 @@ label.form-error {
 
     @media screen
     and (max-width: $tablet){
+    }
+    @media screen
+    and (max-width: $mobile){
         &_simple {
             min-width: 156px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 }

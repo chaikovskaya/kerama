@@ -176,8 +176,7 @@ function initSliderMainBanner() {
                 init: function () {
                 },
                 slideChangeTransitionEnd: function () {
-                    let index = $slider.find('.swiper-slide-duplicate-active').data('swiper-slide-index');
-                    index = index + 1;
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
                     if (index < 10) {
                         index = '0' + index;
                     }
@@ -194,7 +193,7 @@ function initSliderMainCategory() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
-            $count = $slider.find('.js-slider-main-category-count');
+            $count = $slider.find('.js-slider-count');
 
         var isStart = sliderLength > 1 ? true : false;
 
@@ -222,8 +221,7 @@ function initSliderMainCategory() {
                 init: function () {
                 },
                 slideChangeTransitionEnd: function () {
-                    let index = $slider.find('.swiper-slide-duplicate-active').data('swiper-slide-index');
-                    index = index + 1;
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
                     if (index < 10) {
                         index = '0' + index;
                     }
@@ -240,7 +238,7 @@ function initSliderMainActions() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
-            $count = $slider.find('.js-slider-main-category-count');
+            $count = $slider.find('.js-slider-count');
 
         var isStart = sliderLength > 1 ? true : false;
 
@@ -254,7 +252,6 @@ function initSliderMainActions() {
             },
             slidesPerView: 'auto',
             spaceBetween: 20,
-            freeMode: true,
             breakpoints: {
                 0: {
                     simulateTouch: false,
@@ -268,8 +265,133 @@ function initSliderMainActions() {
                 init: function () {
                 },
                 slideChangeTransitionEnd: function () {
-                    let index = $slider.find('.swiper-slide-duplicate-active').data('swiper-slide-index');
-                    index = index + 1;
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+
+var sliderProducts;
+function initSliderProducts() {
+    jQuery('.js-slider-products').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderProducts = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 15,
+                },
+                768: {
+                    spaceBetween: 15,
+                },
+                992: {
+                    spaceBetween: 20,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+
+var sliderProductsNav;
+function initSliderProductsNav() {
+    jQuery('.js-slider-products-nav').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list');
+
+        sliderProductsNav = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: false,
+            slidesPerView: 'auto',
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 15,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+
+var sliderBrands;
+function initSliderBrands() {
+    jQuery('.js-slider-brands').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderBrands = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            freeMode: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 0,
+                },
+                768: {
+                    spaceBetween: 0,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
                     if (index < 10) {
                         index = '0' + index;
                     }
@@ -412,6 +534,9 @@ $(document).ready(function () {
     initSliderMainBanner();
     initSliderMainCategory();
     initSliderMainActions();
+    initSliderProducts();
+    initSliderProductsNav();
+    initSliderBrands();
     initMobileMenu();
     initForm();
     initAjaxMore();
