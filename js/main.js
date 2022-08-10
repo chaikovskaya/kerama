@@ -4,7 +4,7 @@ GLOBAL.widthWindow = GLOBAL.widthWindow || {};
 GLOBAL.FORMERROR = GLOBAL.FORMERROR || {};
 GLOBAL.FORMERROR.REQUIRED = GLOBAL.FORMERROR.REQUIRED || '';
 GLOBAL.FORMERROR.EMAIL = GLOBAL.FORMERROR.EMAIL || '';
-GLOBAL.mobile = GLOBAL.mobile || 720;
+GLOBAL.mobile = GLOBAL.mobile || 768;
 GLOBAL.tablet = GLOBAL.tablet || 992;
 GLOBAL.columnsStartLength = GLOBAL.columnsStartLength || 0;
 
@@ -44,7 +44,7 @@ function initDropdown() {
 
     var common = {};
 
-    $('.JS-Dropdown').not('.JS-Dropdown-ready').each(function(){
+    $('.JS-Dropdown').each(function(){
         var local = GLOBAL.parseData(jQuery(this).data('dropdown'));
         new Dropdown(this, jQuery.extend({}, common, local));
     });
@@ -57,7 +57,7 @@ function initDropdownSearch() {
 
     var common = {};
 
-    $('.JS-DropSearch').not('.JS-Dropdown-ready').each(function(){
+    $('.JS-DropSearch').each(function(){
         var local = GLOBAL.parseData(jQuery(this).data('dropdown'));
         new Dropdown(this, jQuery.extend({}, common, local));
     });
@@ -402,6 +402,103 @@ function initSliderBrands() {
     });
 }
 
+var sliderInspiration;
+function initSliderInspiration() {
+    jQuery('.js-slider-inspiration').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderInspiration = new Swiper($list[0], {
+            loop: isStart,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 15,
+                },
+                768: {
+                    spaceBetween: 15,
+                },
+                992: {
+                    spaceBetween: 20,
+                    //allowTouchMove: false,
+                },
+            },
+            on: {
+                afterInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+
+var sliderArticles;
+function initSliderArticles() {
+    jQuery('.js-slider-articles').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderArticles = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 15,
+                    },
+                768: {
+                    spaceBetween: 15,
+                },
+                992: {
+                    spaceBetween: 20,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+
 function initMobileMenu() {
     if (typeof(MobileMenu) === 'undefined' || !jQuery.isFunction(MobileMenu)) {
         return false;
@@ -537,6 +634,8 @@ $(document).ready(function () {
     initSliderProducts();
     initSliderProductsNav();
     initSliderBrands();
+    initSliderInspiration();
+    initSliderArticles();
     initMobileMenu();
     initForm();
     initAjaxMore();

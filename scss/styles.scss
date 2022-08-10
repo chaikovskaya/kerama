@@ -27,7 +27,6 @@ body {
     font: 14px/21px 'Aeonik Pro TRIAL', sans-serif;
     color: $color;
 	background-color: #fff;
-	letter-spacing: 0.04em;
 }
 
 h1,
@@ -88,7 +87,7 @@ ol {
 }
 
 b {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 *::before, *::after{
@@ -479,7 +478,7 @@ blockquote {
 	@media screen
 	and (max-width: $tablet) {
 		&-nav {
-			visibility: hidden;
+			display: none;
 		}
 	}
 	@media screen
