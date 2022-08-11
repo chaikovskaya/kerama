@@ -413,6 +413,9 @@ blockquote {
 		&:hover {
 			background-color: #BA001A;
 		}
+		&:active {
+			background-color: #950216;
+		}
 	}
 	&-button-icon {
 		display: block;
@@ -423,10 +426,12 @@ blockquote {
 	&-button-icon_right {
 		background: url("../images/icons/arrow-right-dark.svg") no-repeat 0 0;
 	}
-	&-button:hover:not(&-button_disabled) &-button-icon {
+	&-button:hover:not(&-button_disabled) &-button-icon,
+	&-button:active:not(&-button_disabled) &-button-icon {
 		background-image: url("../images/icons/arrow-left.svg");
 	}
-	&-button_next:hover:not(&-button_disabled) &-button-icon_right {
+	&-button_next:hover:not(&-button_disabled) &-button-icon_right,
+	&-button_next:active:not(&-button_disabled) &-button-icon_right {
 		background-image: url("../images/icons/arrow-right.svg");
 	}
 	&-button_prev {
@@ -461,7 +466,8 @@ blockquote {
 	&-nav_light &-button {
 		border: 1px solid transparent;
 	}
-	&-nav_light &-button:hover {
+	&-nav_light &-button:hover,
+	&-nav_light &-button:active {
 		border-color: #FFFFFF;
 		background-color: transparent;
 	}
@@ -660,6 +666,25 @@ blockquote {
 }
 /* /-show-more */
 
+/* tooltip */
+.tooltip {
+	display: inline-block;
+}
+.tpd-skin-light .tpd-background {
+	border-width: 0;
+}
+.tpd-skin-light .tpd-content {
+	padding: 0;
+}
+/* hide triangle */
+.tpd-stem-triangle {
+	display: none;
+}
+.tpd-skin-light .tpd-background {
+	background-color: transparent;
+}
+/* /tooltip */
+
 @media screen
 and (max-width: $desktop){
 }
@@ -677,11 +702,14 @@ and (max-width: $tablet){
 	h1,
 	.h1 {
 		font-size: 24px;
-		line-height: 35px;
+		line-height: 27px;
 	}
 	.container {
 		padding-right: 39px;
 		padding-left: 39px;
+	}
+	.main-content {
+		padding-bottom: 55px;
 	}
 }
 
@@ -690,5 +718,8 @@ and (max-width: $mobile){
 	.container {
 		padding-right: 23px;
 		padding-left: 23px;
+	}
+	.main-content {
+		padding-bottom: 50px;
 	}
 }

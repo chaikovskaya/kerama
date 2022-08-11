@@ -96,14 +96,13 @@ $colorPlaceholder: #818A9E;
 
 input.form-error {
     display: block;
-    border-color: #FCDCDC;
-    background-color: #FCDCDC;
-    color: #E31E24;
+    border-color: #BA001A;
+    color: #BA001A;
     &:focus {
-        border-color: #FCDCDC;
+        border-color: #BA001A;
     }
     &::placeholder {
-        color: #E31E24;
+        color: #BA001A;
     }
 
 }
@@ -269,6 +268,15 @@ label.form-error {
 
     &_simple {
         min-width: 191px;
+        &:hover {
+            font-weight: 700;
+            color: #111111;
+        }
+        &:active {
+            font-weight: 700;
+            color: #000;
+            border-color: #000000;
+        }
     }
 
     &_dark {
@@ -283,6 +291,10 @@ label.form-error {
         font-weight: 700;
         &:hover {
             color: #fff;
+            background-color: #CB021E;
+        }
+        &:active {
+            background-color: #950216;
         }
         &-icon {
             display: inline-block;
@@ -292,7 +304,6 @@ label.form-error {
             background: url(../images/icons/arrow-right.svg) no-repeat 0 0;
         }
     }
-
 
     @media screen
     and (max-width: $tablet){

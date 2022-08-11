@@ -438,6 +438,7 @@ function initSliderInspiration() {
                 afterInit: function () {
                 },
                 init: function () {
+                    initTooltip();
                 },
                 slideChangeTransitionEnd: function () {
                     var index = $slider.find('.swiper-slide-active').data('slider-index');
@@ -445,6 +446,10 @@ function initSliderInspiration() {
                         index = '0' + index;
                     }
                     $count.text(index);
+                    initTooltip();
+                },
+                touchMove: function () {
+                    Tipped.hide(".js-tooltip");
                 },
             },
         });
@@ -601,6 +606,33 @@ function initShowMore(showmoreExtra) {
     });
 }
 
+function initTooltip() {
+    $('.js-tooltip').each(function() {
+        var $content = $(this).find('.js-tooltip-content'),
+            classElement = 'inspiration-tpd-tooltip';
+
+        Tipped.create($(this), $content, {
+            containment: {
+                selector: '.inspiration-pic',
+                padding: 0
+            },
+            position: {
+                target: 'bottom',
+                tooltip: 'bottomleft'
+            },
+            size: 'x-small',
+            skin: 'light',
+            hideOthers: true,
+            hideOnClickOutside: true,
+            showOn: 'click',
+            hideOn: 'click',
+            onShow: function (content, element) {
+                $(".tpd-tooltip").addClass(classElement);
+            },
+        });
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -640,4 +672,5 @@ $(document).ready(function () {
     initForm();
     initAjaxMore();
     initShowMore();
+    initTooltip();
 });

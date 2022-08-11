@@ -1,7 +1,7 @@
 
 .main-banner {
     position: relative;
-    margin-bottom: 58px;
+    margin-bottom: 55px;
     &-item {
         display: flex;
         overflow: hidden;
@@ -11,7 +11,7 @@
     }
     &-detail {
         width: 49.5%;
-        padding: 107px 20px 20px;
+        padding: 111px 20px 20px;
         background-color: #BA001A;
     }
     &-img {
@@ -24,7 +24,7 @@
         object-fit: cover;
     }
     &-name {
-        margin-bottom: 18px;
+        margin-bottom: 14px;
         font-weight: 700;
         font-size: 28px;
         line-height: 36px;
@@ -117,19 +117,19 @@
 }
 
 .main-category {
-    margin-bottom: 54px;
+    margin-bottom: 58px;
     &-panel {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
     &-title {
         margin-bottom: 0;
     }
     &-block {
         overflow: hidden;
-        margin-bottom: 30px;
+        margin-bottom: 33px;
     }
     &-container {
         display: flex;
@@ -201,6 +201,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.3s linear;
+    }
+    &-list-link:hover &-list-img {
+        transform: scale(1.1);
     }
     &-list-arrow {
         position: absolute;
@@ -297,7 +301,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
     &-title {
         margin-bottom: 0;
@@ -662,6 +666,10 @@
             color: #fff;
             background-color: #000;
         }
+        &:active {
+            color: #fff;
+            background-color: #333333;
+        }
     }
     &-nav-item_active {}
     &-nav-item_active &-nav-label {
@@ -803,12 +811,17 @@
     &-link {
         display: block;
         height: 219px;
+        overflow: hidden;
+        border-radius: 10px;
     }
     &-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 10px;
+        transition: transform 0.3s linear;
+    }
+    &-link:hover &-img {
+        transform: scale(1.12);
     }
     &-mark {
         position: absolute;
@@ -912,15 +925,18 @@
     &-color-item_hide {
         display: none;
     }
-    &-color-img {
+    &-color-link {
         display: block;
         width: 31px;
         height: 31px;
-        object-fit: cover;
-        border-radius: 3px;
     }
-    &-color-link {
+    &-color-img {
         display: block;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 3px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -1049,6 +1065,7 @@
     &-pic {
         position: relative;
         height: 382px;
+        overflow: hidden;
         margin-bottom: 18px;
     }
     &-img {
@@ -1125,26 +1142,16 @@
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     }
     &-popup {
-        position: absolute;
-        top: -15px;
-        left: 50px;
-        z-index: 1;
+        display: none;
         overflow: hidden;
-        width: 0;
-        height: 0;
+        width: 242px;
+        height: 247px;
         background-color: #FFFFFF;
         box-shadow: 0px 0px 10px rgba(148, 146, 146, 0.25);
         border-radius: 5px;
-        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     }
-    &-point[style*="bottom"] &-popup {
-        top: auto;
-        bottom: 0;
-    }
-
-    &-point_active &-popup {
-        width: 242px;
-        height: 247px;
+    &-tpd-tooltip {
+        transform: translate(44px, -8px);
     }
     &-point:hover &-point-icon,
     &-point_active &-point-icon {
@@ -1165,7 +1172,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 2px;
-        text-decoration: none;
+        text-decoration: none!important;
     }
     &-popup-name {
         max-width: 114px;
@@ -1205,11 +1212,10 @@
         font-size: 12px;
         line-height: 19px;
         letter-spacing: 0.03em;
-        text-decoration-line: underline;
-        color: #BA001A;
+        color: #BA001A!important;
         &:hover {
             color: #BA001A;
-            text-decoration: none;
+            text-decoration: none!important;
         }
     }
     &-popup-detail {
@@ -1255,6 +1261,8 @@
         padding-right: 15px;
         font-size: 14px;
         text-transform: none;
+        text-decoration: none!important;
+        color: #fff!important;
     }
     &-popup-button-icon {
         display: block;
@@ -1289,7 +1297,7 @@
             width: 30px;
             height: 30px;
         }
-        &-point_active &-popup {
+        &-popup {
             width: 205px;
         }
         &-point-icon-inner {
@@ -1429,7 +1437,11 @@
     border-radius: 10px;
     &-img {
         width: 49%;
+        max-width: 570px;
         position: relative;
+        background: url(../images/subscribe/subscribe-img-1.png) no-repeat right bottom;
+        border-radius: 10px 0 0 10px;
+        @include clearfix();
     }
     &-detail {
         width: 51%;
@@ -1445,40 +1457,23 @@
         line-height: 20px;
         color: rgba(0, 0, 0, 0.9);
     }
-    &-pic {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 446px;
-        height: 100%;
-        border-radius: 10px 0 0 10px;
-        background: url(../images/subscribe/subscribe-img-1.png) no-repeat 0 bottom;
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: 56px;
-            left: 193px;
-            width: 234px;
-            height: 199px;
-            background: url(../images/subscribe/subscribe-img-2.png) no-repeat 0 0;
-        }
-    }
     &-decor {
         position: absolute;
-        bottom: 0;
-        left: 78px;
-        width: 487px;
-        height: 100%;
-        background: url(../images/subscribe/subscribe-bgr-1.png) no-repeat 0 -140px;
+        bottom: 56px;
+        right: 144px;
+        width: 234px;
+        height: 199px;
+        background: url(../images/subscribe/subscribe-img-2.png) no-repeat 0 0;
     }
     &-button {
         padding-left: 30px;
         padding-right: 20px;
     }
     &-list {
+        float: right;
         position: relative;
         margin-top: 80px;
-        margin-left: 433px;
+        margin-right: 40px;
     }
     &-list-item {
         margin-bottom: 11px;
@@ -1507,8 +1502,12 @@
         line-height: 20px;
         color: #4F4F4F;
         background-color: #fff;
+        &:focus {
+            border-color: #4F4F4F;
+        }
         &::placeholder {
             font-size: 14px;
+            font-weight: 300;
             color: #4F4F4F;
         }
     }
@@ -1523,34 +1522,53 @@
 
     @media screen
     and (max-width: $tablet){
-        overflow: hidden;
-        &-pic {
-            width: 178px;
+        min-height: 224px;
+        &-img {
+            width: 44%;
+            max-width: 447px;
             background-image: url(../images/subscribe/subscribe-img-3.png);
-            &:after {
-                display: none;
-            }
+        }
+        &-detail {
+            width: 56%;
+            padding: 17px 20px;
         }
         &-decor {
-            left: -124px;
-            width: 393px;
-            background-image: url(../images/subscribe/subscribe-bgr-2.png);
-            background-position: 0 0;
+            display: none;
         }
         &-list {
             margin-top: 52px;
-            margin-left: 184px;
+            margin-right: 0;
         }
     }
     @media screen
     and (max-width: $mobile){
         flex-direction: column;
+        max-width: 326px;
+        margin-left: auto;
+        margin-right: auto;
         &-detail {
             order: -1;
             width: 100%;
+            padding-top: 25px;
+            padding-bottom: 8px;
         }
         &-img {
             width: 100%;
+            min-height: 190px;
+            border-radius: 0 0 10px 10px;
+            background-image: url(../images/subscribe/subscribe-img-4.png);
+            background-position: left bottom;
+        }
+        &-list {
+            float: none;
+            margin-top: 21px;
+            margin-left: 170px;
+        }
+        &-name {
+            margin-bottom: 11px;
+        }
+        &-info {
+            margin-bottom: 8px;
         }
     }
 }

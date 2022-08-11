@@ -1,11 +1,11 @@
 
 .header {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     &-top {
         display: flex;
         align-items: center;
         padding-top: 17px;
-        padding-bottom: 17px;
+        padding-bottom: 15px;
     }
     &-logo {
         margin-right: 50px;
@@ -40,6 +40,10 @@
     }
     &-location:hover &-location-label {
         text-decoration: none;
+        color: $color-red;
+    }
+    &-location:hover &-location-icon path {
+        fill: $color-red;
     }
     &-callback-link {
         margin-right: 10px;
@@ -169,7 +173,7 @@
     }
     &-element {
         display: block;
-        min-width: 57px;
+        min-width: 42px;
         text-decoration: none;
         text-align: center;
     }
@@ -229,6 +233,16 @@
         line-height: 13px;
         color: #111111;
     }
+    &-element:hover &-label {
+        color: $color-red;
+    }
+    &-element:hover &-icon path {
+        stroke: $color-red;
+    }
+    &-item_basket &-element:hover &-icon circle,
+    &-item_basket &-element:hover &-icon ellipse {
+        fill: $color-red;
+    }
 
     @media screen
     and (max-width: $desktop){
@@ -278,7 +292,7 @@
         align-items: center;
         background-color: #000000;
         border-radius: 100px;
-        height: 40px;
+        height: 35px;
         padding: 8px 21px 8px 23px;
         font-weight: 700;
         font-size: 14px;
@@ -324,7 +338,7 @@
     margin-right: 15px;
     &-item {
         position: relative;
-        margin-right: 15px;
+        margin-right: 18px;
         &:last-child {
             margin-right: 0;
         }
@@ -1197,6 +1211,9 @@ body.mob-menu-show {
         line-height: 0;
     }
     &-icon {}
+    &-link:hover &-icon path {
+        fill: $color-red;
+    }
 
     @media screen
     and (max-width: $tablet){

@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./libs/Selectric/public/selectric.css" />
     <link rel="stylesheet" href="./libs/simplebar/simplebar.min.css" />
+    <link rel="stylesheet" href="./libs/tipped/css/tipped.css" />
     <link rel="stylesheet" href="./css/bootstrap-grid.css" />
     <link rel="stylesheet" href="./css/common.css" />
  </head>
 
 <body class="main-page">
+    <div style="position: absolute;top:0;left: 50%;margin-left:-670px;opacity:0.6;width:1340px;z-index:1000;"><img src="./main.jpg" alt="" /></div>
     <div class="svg-box">
     </div>
 
@@ -659,6 +661,17 @@
                                 </span>
                             </a>
                         </li>
+                        <li class="main-actions-list-item swiper-slide" data-slider-index="5">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                    <span class="main-actions-discount">-15%</span>
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-1.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Скидка 15% на всё по промокоду ЛЕТО.Успейте купить со скидкой.</span>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -837,7 +850,7 @@
                                 <div class="product">
                                     <div class="product-block">
                                         <a class="product-link" href="#">
-                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                            <img class="product-img" src="./images/products/products-img-2.jpg" alt="" />
                                         </a>
                                         <span class="product-mark product-mark_simple">Акция</span>
                                         <ul class="links">
@@ -861,7 +874,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-info">
-                                        <span class="product-name">Тrandi</span>
+                                        <span class="product-name">Marco polo</span>
                                         <ul class="product-brand">
                                             <li class="product-brand-item">
                                                 <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
@@ -940,7 +953,7 @@
                                 <div class="product">
                                     <div class="product-block">
                                         <a class="product-link" href="#">
-                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                            <img class="product-img" src="./images/products/products-img-3.jpg" alt="" />
                                         </a>
                                         <span class="product-mark">Акция</span>
                                         <ul class="links">
@@ -964,7 +977,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-info">
-                                        <span class="product-name">Тrandi</span>
+                                        <span class="product-name">Italian gravity</span>
                                         <ul class="product-brand">
                                             <li class="product-brand-item">
                                                 <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
@@ -1043,7 +1056,7 @@
                                 <div class="product">
                                     <div class="product-block">
                                         <a class="product-link" href="#">
-                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                            <img class="product-img" src="./images/products/products-img-4.jpg" alt="" />
                                         </a>
                                         <span class="product-mark">Акция</span>
                                         <ul class="links">
@@ -1067,7 +1080,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-info">
-                                        <span class="product-name">Тrandi</span>
+                                        <span class="product-name">Italian gravity</span>
                                         <ul class="product-brand">
                                             <li class="product-brand-item">
                                                 <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
@@ -1146,7 +1159,7 @@
                                 <div class="product">
                                     <div class="product-block">
                                         <a class="product-link" href="#">
-                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                            <img class="product-img" src="./images/products/products-img-5.jpg" alt="" />
                                         </a>
                                         <span class="product-mark">Акция</span>
                                         <ul class="links">
@@ -1249,7 +1262,7 @@
                                 <div class="product">
                                     <div class="product-block">
                                         <a class="product-link" href="#">
-                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                            <img class="product-img" src="./images/products/products-img-6.jpg" alt="" />
                                         </a>
                                         <span class="product-mark">Акция</span>
                                         <ul class="links">
@@ -1261,6 +1274,109 @@
                                             </li>
                                             <li class="links-item">
                                                 <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <span class="product-name">Marco polo</span>
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-logo" src="./images/products/brand-logo.png" alt="" />
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag.png" alt="" />Италия
+                                            </li>
+                                        </ul>
+                                        <span class="product-price">от 3 800 <span class="currency">i</span>/ м2</span>
+                                        <div class="JS-ShowMore" data-showmore="{
+                                            'amount': 6,
+                                            'classHide': 'product-color-item_hide'
+                                        }">
+                                            <ul class="product-color">
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-4.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-5.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-6.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-1.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-2.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                                <li class="product-color-item JS-ShowMore-Item">
+                                                    <a class="product-color-link" href="javascript:;">
+                                                        <img class="product-color-img" src="./images/products/colors/colors-img-3.jpg" alt="" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="product-more">
+                                                <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="product-more-link show-more-label">Смотреть все</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="product-more-link show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="7">
+                                <div class="product">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                        </a>
+                                        <span class="product-mark product-mark_simple">Акция</span>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
                                                 <a class="links-label" href="javascript:;">
                                                     <span class="links-icon links-icon_compare"></span>
                                                 </a>
@@ -1350,20 +1466,22 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="products-list-item swiper-slide" data-slider-index="7">
+                            <li class="products-list-item swiper-slide" data-slider-index="8">
                                 <div class="product">
                                     <div class="product-block">
                                         <a class="product-link" href="#">
-                                            <img class="product-img" src="./images/products/products-img-1.jpg" alt="" />
+                                            <img class="product-img" src="./images/products/products-img-2.jpg" alt="" />
                                         </a>
-                                        <span class="product-mark product-mark_simple">Акция</span>
+                                        <span class="product-mark">Акция</span>
                                         <ul class="links">
                                             <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
                                                 <a class="links-label" href="javascript:;">
                                                     <span class="links-icon links-icon_wishlist"></span>
                                                 </a>
                                             </li>
                                             <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
                                                 <a class="links-label" href="javascript:;">
                                                     <span class="links-icon links-icon_compare"></span>
                                                 </a>
@@ -1618,13 +1736,11 @@
                                 </div>
                                 <img class="inspiration-img" src="./images/inspiration/inspiration-img-1.jpg" alt="" />
                                 <!-- Сдвиг точки от цента влево: число со знаком "-", вправо: без знака -->
-                                <div class="inspiration-point JS-Dropdown" style="top: 70px; margin-left: -281px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                <div class="inspiration-point js-tooltip" style="top: 70px; margin-left: -281px;">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1649,13 +1765,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inspiration-point JS-Dropdown" style="top: 58px; margin-left: 120px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                <div class="inspiration-point js-tooltip" style="top: 58px; margin-left: 120px;">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1679,13 +1793,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inspiration-point JS-Dropdown" style="bottom: 18px; margin-left: -10px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                <div class="inspiration-point js-tooltip" style="bottom: 18px; margin-left: -10px;">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1721,13 +1833,11 @@
                                 </div>
                                 <img class="inspiration-img" src="./images/inspiration/inspiration-img-3.jpg" alt="" />
                                 <!-- Сдвиг точки от цента влево: число со знаком "-", вправо: без знака -->
-                                <div class="inspiration-point JS-Dropdown" style="top: 70px; margin-left: -281px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                <div class="inspiration-point js-tooltip" style="top: 70px; margin-left: -281px;">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1752,13 +1862,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inspiration-point JS-Dropdown" style="top: 58px; margin-left: 120px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                <div class="inspiration-point js-tooltip" style="top: 58px; margin-left: 120px;">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1782,13 +1890,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inspiration-point JS-Dropdown" style="bottom: 18px; margin-left: -10px;" data-dropdown="{
+                                <div class="inspiration-point js-tooltip" style="bottom: 18px; margin-left: -10px;" data-dropdown="{
                                     'classActive': 'inspiration-point_active'
                                 }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1824,13 +1932,11 @@
                                 </div>
                                 <img class="inspiration-img" src="./images/inspiration/inspiration-img-2.jpg" alt="" />
                                 <!-- Сдвиг точки от цента влево: число со знаком "-", вправо: без знака -->
-                                <div class="inspiration-point JS-Dropdown" style="top: 70px; margin-left: -281px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                <div class="inspiration-point js-tooltip" style="top: 70px; margin-left: -281px;">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1855,13 +1961,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inspiration-point JS-Dropdown" style="top: 58px; margin-left: 120px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
-                                    <span class="inspiration-point-icon JS-Dropdown-Switcher">
+                                <div class="inspiration-point js-tooltip" style="top: 58px; margin-left: 120px;">
+                                    <span class="inspiration-point-icon">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -1885,13 +1989,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inspiration-point JS-Dropdown" style="bottom: 18px; margin-left: -10px;" data-dropdown="{
-                                    'classActive': 'inspiration-point_active'
-                                }">
+                                <div class="inspiration-point js-tooltip" style="bottom: 18px; margin-left: -10px;">
                                     <span class="inspiration-point-icon JS-Dropdown-Switcher">
                                          <span class="inspiration-point-icon-inner"></span>
                                     </span>
-                                    <div class="inspiration-popup">
+                                    <div class="inspiration-popup js-tooltip-content">
                                         <div class="inspiration-popup-wrapper">
                                             <a class="inspiration-popup-panel" href="#">
                                                 <span class="inspiration-popup-name">Монтерано белый</span>
@@ -2012,6 +2114,41 @@
                             </a>
                             <div class="articles-list-info">Лучшие средства для очистки плитки</div>
                         </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="7">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-1.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-name">ЧТО НУЖНО ЗНАТЬ О КЕРАМИЧЕСКОЙ ПЛИТКЕ?</span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Как правильно выбрать  керамическую плитку.</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="8">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-2.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Поможем подобрать средства для плитки</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="9">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-3.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-mark">Уют</span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Создаем уют в доме, советы дизайнеров.</div>
+                        </li>
                     </ul>
                 </div>
 
@@ -2023,7 +2160,6 @@
             <div class="subscribe">
                 <div class="subscribe-img">
                     <div class="subscribe-decor"></div>
-                    <div class="subscribe-pic"></div>
                     <ul class="subscribe-list">
                         <li class="subscribe-list-item">
                             <span class="subscribe-list-label"># НОВОСТИ</span>
@@ -2039,8 +2175,8 @@
                 <div class="subscribe-detail">
                     <span class="subscribe-name h1">Подпишись на рассылку</span>
                     <div class="subscribe-info content">Оставьте свой e-mail, чтобы первыми узнать о старте <b>SALE</b> и новых поступлениях</div>
-                    <form>
-                        <input class="subscribe-input" type="text" placeholder="e-mail" />
+                    <form class="js-form-validate">
+                        <input class="subscribe-input js-mask-email" type="text" placeholder="e-mail" required />
                         <button class="subscribe-button button button_dark">Подписаться<span class="button_dark-icon"></span></button>
                     </form>
                 </div>
@@ -2160,6 +2296,7 @@
     <script src="./libs/swiper/swiper-bundle.min.js"></script>
     <script src="./libs/Selectric/public/jquery.selectric.min.js"></script>
     <script src="./libs/simplebar/simplebar.min.js"></script>
+    <script src="./libs/tipped/js/tipped.min.js"></script>
     <script src="./js/JSC.Dropdown.js"></script>
     <script src="./js/JSC.MobileMenu.js"></script>
     <script src="./js/JSC.AjaxMore.js"></script>
