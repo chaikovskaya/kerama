@@ -240,7 +240,7 @@ label.form-error {
     background-color: transparent;
     font-family: 'Aeonik Pro TRIAL', sans-serif;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.4em;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #000000;
@@ -252,9 +252,19 @@ label.form-error {
         cursor: not-allowed;
     }
 
+    &-icon {
+        display: inline-block;
+        width: 0;
+        height: 12px;
+        background: url(../images/icons/arrow-right.svg) no-repeat 0 0;
+        transition: width 0.25s ease-in-out, margin-left 0.25s ease-in-out;
+    }
+    &:hover &-icon {
+        width: 21px;
+        margin-left: 11px;
+    }
+
     &_light {
-        display: flex;
-        align-items: center;
         color: #fff;
         border-color: #fff;
         &:hover {
@@ -279,11 +289,11 @@ label.form-error {
         display: inline-block;
         background-color: $color-red;
         border-width: 0;
-        padding-left: 29px;
+        padding-left: 27px;
         padding-right: 27px;
         color: #fff;
         font-size: 13px;
-        line-height: 19px;
+        line-height: 1.7em;
         font-weight: 700;
         &:hover {
             color: #fff;
@@ -291,13 +301,6 @@ label.form-error {
         }
         &:active {
             background-color: #950216;
-        }
-        &-icon {
-            display: inline-block;
-            width: 21px;
-            height: 12px;
-            margin-left: 12px;
-            background: url(../images/icons/arrow-right.svg) no-repeat 0 0;
         }
     }
 
@@ -307,6 +310,10 @@ label.form-error {
             min-width: 156px;
             padding-left: 10px;
             padding-right: 10px;
+        }
+        &-icon {
+            width: 21px;
+            margin-left: 11px;
         }
     }
     @media screen

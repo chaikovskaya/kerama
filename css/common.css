@@ -798,7 +798,7 @@ label.form-error {
   background-color: transparent;
   font-family: 'Aeonik Pro TRIAL', sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.4em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #000000; }
@@ -807,9 +807,16 @@ label.form-error {
   .button:disabled {
     opacity: 0.8;
     cursor: not-allowed; }
+  .button-icon {
+    display: inline-block;
+    width: 0;
+    height: 12px;
+    background: url(../images/icons/arrow-right.svg) no-repeat 0 0;
+    transition: width 0.25s ease-in-out, margin-left 0.25s ease-in-out; }
+  .button:hover .button-icon {
+    width: 21px;
+    margin-left: 11px; }
   .button_light {
-    display: flex;
-    align-items: center;
     color: #fff;
     border-color: #fff; }
     .button_light:hover {
@@ -827,28 +834,25 @@ label.form-error {
     display: inline-block;
     background-color: #BA001A;
     border-width: 0;
-    padding-left: 29px;
+    padding-left: 27px;
     padding-right: 27px;
     color: #fff;
     font-size: 13px;
-    line-height: 19px;
+    line-height: 1.7em;
     font-weight: 700; }
     .button_dark:hover {
       color: #fff;
       background-color: #CB021E; }
     .button_dark:active {
       background-color: #950216; }
-    .button_dark-icon {
-      display: inline-block;
-      width: 21px;
-      height: 12px;
-      margin-left: 12px;
-      background: url(../images/icons/arrow-right.svg) no-repeat 0 0; }
   @media screen and (max-width: 992px) {
     .button_simple {
       min-width: 156px;
       padding-left: 10px;
-      padding-right: 10px; } }
+      padding-right: 10px; }
+    .button-icon {
+      width: 21px;
+      margin-left: 11px; } }
 
 /*selectric*/
 .selectric-wrapper {
@@ -1324,7 +1328,11 @@ label.form-error {
     line-height: 0;
     margin-top: -2px; }
   .header-phone-icon {
-    margin-left: 10px; }
+    margin-left: 8px;
+    display: block;
+    width: 9px;
+    height: 5px;
+    background: url(../images/header/header-icons/arrow-bottom.svg) no-repeat 0 0; }
   .header-menu {
     display: flex;
     align-items: center; }
@@ -1565,7 +1573,8 @@ label.form-error {
     position: relative; }
   .search-icon {
     width: 16px;
-    height: 16px; }
+    height: 16px;
+    margin-left: 1px; }
   .search-input-wrapper {
     flex-grow: 1; }
   .search-input {
@@ -2513,12 +2522,6 @@ body.mob-menu-show {
     display: inline-block; }
   .main-banner-button {
     font-weight: 700; }
-  .main-banner-icon {
-    display: block;
-    width: 21px;
-    height: 12px;
-    margin-left: 11px;
-    background: url("../images/icons/arrow-right.svg") no-repeat 0 0; }
   .main-banner-slider-nav {
     position: absolute;
     top: 44px;
@@ -3671,9 +3674,6 @@ body.mob-menu-show {
     width: 234px;
     height: 199px;
     background: url(../images/subscribe/subscribe-img-2.png) no-repeat 0 0; }
-  .subscribe-button {
-    padding-left: 30px;
-    padding-right: 20px; }
   .subscribe-list {
     float: right;
     position: relative;

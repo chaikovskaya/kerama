@@ -43,13 +43,6 @@
     &-button {
         font-weight: 700;
     }
-    &-icon {
-        display: block;
-        width: 21px;
-        height: 12px;
-        margin-left: 11px;
-        background: url("../images/icons/arrow-right.svg") no-repeat 0 0;
-    }
     &-slider-nav {
         position: absolute;
         top: 44px;
@@ -1497,8 +1490,6 @@
         background: url(../images/subscribe/subscribe-img-2.png) no-repeat 0 0;
     }
     &-button {
-        padding-left: 30px;
-        padding-right: 20px;
     }
     &-list {
         float: right;
