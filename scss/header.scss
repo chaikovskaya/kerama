@@ -102,8 +102,8 @@
     and (max-width: $tablet){
         margin-bottom: 14px;
         &-top {
-            padding-top: 16px;
-            padding-bottom: 15px;
+            padding-top: 11px;
+            padding-bottom: 11px;
         }
         &-logo {
             margin-right: 25px;
@@ -265,6 +265,9 @@
     }
     @media screen
     and (max-width: $tablet){
+        &-item {
+            margin-right: 29px;
+        }
     }
     @media screen
     and (max-width: $mobile){

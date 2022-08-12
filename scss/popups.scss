@@ -1,18 +1,11 @@
 
 /* Fancybox */
 .fancybox-bg {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .fancybox-slide {
     padding: 30px 40px;
-}
-.fancybox-slide_simple {
-    padding: 0;
-}
-
-.fancybox-slide--html {
-    padding: 0;
 }
 
 .fancybox-content {
@@ -30,19 +23,19 @@
 
 .fancybox-close {
     position: absolute;
-    top: 0;
+    top: -27px;
     left: 100%;
     z-index: 1;
-    margin-left: 10px;
+    margin-left: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 33px;
-    height: 33px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     border: 0;
     border-radius: 50%;
-    background-color: #fff;
+    background: url("../images/icons/popup-close.svg") no-repeat 0 0;
 }
 .fancybox-close:hover {
 }
@@ -52,21 +45,6 @@
 .fancybox-close:hover .fancybox-close-icon {
     path {
         fill: #D50A0A;
-    }
-}
-.fancybox-slide_simple .fancybox-close {
-    top: 34px;
-    left: auto;
-    right: 30px;
-    width: 18px;
-    height: 18px;
-    background-color: transparent;
-}
-.fancybox-slide_simple .fancybox-close-icon {
-    width: 18px;
-    height: 18px;
-    path {
-       fill: #2873B9;
     }
 }
 
@@ -141,13 +119,6 @@
         background-color: transparent;
     }
 }
-.fancybox-active .wrapper {
-    -webkit-filter: blur(25px);
-    -moz-filter: blur(25px);
-    -o-filter: blur(25px);
-    -ms-filter: blur(25px);
-    filter: blur(25px);
-}
 
 .fancybox-toolbar {
     display: none;
@@ -161,6 +132,13 @@ and (max-width: $tablet) {
 }
 @media screen
 and (max-width: $mobile) {
+    .fancybox-slide {
+        padding: 50px 11px;
+    }
+    .fancybox-close {
+        top: -32px;
+        margin-left: -24px;
+    }
 }
 /* /Fancybox */
 
@@ -202,15 +180,106 @@ and (max-width: $mobile) {
 }
 
 .popup {
-    width: 735px;
-    background-color: #fff;
-    padding: 65px 60px 60px;
-    border-radius: 12px;
+    width: 400px;
+    background-color: #FEFEFE;
+    padding: 33px 30px 45px;
+    border-radius: 14px;
+    &-title {
+        display: block;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 41px;
+        color: #BA001A
+    }
+    &-button {
+        width: 100%;
+        font-size: 14px;
+        letter-spacing: 0.022em;
+        padding-top: 8px;
+        padding-bottom: 6px;
+    }
+    &-button-field {
+        margin-bottom: 17px;
+    }
+    &-actions-list {
+        margin-bottom: 16px;
+    }
+    &-actions-list-item {
+        margin-bottom: 2px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-actions-link {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.007em;
+        color: #BA001A;
+        text-decoration: none;
+        &:hover {
+            color: #BA001A;
+            text-decoration: underline;
+        }
+    }
+    &-info {
+        max-width: 285px;
+        margin-bottom: 20px;
+        color: #000000;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &-subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 29px;
+        color: #111111;
+        margin-bottom: 17px;
+    }
+
+    &-registration {
+        padding-bottom: 50px;
+    }
+    &-code {
+        padding-bottom: 40px;
+    }
+    &-code &-info a {
+        text-decoration: none;
+        color: $color-red;
+    }
+    &-code-help {
+        margin-bottom: 37px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 187px;
+        font-size: 13px;
+        line-height: 19px;
+        text-align: center;
+        color: #4F4F4F;
+    }
+    &-code-actions {
+        text-align: center;
+    }
+    &-code-field {
+        margin-bottom: 12px;
+    }
+    &-code &-title {
+        margin-bottom: 17px;
+    }
+
+    &-city {
+        max-width: 367px;
+    }
 
     @media screen
     and (max-width: $tablet) {
+        &-title {
+            font-size: 24px;
+            line-height: 27px;
+        }
     }
     @media screen
     and (max-width: $mobile) {
+        padding: 28px 23px 35px;
     }
 }

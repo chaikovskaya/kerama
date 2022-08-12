@@ -1,0 +1,33 @@
+
+<div class="popup-registration popup">
+    <div class="popup-content">
+        <span class="popup-title">Регистрация</span>
+        <div class="popup-subtitle">Введите номер телефона</div>
+        <div class="popup-info">Мы отправим код или позвоним. Отвечать на звонок не нужно. Код может прийти на почту или в СМС</div>
+        <form class="js-form-validate js-form" action="/">
+            <div class="field js-form-validate-field">
+                <span class="field-input">
+                    <input class="input js-mask-phone" type="text" placeholder="Телефон" id="phone-2" name="phone-2" required />
+                </span>
+            </div>
+            <div class="switch-field">
+                <label class="switch">
+                    <input class="switch-checkbox js-form-checkbox" type="checkbox" name="agreement" checked="checked" />
+                    <span class="switch-decor">
+                        <span class="switch-icon"></span>
+                    </span>
+                    <span class="switch-label">Согласен на обработку персональных данных</span>
+                </label>
+            </div>
+            <div class="popup-button-field">
+                <button class="popup-button button button_dark js-form-button">ПОЛУЧИТЬ КОД</button>
+            </div>
+            <a class="popup-actions-link js-open-profile" href="javascript:;" data-src="./ajax/profile.html">Я уже зарегистрован</a>
+        </form>
+        <!-- Выполнить код после отправки формы, чтобы открылся попап "Введите код":
+        <script>
+            openPopupCode('./ajax/code.html');
+        </script>
+        -->
+    </div>
+</div>

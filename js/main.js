@@ -98,7 +98,7 @@ function initValidate($element) {
 
 function initMask() {
     $('.js-mask-phone').inputmask({
-        mask: '+7 (999) 999-99-99',
+        mask: '+7 999 999 99 99',
         "tabThrough": true,
         "showMaskOnHover": false,
     });
@@ -633,6 +633,181 @@ function initTooltip() {
     });
 }
 
+function openPopupForgotPassword($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-popup-forgot-password');
+    }
+
+    $.fancybox.open({
+        src  : $element.data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initForm();
+            initMask();
+            initPopupRegistration();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon las la-times"></i>' +
+                "</button>"
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupForgotPassword() {
+    $(".js-open-forgot-password").on('click', function() {
+        $.fancybox.close();
+        openPopupForgotPassword($(".js-open-forgot-password"));
+    });
+}
+
+function openPopupCode(srcData) {
+    $.fancybox.open({
+        src  : srcData,
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initMask();
+            initPopupRegistration();
+            initPopupProfile();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon las la-times"></i>' +
+                "</button>"
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupCode() {
+    $(".js-open-code").on('click', function() {
+        $.fancybox.close();
+        openPopupCode($(".js-open-code"));
+    });
+}
+
+function openPopupRegistration($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-popup-registration');
+    }
+
+    $.fancybox.open({
+        src  : $element.data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initForm();
+            initMask();
+            initPopupProfile();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon las la-times"></i>' +
+                "</button>"
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupRegistration() {
+    $(".js-open-registration").on('click', function() {
+        $.fancybox.close();
+        openPopupRegistration($(".js-open-registration"));
+    });
+}
+
+function openPopupProfile($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-popup-profile');
+    }
+
+    $.fancybox.open({
+        src  : $element.data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initForm();
+            initMask();
+            initPopupRegistration();
+            initPopupForgotPassword();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon las la-times"></i>' +
+                "</button>"
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupProfile() {
+    $(".js-open-profile").on('click', function() {
+        $.fancybox.close();
+        openPopupProfile($(".js-open-profile"));
+    });
+}
+
+function initPopupCity() {
+    $(".js-popup-city").fancybox({
+        src  : $(this).data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<svg class="fancybox-close-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                '<path d="M10.4461 0.553928C10.1401 0.248002 9.64414 0.248002 9.33821 0.553928L5.5 4.39214L1.66179 0.553929C1.35586 0.248002 0.859855 0.248002 0.553928 0.553928C0.248002 0.859855 0.248002 1.35586 0.553928 1.66179L4.39214 5.5L0.553929 9.33821C0.248002 9.64414 0.248002 10.1401 0.553928 10.4461C0.859855 10.752 1.35586 10.752 1.66179 10.4461L5.5 6.60786L9.33821 10.4461C9.64414 10.752 10.1401 10.752 10.4461 10.4461C10.752 10.1401 10.752 9.64414 10.4461 9.33821L6.60786 5.5L10.4461 1.66179C10.752 1.35586 10.752 0.859855 10.4461 0.553928Z" fill="#202430"/>\n' +
+                '</svg>' +
+                '</button>'
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
+        afterShow: function (data) {
+            initScroll();
+        },
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -673,4 +848,6 @@ $(document).ready(function () {
     initAjaxMore();
     initShowMore();
     initTooltip();
+    initPopupProfile();
+    initPopupCity();
 });

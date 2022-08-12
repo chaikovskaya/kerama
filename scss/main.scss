@@ -52,8 +52,8 @@
     }
     &-slider-nav {
         position: absolute;
-        top: 45px;
-        left: 22px;
+        top: 44px;
+        left: 17px;
         z-index: 1;
     }
     &-item_blue {}
@@ -63,12 +63,16 @@
 
     @media screen
     and (max-width: $tablet){
-        margin-bottom: 46px;
+        margin-bottom: 45px;
+        &-item {
+            height: 318px;
+        }
         &-detail {
-            width: 52%;
+            width: 50%;
+            padding-top: 102px;
         }
         &-img {
-            width: 48%;
+            width: 50%;
         }
         &-name {
             font-size: 24px;
@@ -81,11 +85,14 @@
         &-slider-nav {
             display: flex;
         }
+        &-description {
+            margin-bottom: 22px;
+        }
     }
 
     @media screen
     and (max-width: $mobile){
-        margin-bottom: 41px;
+        margin-bottom: 45px;
         &-item {
             flex-direction: column;
             height: auto;
@@ -102,16 +109,16 @@
             margin-top: auto;
         }
         &-pic {
-            height: 220px;
+            height: 225px;
         }
         &-slider-nav {
             display: none;
         }
         &-name {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
         &-description {
-            margin-bottom: 25px;
+            margin-bottom: 21px;
         }
     }
 }
@@ -237,7 +244,7 @@
 
     @media screen
     and (max-width: $tablet){
-        margin-bottom: 51px;
+        margin-bottom: 41px;
         &-panel {
             margin-bottom: 15px;
         }
@@ -279,16 +286,16 @@
             bottom: 20px;
             right: 14px;
         }
-        &-button {
-            min-width: 156px;
-        }
         &-slider-nav {
             display: flex;
         }
     }
     @media screen
     and (max-width: $mobile){
-        margin-bottom: 41px;
+        margin-bottom: 46px;
+        &-panel {
+            margin-bottom: 20px;
+        }
         &-slider-nav {
             display: none;
         }
@@ -307,7 +314,7 @@
         margin-bottom: 0;
     }
     &-block {
-        margin-bottom: 30px;
+        margin-bottom: 29px;
     }
     &-list {
         display: flex;
@@ -380,7 +387,7 @@
 
     @media screen
     and (max-width: $tablet){
-        margin-bottom: 51px;
+        margin-bottom: 50px;
         &-panel {
             margin-bottom: 15px;
         }
@@ -420,16 +427,16 @@
             top: 15px;
             right: 15px;
         }
-        &-button {
-            min-width: 156px;
-        }
         &-slider-nav {
             display: flex;
         }
     }
     @media screen
     and (max-width: $mobile){
-        margin-bottom: 40px;
+        margin-bottom: 38px;
+        &-panel {
+            margin-bottom: 20px;
+        }
         &-list-item {
             width: 252px;
         }
@@ -457,6 +464,10 @@
         width: 49%;
         padding-bottom: 20px;
     }
+    &-title {
+        margin-top: 5px;
+        margin-bottom: 14px;
+    }
     &-info {
         margin-bottom: 18px;
     }
@@ -478,13 +489,14 @@
         }
     }
     &-plus-digit {
-        margin-bottom: 9px;
+        margin-bottom: 14px;
         font-weight: 700;
         font-size: 36px;
         line-height: 36px;
         color: #BA001A
     }
     &-plus-info {
+        max-width: 270px;
         font-weight: 300;
         font-size: 14px;
         line-height: 21px;
@@ -555,6 +567,10 @@
     @media screen
     and (max-width: $tablet){
         margin-bottom: 44px;
+        &-title {
+            margin-top: 7px;
+            margin-bottom: 16px;
+        }
         &-img {
             width: 51%;
             padding-right: 16px;
@@ -562,6 +578,7 @@
         &-plus-item {
             padding-left: 13px;
             padding-right: 13px;
+            padding-top: 7px;
         }
         &-detail {
             width: 49%;
@@ -574,12 +591,16 @@
             height: 100%;
             object-fit: cover;
         }
+        &-plus {
+            margin-bottom: 32px;
+        }
         &-plus-digit {
+            margin-bottom: 5px;
             font-size: 24px;
             line-height: 35px;
         }
         &-info {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         &-plus-item:last-child &-plus-info {
             min-width: auto;
@@ -588,7 +609,7 @@
     @media screen
     and (max-width: $mobile){
         flex-direction: column;
-        margin-bottom: 41px;
+        margin-bottom: 46px;
         &-info {
             margin-bottom: 11px;
         }
@@ -608,13 +629,18 @@
         &-plus {
             flex-direction: column;
             border-top-width: 0;
-            margin-bottom: 13px;
+            margin-bottom: 8px;
+        }
+        &-plus-info {
+            max-width: none;
+            letter-spacing: -0.005em;
         }
         &-plus-item {
             border-bottom: 1px solid #DADDE2;
             border-right-width: 0;
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-right: 0;
+            padding-bottom: 13px;
             &:first-child {
                 padding-top: 0;
             }
@@ -698,13 +724,13 @@
     @media screen
     and (max-width: $tablet){
         margin-bottom: 45px;
-        &-panel {
-            margin-bottom: 15px;
+        &-wrapper {
+            margin-bottom: 17px;
         }
     }
     @media screen
     and (max-width: $mobile){
-        margin-bottom: 41px;
+        margin-bottom: 46px;
         &-wrapper {
             margin-bottom: 16px;
         }
@@ -867,7 +893,7 @@
     }
     &-price {
         display: block;
-        margin-bottom: 9px;
+        margin-bottom: 12px;
         font-weight: 700;
         font-size: 15px;
         line-height: 22px;
@@ -941,7 +967,7 @@
 }
 
 .brands {
-    margin-bottom: 58px;
+    margin-bottom: 56px;
     &-panel {
         display: flex;
         justify-content: space-between;
@@ -954,7 +980,7 @@
     &-wrapper {
         position: relative;
         margin-bottom: 30px;
-        padding-top: 30px;
+        padding-top: 32px;
         background-color: rgba(233, 237, 245, 0.9);
         &:before {
             content: '';
@@ -989,7 +1015,7 @@
         margin-right: -39px;
     }
     &-list-item {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         margin-right: 36px;
     }
     &-list-img {
@@ -1002,10 +1028,10 @@
     and (max-width: $tablet){
         margin-bottom: 46px;
         &-panel {
-            margin-bottom: 15px;
+            margin-bottom: 19px;
         }
         &-wrapper {
-            margin-bottom: 25px;
+            margin-bottom: 19px;
         }
         &-inner {
             overflow: visible;
@@ -1027,9 +1053,9 @@
     }
     @media screen
     and (max-width: $mobile){
-        margin-bottom: 41px;
+        margin-bottom: 46px;
         &-wrapper {
-            padding-top: 20px;
+            padding-top: 21px;
         }
         &-block-item {
             width: 490px;
@@ -1046,7 +1072,7 @@
 }
 
 .inspiration {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     &-panel {
         display: flex;
         justify-content: space-between;
@@ -1057,8 +1083,8 @@
         margin-bottom: 0;
     }
     &-wrapper {
-        margin-left: 97px;
-        margin-right: 97px;
+        margin-left: 99px;
+        margin-right: 99px;
     }
     &-list {}
     &-list-item {}
@@ -1105,12 +1131,12 @@
         background-image: url(../images/icons/arrow-right-red.svg);
     }
     &-detail {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     &-brand {
         position: absolute;
         top: 24px;
-        left: 22px;
+        left: 21px;
         display: flex;
         align-items: center;
         padding: 5px 8px;
@@ -1127,19 +1153,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 50%;
         cursor: pointer;
+        transition: transform 0.1s linear;
     }
     &-point-icon-inner {
         display: block;
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
         background-color: #fff;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+        transition: transform 0.1s linear;
     }
     &-popup {
         display: none;
@@ -1155,12 +1183,14 @@
     }
     &-point:hover &-point-icon,
     &-point_active &-point-icon {
+        transform: scale(1.08);
         background-color: rgba(255, 255, 255, 0.8);
         border: 1px solid #FFFFFF;
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
     }
     &-point:hover &-point-icon-inner,
     &-point_active &-point-icon-inner {
+        transform: scale(1.08);
         background-color: #BA001A;
         box-shadow: 0px 0px 4px rgba(186, 0, 26, 0.15);
     }
@@ -1279,7 +1309,7 @@
             margin-right: 60px;
         }
         &-panel {
-            margin-bottom: 15px;
+            margin-bottom: 19px;
         }
         &-name {
             margin-bottom: 10px;
@@ -1323,7 +1353,7 @@
         margin-bottom: 0;
     }
     &-wrapper {
-        margin-bottom: 30px;
+        margin-bottom: 29px;
     }
     &-list {
         display: flex;
@@ -1335,7 +1365,7 @@
         position: relative;
         display: block;
         height: 277px;
-        margin-bottom: 16px;
+        margin-bottom: 15px;
         text-decoration: none;
     }
     &-list-img {
@@ -1355,7 +1385,7 @@
     &-list-block {
         position: relative;
         display: block;
-        padding: 15px;
+        padding: 10px 15px;
         height: 100%;
     }
     &-list-mark {
@@ -1400,6 +1430,7 @@
     }
     &-list-name {
         display: block;
+        margin-top: 7px;
         font-weight: 700;
         font-size: 16px;
         line-height: 22px;
@@ -1409,12 +1440,12 @@
 
     @media screen
     and (max-width: $tablet){
-        margin-bottom: 55px;
+        margin-bottom: 49px;
         &-panel {
-            margin-bottom: 15px;
+            margin-bottom: 19px;
         }
         &-wrapper {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
     }
 
@@ -1452,7 +1483,7 @@
         margin-bottom: 14px;
     }
     &-info {
-        margin-bottom: 7px;
+        margin-bottom: 9px;
         font-size: 14px;
         line-height: 20px;
         color: rgba(0, 0, 0, 0.9);
@@ -1476,7 +1507,7 @@
         margin-right: 40px;
     }
     &-list-item {
-        margin-bottom: 11px;
+        margin-bottom: 7px;
     }
     &-list-label {
         display: inline-block;
@@ -1549,7 +1580,7 @@
         &-detail {
             order: -1;
             width: 100%;
-            padding-top: 25px;
+            padding-top: 26px;
             padding-bottom: 8px;
         }
         &-img {
@@ -1565,7 +1596,7 @@
             margin-left: 170px;
         }
         &-name {
-            margin-bottom: 11px;
+            margin-bottom: 15px;
         }
         &-info {
             margin-bottom: 8px;
