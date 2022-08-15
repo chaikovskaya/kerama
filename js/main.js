@@ -251,12 +251,16 @@ function initSliderMainActions() {
                 disabledClass: "slider-button_disabled",
             },
             slidesPerView: 'auto',
-            spaceBetween: 20,
             breakpoints: {
                 0: {
                     simulateTouch: false,
+                    spaceBetween: 15,
                 },
                 768: {
+                    spaceBetween: 15,
+                },
+                992: {
+                    spaceBetween: 20,
                 },
             },
             on: {
@@ -763,7 +767,7 @@ function openPopupProfile($element) {
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<i class="fancybox-close-icon las la-times"></i>' +
+                '<i class="fancybox-close-icon"></i>' +
                 "</button>"
         },
         lang: "ru",
@@ -784,16 +788,12 @@ function initPopupProfile() {
 
 function initPopupCity() {
     $(".js-popup-city").fancybox({
-        src  : $(this).data('src'),
-        type : 'ajax',
         toolbar  : false,
         smallBtn : true,
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<svg class="fancybox-close-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                '<path d="M10.4461 0.553928C10.1401 0.248002 9.64414 0.248002 9.33821 0.553928L5.5 4.39214L1.66179 0.553929C1.35586 0.248002 0.859855 0.248002 0.553928 0.553928C0.248002 0.859855 0.248002 1.35586 0.553928 1.66179L4.39214 5.5L0.553929 9.33821C0.248002 9.64414 0.248002 10.1401 0.553928 10.4461C0.859855 10.752 1.35586 10.752 1.66179 10.4461L5.5 6.60786L9.33821 10.4461C9.64414 10.752 10.1401 10.752 10.4461 10.4461C10.752 10.1401 10.752 9.64414 10.4461 9.33821L6.60786 5.5L10.4461 1.66179C10.752 1.35586 10.752 0.859855 10.4461 0.553928Z" fill="#202430"/>\n' +
-                '</svg>' +
+                '<i class="fancybox-close-icon"></i>' +
                 '</button>'
         },
         lang: "ru",
@@ -805,6 +805,135 @@ function initPopupCity() {
         afterShow: function (data) {
             initScroll();
         },
+    });
+}
+
+function initTextFilterCity() {
+    $('.js-textfilter-city').each(function(){
+        var $element = $(this),
+            $input = $(this).find('.js-textfilter-city-input'),
+            classActive = $element.data('textfilter-class') || 'active';
+
+        $input.jcOnPageFilter({
+            animateHideNShow: true,
+            focusOnLoad: true,
+            highlightColor: "transparent",
+            textColorForHighlights: "inherit",
+            caseSensitive: false,
+            hideNegatives: true,
+            parentSectionClass: "js-textfilter-city-list",
+            parentLookupClass: "js-textfilter-city-parent",
+            childBlockClass: "js-textfilter-city-child"
+        });
+
+        $input.keyup(function(e) {
+            var len = $element.find('.js-textfilter-city-child span').length;
+            if (len > 0) {
+                $element.addClass(classActive);
+            } else {
+                $element.removeClass(classActive);
+            }
+        });
+    });
+}
+
+function initSearch() {
+    $('.js-search').each(function(){
+        var $element = $(this),
+            classDynamic = $(this).data('search-dynamic'),
+            $input = $(this).find('.js-search-input'),
+            $link = $(this).find('.js-search-reset');
+
+        $link.on('click', function(e, data) {
+            $input.val('').trigger('keyup');
+            $element.removeClass(classDynamic);
+        });
+
+        $input.on('input', function(e, data) {
+            var val = $input.val();
+            if (val != '') {
+                $element.addClass(classDynamic);
+            } else {
+                $element.removeClass(classDynamic);
+            }
+        });
+    });
+}
+
+function initQuantity() {
+    if (typeof(Quantity) === 'undefined' || !jQuery.isFunction(Quantity)) {
+        return false;
+    }
+
+    var common = {};
+
+    $('.JS-Quantity').not('.JS-Quantity-ready').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('quantity'));
+        new Quantity(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initPopupBasket() {
+    $('.js-popup-basket').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+                    initScroll();
+                    initQuantity();
+                    //initPopupBuy();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
+    });
+}
+
+function initPopupWishlist() {
+    $('.js-popup-wishlist').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+                    initScroll();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
     });
 }
 
@@ -850,4 +979,9 @@ $(document).ready(function () {
     initTooltip();
     initPopupProfile();
     initPopupCity();
+    initTextFilterCity();
+    initSearch();
+    initPopupBasket();
+    initPopupWishlist();
+    initQuantity();
 });

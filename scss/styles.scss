@@ -254,19 +254,19 @@ blockquote {
 
 /* simplebar */
 .simplebar-track.simplebar-vertical {
-	width: 3px;
+	width: 10px;
 }
 .simplebar-scrollbar:before {
 	left: 0;
 	right: 0;
 }
 .simplebar-track {
-	right: 33px;
-	border-radius: 15px;
+	right: 0;
 	background-color: transparent;
 }
 .simplebar-scrollbar:before {
-	background: linear-gradient(0deg, #AA0005 -35.71%, #E31E24 127.55%);
+	background: #E0E0E0;
+	border-radius: 5px;
 }
 .simplebar-scrollbar.simplebar-visible:before {
 	opacity: 1;
