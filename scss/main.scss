@@ -842,10 +842,13 @@
     &-link:hover &-img {
         transform: scale(1.12);
     }
-    &-mark {
+    &-marks {
         position: absolute;
         top: 12px;
         left: 15px;
+    }
+    &-mark {
+        display: block;
         min-width: 52px;
         height: 15px;
         padding: 2px 7px;
@@ -857,6 +860,8 @@
         color: #FFFFFF;
         text-align: center;
         text-transform: uppercase;
+        margin-right: 4px;
+        margin-bottom: 4px;
     }
     &-mark_simple {
         background-color: #EF822B;
