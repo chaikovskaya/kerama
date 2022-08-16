@@ -937,6 +937,78 @@ function initPopupWishlist() {
     });
 }
 
+function initPopupProduct() {
+    $(".js-popup-product").fancybox({
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon las la-times"></i>' +
+                "</button>"
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
+        afterShow: function (data) {
+            initShowMore();
+            initGalleryCard();
+        },
+    });
+}
+
+function initGalleryCard() {
+    let $slider = $(".js-gallery-card-thumbs"),
+        sliderLength = $slider.find('.swiper-slide').length;
+
+    let isStart = sliderLength > 1 ? true : false;
+
+    let galleryThumbs = new Swiper(".js-gallery-card-thumbs", {
+        loop: isStart,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        autoHeight: true,
+        navigation: {
+            nextEl: ".js-slider-next",
+            prevEl: ".js-slider-prev",
+        },
+        pagination: false,
+        spaceBetween: 8,
+        breakpoints: {
+            0: {
+            },
+            720: {
+            },
+        }
+    });
+    let galleryTop = new Swiper(".js-gallery-card-main", {
+        loop: true,
+        direction: "horizontal",
+        spaceBetween: 40,
+        navigation: false,
+        pagination: false,
+        thumbs: {
+            swiper: galleryThumbs
+        },
+        slidesPerView: "auto",
+        breakpoints: {
+            0: {
+                spaceBetween: 20,
+            },
+            720: {
+                spaceBetween: 15,
+            },
+            992: {
+                spaceBetween: 15,
+            },
+        },
+    });
+};
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -984,4 +1056,6 @@ $(document).ready(function () {
     initPopupBasket();
     initPopupWishlist();
     initQuantity();
+    initPopupProduct();
+    initGalleryCard();
 });
