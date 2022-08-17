@@ -261,7 +261,13 @@ label.form-error {
     text-transform: uppercase;
     color: #000000;
     &:hover {
-        color: #000000;
+        font-weight: 700;
+        color: #111111;
+    }
+    &:active {
+        font-weight: 700;
+        color: #000;
+        border-color: #000000;
     }
     &:disabled {
         opacity: 0.8;
@@ -286,19 +292,14 @@ label.form-error {
         &:hover {
             color: #fff;
         }
+        &:active {
+            color: #fff;
+            border-color: #fff;
+        }
     }
 
     &_simple {
         min-width: 191px;
-        &:hover {
-            font-weight: 700;
-            color: #111111;
-        }
-        &:active {
-            font-weight: 700;
-            color: #000;
-            border-color: #000000;
-        }
     }
 
     &_dark {
@@ -316,6 +317,7 @@ label.form-error {
             background-color: #CB021E;
         }
         &:active {
+            color: #fff;
             background-color: #950216;
         }
     }

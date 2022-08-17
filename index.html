@@ -165,15 +165,28 @@
                     </svg>
                     <span class="header-location-label">Пенза, Пензенская обл.</span>
                 </a>
-                <a class="header-callback-link" href="javascript:;">Заказать звонок</a>
-                <div class="header-phone">
+                <a class="header-callback-link js-popup-callback" href="javascript:;" data-src="./ajax/callback.html">Заказать звонок</a>
+                <div class="header-phone JS-Dropdown" data-dropdown="{'classActive': 'header-phone_active'}">
                     <div class="header-phone-block">
                         <div class="header-phone-label">
                             <a href="tel:+78412767505">+7 (8412) 76-75-05</a>
                         </div>
-                        <a class="header-phone-switcher" href="javascript:;">
+                        <a class="header-phone-switcher JS-Dropdown-Switcher" href="javascript:;">
                             <span class="header-phone-icon"></span>
                         </a>
+                    </div>
+                    <div class="header-phone-dropdown JS-Dropdown-Menu">
+                        <ul class="header-phone-list">
+                            <li class="header-phone-list-item">
+                                <div class="header-phone-number"><a href="tel:+78412767505">+7 (8412) 76-75-05</a></div>
+                                <!-- Ссылка возможно на карту ведет -->
+                                <div class="header-address"><a href="#">г. Пенза ул. Перспективная 9</a></div>
+                            </li>
+                            <li class="header-phone-list-item">
+                                <div class="header-phone-number"><a href="tel:+78412767505">+7 (8412) 76-75-05</a></div>
+                                <div class="header-address"><a href="#">г. Пенза ул. Привокзальная площадь 125</a></div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <ul class="user-links">
@@ -228,152 +241,238 @@
                 </ul>
             </div>
             <div class="header-menu">
-                <div class="menu-catalog JS-Dropdown" data-dropdown="{
+                <div class="menu-catalog js-main-menu-switcher JS-Dropdown" data-dropdown="{
                         'classActive': 'menu-catalog_active',
                         'classShow': 'catalog-menu-show'
-                    }">
+                    }" data-mainmenu-class="menu-catalog_active">
                     <a class="menu-catalog-switcher JS-Dropdown-Switcher" href="javascript:;">
                         <svg class="menu-catalog-icon" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1H14M1 5.5H14M1 10H6.2963" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span class="menu-catalog-label">Каталог</span>
                     </a>
-                    <div class="menu-catalog-sub JS-Dropdown-Menu">
-                        <div class="menu-catalog-sub-container">
-                            <div class="menu-catalog-box js-custom-scroll">
-                                <ul class="menu-catalog-list">
-                                    <li class="menu-catalog-item">
+                    <div class="menu-catalog-container JS-Dropdown-Menu">
+                        <div class="menu-catalog-box">
+                            <div class="menu-catalog-col">
+                                <ul class="menu-catalog-list JS-Menu" data-menu="{'classActive': 'menu-catalog-item_active'}">
+                                    <!-- Добавлен класс  menu-catalog-item_active у первого элемента -->
+                                    <li class="menu-catalog-item menu-catalog-item_active JS-Menu-Item">
+                                        <a class="menu-catalog-link" href="#">
+                                            <img class="menu-catalog-list-icon" src="./images/header/catalog-menu/keramogranit-icon.svg" alt="" />Керамогранит
+                                        </a>
                                         <div class="menu-catalog-block">
-                                            <a class="sub-menu-link" href="#">Куртки</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Горнолыжные куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Утеплённые куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Парки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Пуховики</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные жилеты</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Ветрозащитные куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивные ветровки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Водонепроницаемые куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Куртки Softshell</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Парадные куртки</a></li>
-                                            </ul>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Цвет</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бежевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Красный</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бордовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Фиолетовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Оранжевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Голубой</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Помещение</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для ванной</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для коридора</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для гостиной</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для фартука</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для бани</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для сауны</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Цвет</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бежевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Красный</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бордовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Фиолетовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Оранжевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Голубой</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Помещение</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для ванной</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для коридора</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для гостиной</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для фартука</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для бани</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для сауны</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Назначение</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для пола</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для стен</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для фартука</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для укладки на землю</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Страна</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Россия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Германия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Италия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Турция</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Испания</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Украина</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Швеция</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Португалия</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Размеры</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">60 х 60 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">20 х 20 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">10 х 10 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">30 х 30 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">120 х 60 см</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Костюмы</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Зимние утеплённые костюмы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные костюмы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Гоночные костюмы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивные костюмы</a></li>
-                                            </ul>
+                                    <li class="menu-catalog-item JS-Menu-Item">
+                                        <a class="menu-catalog-link" href="#">
+                                            <img class="menu-catalog-list-icon" src="./images/header/catalog-menu/mozaic-icon.svg" alt="" />Мозаика
+                                        </a>
+                                        <div class="menu-catalog-block">
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Цвет</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бежевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Красный</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бордовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Фиолетовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Оранжевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Голубой</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Помещение</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для ванной</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для коридора</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для гостиной</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для фартука</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для бани</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для сауны</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Назначение</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для пола</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для стен</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для фартука</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для укладки на землю</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Для кухни</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Страна</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Россия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Германия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Италия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Турция</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Испания</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Украина</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Швеция</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Португалия</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Брюки</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Горнолыжные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Утеплённые брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Ветрозащитные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Водонепроницаемые брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Брюки Softshell</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Трикотажные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Лёгкие летние брюки</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Толстовки</a>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Лонгсливы</a>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Футболки и Поло</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Футболки для бега</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Футболки для активных тренировок</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Футболки для повседневной носки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Рубашки-поло</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Майки</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Майки для бега</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Майки для активных тренировок</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивные топы</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Шорты</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шорты с компрессионным слоем</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шорты для бега и тренинга</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шорты для повседневной носки</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Тайтсы, лосины</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Короткие тайтсы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Длинные тайтсы / лосины</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Термобельё</a>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Аксессуары</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шапки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Балаклавы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Повязки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Баффы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Бейсболки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Варежки / Перчатки / Лобстеры</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Носки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Сумки, рюкзаки, чехлы</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Виды спорта</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Трейлраннинг</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Бег</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Аутдор</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивный стиль</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Фитнес / Тренинг</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Горные лыжи</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Активный отдых</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Городской стиль</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Беговые лыжи</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Зимние тренировки</a></li>
-                                            </ul>
+                                    <li class="menu-catalog-item menu-catalog-item_modified JS-Menu-Item">
+                                        <a class="menu-catalog-link" href="#">
+                                            <img class="menu-catalog-list-icon" src="./images/header/catalog-menu/tile-icon.svg" alt="" />Керамическая плитка
+                                        </a>
+                                        <div class="menu-catalog-block">
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Цвет</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бежевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Красный</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Бордовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Фиолетовый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Оранжевый</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Голубой</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Синий</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Страна</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Россия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Германия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Италия</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Турция</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Испания</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Украина</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Швеция</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Португалия</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Размеры</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">60 х 60 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">20 х 20 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">10 х 10 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">30 х 30 см</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">120 х 60 см</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Поверхность</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Глянцевая</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Матовая</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Лаппатированная</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Структурированная</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Полированная</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Патинированная</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Швеция</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Португалия</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="submenu-catalog">
+                                                <span class="submenu-catalog-name">Тип</span>
+                                                <ul class="submenu-catalog-list">
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Керамогранит</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Керамическая плитка</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Мозаика</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Декоры</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Полированная</a></li>
+                                                    <li class="submenu-catalog-item"><a class="submenu-catalog-link" href="#">Патинированная</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
+                                <a class="menu-catalog-button button" href="#">Вся плитка</a>
                             </div>
                         </div>
                     </div>
@@ -382,19 +481,42 @@
                     <li class="main-menu-item">
                         <a class="main-menu-link" href="#">О компании</a>
                     </li>
-                    <li class="main-menu-item">
+                    <!-- Добавить класс js-main-menu-item если есть вложенность -->
+                    <li class="main-menu-item js-main-menu-item">
                         <a class="main-menu-link" href="#">
                             Клиентам<svg class="main-menu-icon" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.5 3.49401L0.825613 0L0 0.775135L4.5 5L9 0.775135L8.17439 0L5.08388 2.90155L4.5 3.49401Z" fill="#111111"/>
                             </svg>
                         </a>
+                        <ul class="main-submenu">
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Оплата и доставка</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Гарантия и возврат</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Акции</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="main-menu-item">
+                    <li class="main-menu-item js-main-menu-item">
                         <a class="main-menu-link" href="#">
                             Вдохновение<svg class="main-menu-icon" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.5 3.49401L0.825613 0L0 0.775135L4.5 5L9 0.775135L8.17439 0L5.08388 2.90155L4.5 3.49401Z" fill="#111111"/>
                             </svg>
                         </a>
+                        <ul class="main-submenu">
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Популярные коллекции</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Вдохновение</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Дизайнерские решения</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="main-menu-item">
                         <a class="main-menu-link" href="#">Распродажа</a>
@@ -772,7 +894,7 @@
 
             <section class="main-about">
                 <div class="main-about-img">
-                    <a class="main-about-link" href="#">
+                    <a class="main-about-link js-popup" href="https://youtu.be/srepKrsWsbg">
                         <img class="main-about-pic" src="./images/img/main-about.jpg" alt="" />
                         <span class="main-about-play">
                             <span class="main-about-play-icon"></span>
@@ -2178,7 +2300,9 @@
                             <a class="articles-list-link" href="#">
                                 <img class="articles-list-img" src="./images/articles/articles-img-3.jpg" alt="" />
                                 <span class="articles-list-block">
-                                    <span class="articles-list-mark">Уют</span>
+                                    <span class="articles-list-marks">
+                                        <span class="articles-list-mark">Уют</span>
+                                    </span>
                                     <span class="articles-list-more">
                                          <span class="articles-list-more-icon"></span>
                                     </span>
@@ -2213,7 +2337,9 @@
                             <a class="articles-list-link" href="#">
                                 <img class="articles-list-img" src="./images/articles/articles-img-6.jpg" alt="" />
                                 <span class="articles-list-block">
-                                    <span class="articles-list-mark">Мозаика</span>
+                                    <span class="articles-list-marks">
+                                        <span class="articles-list-mark">Мозаика</span>
+                                    </span>
                                     <span class="articles-list-more">
                                          <span class="articles-list-more-icon"></span>
                                     </span>
@@ -2248,7 +2374,9 @@
                             <a class="articles-list-link" href="#">
                                 <img class="articles-list-img" src="./images/articles/articles-img-3.jpg" alt="" />
                                 <span class="articles-list-block">
-                                    <span class="articles-list-mark">Уют</span>
+                                    <span class="articles-list-marks">
+                                        <span class="articles-list-mark">Уют</span>
+                                    </span>
                                     <span class="articles-list-more">
                                          <span class="articles-list-more-icon"></span>
                                     </span>
@@ -2516,6 +2644,7 @@
     <script src="./js/JSC.AjaxMore.js"></script>
     <script src="./js/JSC.ShowMore.js"></script>
     <script src="./js/JSC.Quantity.js"></script>
+    <script src="./js/JSC.Menu.js"></script>
 
     <script src="./js/main.js"></script>
 

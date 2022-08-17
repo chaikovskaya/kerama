@@ -117,9 +117,7 @@ function initPopup() {
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<svg class="fancybox-close-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                '<path d="M10.4461 0.553928C10.1401 0.248002 9.64414 0.248002 9.33821 0.553928L5.5 4.39214L1.66179 0.553929C1.35586 0.248002 0.859855 0.248002 0.553928 0.553928C0.248002 0.859855 0.248002 1.35586 0.553928 1.66179L4.39214 5.5L0.553929 9.33821C0.248002 9.64414 0.248002 10.1401 0.553928 10.4461C0.859855 10.752 1.35586 10.752 1.66179 10.4461L5.5 6.60786L9.33821 10.4461C9.64414 10.752 10.1401 10.752 10.4461 10.4461C10.752 10.1401 10.752 9.64414 10.4461 9.33821L6.60786 5.5L10.4461 1.66179C10.752 1.35586 10.752 0.859855 10.4461 0.553928Z" fill="#202430"/>\n' +
-                '</svg>' +
+                '<i class="fancybox-close-icon"></i>' +
                 '</button>'
         },
         lang: "ru",
@@ -580,10 +578,8 @@ function openPopupSuccess(url) {
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<svg class="fancybox-close-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                '<path d="M10.4461 0.553928C10.1401 0.248002 9.64414 0.248002 9.33821 0.553928L5.5 4.39214L1.66179 0.553929C1.35586 0.248002 0.859855 0.248002 0.553928 0.553928C0.248002 0.859855 0.248002 1.35586 0.553928 1.66179L4.39214 5.5L0.553929 9.33821C0.248002 9.64414 0.248002 10.1401 0.553928 10.4461C0.859855 10.752 1.35586 10.752 1.66179 10.4461L5.5 6.60786L9.33821 10.4461C9.64414 10.752 10.1401 10.752 10.4461 10.4461C10.752 10.1401 10.752 9.64414 10.4461 9.33821L6.60786 5.5L10.4461 1.66179C10.752 1.35586 10.752 0.859855 10.4461 0.553928Z" fill="#202430"/>\n' +
-                '</svg>' +
-                '</button>',
+                '<i class="fancybox-close-icon"></i>' +
+                "</button>"
         },
         lang: "ru",
         i18n: {
@@ -656,7 +652,7 @@ function openPopupForgotPassword($element) {
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<i class="fancybox-close-icon las la-times"></i>' +
+                '<i class="fancybox-close-icon"></i>' +
                 "</button>"
         },
         lang: "ru",
@@ -690,7 +686,7 @@ function openPopupCode(srcData) {
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<i class="fancybox-close-icon las la-times"></i>' +
+                '<i class="fancybox-close-icon"></i>' +
                 "</button>"
         },
         lang: "ru",
@@ -728,7 +724,7 @@ function openPopupRegistration($element) {
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<i class="fancybox-close-icon las la-times"></i>' +
+                '<i class="fancybox-close-icon"></i>' +
                 "</button>"
         },
         lang: "ru",
@@ -805,6 +801,71 @@ function initPopupCity() {
         afterShow: function (data) {
             initScroll();
         },
+    });
+}
+
+function initPopupCallback() {
+    $element = $('.js-popup-callback');
+
+    $element.fancybox({
+        src  : $element.data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon"></i>' +
+                '</button>'
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
+        afterShow: function (data) {
+        },
+    });
+}
+
+function openPopupBuy($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-popup-buy');
+    }
+
+    var url = $element.data('src') + '?id=' + $element.attr('data-id') + '&quantity=' + $element.attr('data-quantity');
+
+    $.fancybox.open({
+        src  : url,
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initForm();
+            initMask();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon"></i>' +
+                "</button>"
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupBuy() {
+    $(".js-open-buy").on('click', function() {
+        console.log("true");
+        $.fancybox.close();
+        openPopupBuy($(".js-open-buy"));
     });
 }
 
@@ -889,7 +950,7 @@ function initPopupBasket() {
                     $('.js-form-popup').html(data);
                     initScroll();
                     initQuantity();
-                    //initPopupBuy();
+                    initPopupBuy();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -945,7 +1006,7 @@ function initPopupProduct() {
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<i class="fancybox-close-icon las la-times"></i>' +
+                '<i class="fancybox-close-icon"></i>' +
                 "</button>"
         },
         lang: "ru",
@@ -957,6 +1018,7 @@ function initPopupProduct() {
         afterShow: function (data) {
             initShowMore();
             initGalleryCard();
+            initPopupBuy();
         },
     });
 }
@@ -1009,6 +1071,35 @@ function initGalleryCard() {
     });
 };
 
+function initMenu() {
+    if (typeof(Menu) === 'undefined' || !jQuery.isFunction(Menu)) {
+        return false;
+    }
+
+    var common = {};
+
+    $('.JS-Menu').not('.JS-Menu-ready').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('menu'));
+        new Menu(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initMainmenu() {
+    $('.js-main-menu-item').each(function(){
+        let $element = $(this),
+            $switcher = $('.js-main-menu-switcher'),
+            classActive = $switcher.data('mainmenu-class');
+
+        $element.hover(
+            function () {
+                $switcher.removeClass(classActive);
+            },
+            function () {
+            }
+        );
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1051,6 +1142,7 @@ $(document).ready(function () {
     initTooltip();
     initPopupProfile();
     initPopupCity();
+    initPopupCallback();
     initTextFilterCity();
     initSearch();
     initPopupBasket();
@@ -1058,4 +1150,7 @@ $(document).ready(function () {
     initQuantity();
     initPopupProduct();
     initGalleryCard();
+    initMenu();
+    initMainmenu();
+    initPopupBuy();
 });
