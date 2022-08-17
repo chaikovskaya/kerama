@@ -4388,7 +4388,6 @@ body.mob-menu-show {
     width: 49%;
     max-width: 570px;
     position: relative;
-    background: url(../images/subscribe/subscribe-img-1.png) no-repeat right bottom;
     border-radius: 10px 0 0 10px; }
     .subscribe-img:after {
       content: "";
@@ -4406,10 +4405,26 @@ body.mob-menu-show {
     font-size: 14px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.9); }
+  .subscribe-bgr {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: calc(100% - 20px);
+    height: 100%;
+    background: url(../images/subscribe/subscribe-bgr-1.png) no-repeat right -120px;
+    border-radius: 10px 0 0 10px; }
+  .subscribe-pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/subscribe/subscribe-img-1.png) no-repeat right bottom;
+    border-radius: 10px 0 0 10px; }
   .subscribe-decor {
     position: absolute;
     bottom: 56px;
-    right: 144px;
+    right: 154px;
     width: 234px;
     height: 199px;
     background: url(../images/subscribe/subscribe-img-2.png) no-repeat 0 0; }
@@ -4458,8 +4473,14 @@ body.mob-menu-show {
       min-height: 224px; }
       .subscribe-img {
         width: 44%;
-        max-width: 447px;
-        background-image: url(../images/subscribe/subscribe-img-3.png); }
+        max-width: 447px; }
+      .subscribe-pic {
+        background-image: url(../images/subscribe/subscribe-img-3.png);
+        background-position: left bottom; }
+      .subscribe-bgr {
+        right: 0;
+        width: 100%;
+        background-position: right -32px; }
       .subscribe-detail {
         width: 56%;
         padding: 17px 20px; }
@@ -4481,10 +4502,15 @@ body.mob-menu-show {
         padding-bottom: 8px; }
       .subscribe-img {
         width: 100%;
-        min-height: 190px;
-        border-radius: 0 0 10px 10px;
+        min-height: 190px; }
+      .subscribe-bgr {
+        background-position: right 13px; }
+      .subscribe-pic {
         background-image: url(../images/subscribe/subscribe-img-4.png);
-        background-position: left bottom; }
+        background-position: left bottom;
+        border-radius: 0 0 10px 10px; }
+      .subscribe-decor {
+        display: none; }
       .subscribe-list {
         float: none;
         margin-top: 21px;
