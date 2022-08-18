@@ -590,6 +590,34 @@ function openPopupSuccess(url) {
     });
 }
 
+function initPopupAddedBasket(url) {
+    if (typeof(url) == 'undefined') {
+        url = '/';
+    }
+
+    $.fancybox.open({
+        src  : url,
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initQuantity();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon"></i>' +
+                "</button>"
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
 function initShowMore(showmoreExtra) {
     if (typeof(ShowMore) === 'undefined' || !jQuery.isFunction(ShowMore)) {
         return false;

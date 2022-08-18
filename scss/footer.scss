@@ -19,7 +19,6 @@
     &-menu-item {
         margin-right: 26px;
     }
-    &-menu-item_catalog {}
     &-menu-link {
         text-decoration: none;
         font-size: 14px;
@@ -68,7 +67,7 @@
         display: none;
     }
     &-logo {
-        margin-right: 44px;
+        margin-right: 30px;
         text-decoration: none;
         font-weight: 700;
         font-size: 30px;
@@ -88,7 +87,7 @@
         margin-right: auto;
     }
     &-develop {
-        margin-left: 50px;
+        margin-left: auto;
         font-weight: 700;
         font-size: 10px;
         line-height: 13px;
@@ -100,32 +99,39 @@
         margin-left: 30px;
     }
     &-copy {
-        display: none;
         max-width: 280px;
-        margin-right: 13px;
+        margin-right: 20px;
         font-weight: 500;
         font-size: 10px;
         line-height: 17px;
         font-family: 'Montserrat', sans-serif;
     }
+    &-panel {
+        min-height: 34px;
+        padding-top: 12px;
+        padding-bottom: 9px;
+        background-color: #E3E7EF;
+    }
+    &-panel-container {
+        display: flex;
+    }
 
     @media screen
     and (max-width: $desktop){
     }
-
     @media screen
-    and (max-width: $tablet){
-        &-menu-item_catalog {
-            display: none;
-        }
-        &-main-container {
-            padding-top: 19px;
-            padding-bottom: 15px;
-        }
+    and (max-width: $notebook){
         &-logo {
             margin-right: 27px;
             font-size: 19px;
             line-height: 28px;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        &-main-container {
+            padding-top: 19px;
+            padding-bottom: 15px;
         }
         &-phone {
             margin-right: 0;
@@ -133,8 +139,11 @@
         &-phone-label {
             display: none;
         }
+        &-menu {
+            padding-right: 20px;
+        }
         &-menu-item {
-            margin-right: 19px;
+            margin-right: 15px;
         }
         &-phone-value {
             font-size: 16px;
@@ -153,12 +162,12 @@
         &-develop {
             display: none;
         }
-        &-copy {
-            display: block;
-        }
         &-bottom-container {
             align-items: flex-start;
             padding-bottom: 23px;
+        }
+        &-panel {
+            display: none;
         }
     }
 
@@ -236,7 +245,7 @@
     }
 
     @media screen
-    and (max-width: $tablet){
+    and (max-width: $notebook){
         &-label {
             text-transform: none;
             font-size: 10px;
@@ -246,6 +255,9 @@
         &-label-symbol {
             display: inline-block;
         }
+    }
+    @media screen
+    and (max-width: $tablet){
     }
     @media screen
     and (max-width: $mobile){

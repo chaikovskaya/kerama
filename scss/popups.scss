@@ -275,6 +275,12 @@ and (max-width: $mobile) {
         display: none;
         max-width: 367px;
     }
+    &_success {
+        text-align: center;
+    }
+    &_success &-subtitle {
+        color: #000;
+    }
 
     @media screen
     and (max-width: $tablet) {
@@ -286,6 +292,10 @@ and (max-width: $mobile) {
     @media screen
     and (max-width: $mobile) {
         padding: 28px 23px 35px;
+        &_success &-subtitle {
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 }
 
@@ -543,15 +553,20 @@ body.mob-form-show .wrapper {
         }
     }
     &-pic-link {
-        display: block;
-    }
-    &-pic {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-width: 116px;
         width: 116px;
         height: 116px;
-        object-fit: cover;
         border-radius: 4px;
+        overflow: hidden;
+    }
+    &-pic {
+        display: block;
+        object-fit: contain;
+        min-width: 100%;
+        min-height: 100%;
     }
     &-buttons {
         display: flex;
@@ -605,7 +620,7 @@ body.mob-form-show .wrapper {
         margin-bottom: 15px;
     }
     &-discount-wrapper {
-        margin-bottom: 2px;
+        line-height: 15px;
     }
     &-price-old {
         position: relative;
@@ -637,7 +652,7 @@ body.mob-form-show .wrapper {
         color: #FFFFFF;
     }
     &-price-value {
-        margin-bottom: 19px;
+        margin-bottom: 18px;
         font-weight: 700;
         font-size: 15px;
         line-height: 22px;
@@ -835,15 +850,20 @@ body.mob-form-show .wrapper {
         width: 17%;
     }
     &-pic-link {
-        display: block;
-    }
-    &-pic {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-width: 91px;
         width: 91px;
         height: 91px;
-        object-fit: cover;
         border-radius: 4px;
+        overflow: hidden;
+    }
+    &-pic {
+        display: block;
+        object-fit: contain;
+        min-width: 100%;
+        min-height: 100%;
     }
     &-name {
         text-decoration: none;
@@ -1120,5 +1140,97 @@ body.mob-form-show .wrapper {
         &-price {
             flex-wrap: wrap;
         }
+    }
+}
+
+.added-basket-popup {
+    width: 733px;
+    padding-top: 22px;
+    padding-bottom: 30px;
+    &-product {
+        display: flex;
+        padding-bottom: 14px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #BDBDBD;
+    }
+    &-col {
+        padding-right: 25px;
+    }
+    &-description {
+        display: flex;
+        width: 63%;
+        padding-right: 15px;
+    }
+    &-img {
+        margin-right: 20px;
+    }
+    &-pic-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 116px;
+        width: 116px;
+        height: 116px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    &-pic {
+        display: block;
+        object-fit: contain;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &-name {
+        display: inline-block;
+        margin-bottom: 14px;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.022em;
+        color: #000000;
+    }
+    &-code {
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.022em;
+        color: #1C1D1D;
+    }
+    &-order {
+        min-width: 195px;
+        width: 19%;
+    }
+    &-amount {
+        margin-bottom: 15px;
+    }
+    &-price {
+        min-width: 90px;
+        width: 17%;
+    }
+    &-info {
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.022em;
+        color: #828282;
+    }
+    &-price-symbol {
+        vertical-align: super;
+        font-size: 7px;
+    }
+    &-panel {
+        display: flex;
+        align-items: center;
+    }
+    &-sum {
+        margin-right: auto;
+        padding-right: 20px;
+        font-size: 12px;
+        line-height: 17px;
+        color: #828282;
+    }
+    &-button {
+        margin-left: 20px;
+        text-transform: none;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 }

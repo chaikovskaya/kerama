@@ -670,6 +670,9 @@ blockquote {
 .tooltip {
 	display: inline-block;
 }
+.tpd-tooltip {
+	z-index: 10000!important;
+}
 .tpd-skin-light .tpd-background {
 	border-width: 0;
 }
