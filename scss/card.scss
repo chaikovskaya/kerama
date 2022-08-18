@@ -78,6 +78,7 @@
         overflow: hidden;
     }
     &-gallery-thumbs-list {
+        z-index: auto;
     }
     &-thumbs-item {
         display: flex;
@@ -98,11 +99,13 @@
     }
     &-gallery-img {
     }
+    &-gallery-slider-nav {
+    }
     &-gallery-slider-decor {
         position: absolute;
         top: 0;
         left: -52px;
-        z-index: 1;
+        z-index: 2;
         background-color: #fff;
         height: 100%;
         width: 52px;

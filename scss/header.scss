@@ -92,11 +92,12 @@
         position: absolute;
         top: 100%;
         left: -20px;
-        z-index: 4;
+        z-index: 8;
         width: 234px;
         background-color: #fff;
-        padding: 15px 20px 20px;
+        padding: 7px 20px 20px;
         border-radius: 0px 15px 15px 15px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
     }
     &-phone_active &-phone-dropdown {
         display: block;
@@ -319,17 +320,13 @@
     @media screen
     and (max-width: $mobile){
         margin-left: 11px;
-        margin-right: 10px;
-        &-item_basket {
-            margin-right: 0;
+        &-item {
+            margin-right: 20px;
         }
         &-item_compare {
             display: none;
         }
         &-item_wishlist {
-            display: none;
-        }
-        &-item_auth {
             display: none;
         }
     }
@@ -364,7 +361,7 @@
         position: absolute;
         top: 100%;
         left: -20px;
-        z-index: 9;
+        z-index: 7;
         width: calc(100% + 34px);
         padding: 20px 20px 50px;
         background-color: #fff;
@@ -586,6 +583,7 @@
     background-color: #fff;
     padding: 25px 20px 23px;
     border-radius: 0px 15px 15px 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
     &-item {
         margin-bottom: 15px;
         line-height: 16px;
@@ -675,11 +673,12 @@
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 3;
+        z-index: 7;
         width: 100%;
         padding: 25px 0 23px 20px;
         background-color: #fff;
         border-radius: 0 15px 15px 15px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
     }
     &-list-popup-block {
         max-height: 300px;
@@ -777,6 +776,9 @@
     and (max-width: $mobile){
         margin-left: 0;
         max-width: none;
+        &-list-popup-block {
+            max-height: 200px;
+        }
     }
 }
 
@@ -951,7 +953,7 @@
         margin-right: auto;
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 19px;
         color: #8a8a8a;
         text-decoration: none;
@@ -969,11 +971,11 @@
     &-list-link {
         display: flex;
         align-items: center;
-        min-height: 39px;
+        min-height: 50px;
         padding-top: 10px;
         padding-bottom: 12px;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 17px;
         color: #000000;
         &:hover {
@@ -989,11 +991,11 @@
         display: flex;
         align-items: center;
         position: relative;
-        min-height: 39px;
+        min-height: 50px;
         padding: 10px 23px;
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 19px;
         background-color: #f1f2f6;
         text-decoration: none;
@@ -1115,19 +1117,20 @@
         display: flex;
     }
     &-location-icon {
-        width: 14px;
-        height: 19px;
+        width: 15px;
+        height: 20px;
+        margin-top: -1px;
         margin-right: 9px;
     }
     &-location-label {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 17px;
         color: #000000;
     }
     &-info-name {
         margin-bottom: 11px;
         font-weight: 700;
-        font-size: 10px;
+        font-size: 12px;
         line-height: 13px;
         letter-spacing: 0.01em;
         color: #333333;

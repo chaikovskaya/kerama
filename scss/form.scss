@@ -599,16 +599,19 @@ label.form-error {
     }
     &-icon {
         margin-top: -1px;
-        margin-left: -2px;
         font-size: 20px;
         line-height: 0;
         color: #000000;
+        font-style: normal;
     }
     &-counter:hover &-icon {
         color: #FFFFFF;
     }
     &-counter &-icon {
-        margin-left: -3px;
+        margin-left: -1px;
+    }
+    &-counter:first-child &-icon {
+        margin-top: -2px;
     }
     &-digit {
         width: 100%;
@@ -623,6 +626,12 @@ label.form-error {
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        &-counter &-icon {
+            margin-left: 0;
         }
     }
 }

@@ -323,6 +323,7 @@ and (max-width: $mobile) {
         font-size: 14px;
         line-height: 16px;
         color: #111111;
+        cursor: pointer;
     }
     &-list-link:hover {
         color: $color-red;
@@ -355,16 +356,15 @@ and (max-width: $mobile) {
         right: -30px;
     }
     &-radio {
-        visibility: hidden;
-    }
-    &-list-item_active &-radio {
-        visibility: visible;
     }
 
     @media screen
     and (max-width: $mobile) {
         &-list-wrapper .simplebar-track {
             right: -23px;
+        }
+        &-list-link {
+            font-size: 15px;
         }
     }
 }
@@ -609,6 +609,18 @@ body.mob-form-show .wrapper {
         line-height: 18px;
         letter-spacing: 0.022em;
         color: #000000;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 3;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        display: -webkit-box;
+        display: box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
     }
     &-code {
         font-size: 12px;
@@ -617,9 +629,10 @@ body.mob-form-show .wrapper {
         color: #1C1D1D;
     }
     &-amount {
-        margin-bottom: 15px;
+        margin-bottom: 17px;
     }
     &-discount-wrapper {
+        margin-top: -4px;
         line-height: 15px;
     }
     &-price-old {
@@ -652,10 +665,10 @@ body.mob-form-show .wrapper {
         color: #FFFFFF;
     }
     &-price-value {
-        margin-bottom: 18px;
+        margin-bottom: 15px;
         font-weight: 700;
         font-size: 15px;
-        line-height: 22px;
+        line-height: 18px;
         color: #000000;
         white-space: nowrap;
     }
@@ -753,15 +766,23 @@ body.mob-form-show .wrapper {
         }
         &-price {
             width: 20%;
+            margin-top: -3px;
         }
         &-img {
             margin-bottom: 15px;
             margin-right: 15px;
         }
-        &-pic {
+        &-pic-link {
             min-width: 60px;
             width: 60px;
             height: 60px;
+        }
+        &-price-value {
+            margin-bottom: 14px;
+            line-height: 16px;
+        }
+        &-discount-wrapper {
+            min-height: 16px;
         }
         &-name {
             margin-bottom: 9px;
@@ -811,6 +832,9 @@ body.mob-form-show .wrapper {
         }
         &-total-currency {
             font-size: 19px;
+        }
+        &-actions {
+            justify-content: normal;
         }
     }
 }
@@ -867,6 +891,18 @@ body.mob-form-show .wrapper {
     }
     &-name {
         text-decoration: none;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 3;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        display: -webkit-box;
+        display: box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
     }
     &-brand {
         display: flex;
@@ -912,7 +948,7 @@ body.mob-form-show .wrapper {
         &-item {
             flex-wrap: wrap;
         }
-        &-pic {
+        &-pic-link {
             min-width: 60px;
             width: 60px;
             height: 60px;
