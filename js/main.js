@@ -544,25 +544,6 @@ function initForm() {
     });
 }
 
-function initAjaxMore() {
-    if (typeof(AjaxMore) === 'undefined' || !jQuery.isFunction(AjaxMore)) {
-        return false;
-    }
-
-    var common = {
-        beforeSend: function () {
-        },
-        success: function () {
-        }
-    };
-
-    $('.JS-AjaxMore').each(function(){
-        var local = GLOBAL.parseData(jQuery(this).data('ajaxmore'));
-        new AjaxMore(this, jQuery.extend({}, common, local));
-    });
-}
-
-
 function openPopupSuccess(url) {
     if (typeof(url) == 'undefined') {
         url = '/';
@@ -853,6 +834,9 @@ function initPopupCallback() {
             },
         },
         afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initForm();
+            initMask();
         },
     });
 }
@@ -1128,17 +1112,183 @@ function initMainmenu() {
     });
 }
 
+function initAccordion() {
+    if (typeof(Accordion) === 'undefined' || !jQuery.isFunction(Accordion)) {
+        return false;
+    }
+
+    var common = {};
+
+    $('.JS-Accordion').not('.JS-Accordion-ready').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('accordion'));
+        new Accordion(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initSliderRange() {
+    jQuery('.js-slider-range').each(function() {
+        var $element = $(this),
+            $track = $element.find('.js-slider-range-track'),
+            $textMin = $element.find('.js-slider-rating-text-min'),
+            $textMax = $element.find('.js-slider-rating-text-max'),
+            $labelMin = $element.find('.js-slider-range-label-min').text() || '',
+            $labelMax = $element.find('.js-slider-range-label-max').text() || '',
+            $currency = $element.find('.js-slider-range-currency').html() || '';
+
+        var min = Number($(this).find('.min-price').attr('data-value'));
+        var max = Number($(this).find('.max-price').attr('data-value'));
+
+        var price_id = $(this).attr('data-code');
+
+        $track.slider({
+            range: true,
+            min: min,
+            max: max,
+            drag: true,
+            values: [min, max],
+            classes: {
+                "ui-slider-handle": "slider-range-button",
+                "ui-slider-range": "slider-range-quantity"
+            },
+            slide: function (event, ui) {
+                $("input#minCost_" + price_id).val(ui.values[0]);
+                $("input#maxCost_" + price_id).val(ui.values[1]);
+
+                $('#minCost_' + price_id).trigger('change');
+                $textMin.html( $labelMin + " " + ui.values[0] + " " + $currency );
+                $textMax.html( $labelMax + " " + ui.values[1] + " " + $currency );
+            },
+            stop: function (event, ui) {
+                $("input#minCost_" + price_id).val(ui.values[0]);
+                $("input#maxCost_" + price_id).val(ui.values[1]);
+
+                $('#minCost_' + price_id).trigger('change');
+            },
+            create: function() {
+            },
+        });
+    });
+}
+
+var sliderCatalog;
+function initSliderCatalog() {
+    jQuery('.js-slider-catalog').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length;
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderCatalog = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                },
+                768: {
+                },
+                992: {
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+function reInitSliderCatalog() {
+    if (sliderCatalog) {
+        sliderCatalog.destroy();
+    }
+    sliderCatalog = undefined;
+}
+
+function initPopupFilter() {
+    if (typeof(MobileMenu) === 'undefined' || !jQuery.isFunction(MobileMenu)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-PopupFilter').not('.JS-MobileMenu-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('mobilemenu'));
+        new MobileMenu(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initOpenFilter() {
+    $('.js-catalog-filter-link').each(function(){
+        let $element = $(this);
+
+        $element.on('click', function(e, data) {
+            $('.JS-PopupFilter .JS-MobileMenu-Burger').trigger('click');
+        });
+    });
+}
+
+function initAjaxMoreCatalog() {
+    if (typeof(AjaxMore) === 'undefined' || !jQuery.isFunction(AjaxMore)) {
+        return false;
+    }
+
+    var lastElement;
+
+    var common = {
+        beforeSend: function () {
+            if ( GLOBAL.widthWindow == 'isTablet' || GLOBAL.widthWindow == 'isMobile') {
+                if (sliderCatalog != undefined) {
+                    reInitSliderCatalog();
+                }
+                lastElement = $(".js-slider-catalog .swiper-slide").length;
+            }
+        },
+        success: function () {
+            if ( GLOBAL.widthWindow == 'isTablet' || GLOBAL.widthWindow == 'isMobile') {
+                if (sliderCatalog == undefined) {
+                    initSliderCatalog();
+                    sliderCatalog.slideTo(lastElement, 1000, false);
+                }
+            }
+            initShowMore();
+        }
+    };
+
+    $('.JS-AjaxMoreCatalog').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('ajaxmore'));
+        new AjaxMore(this, jQuery.extend({}, common, local));
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
         GLOBAL.widthWindow = 'isMobile';
-
+        if (sliderCatalog == undefined) {
+            initSliderCatalog();
+        }
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
-
+        if (sliderCatalog == undefined) {
+            initSliderCatalog();
+        }
     } else {
         GLOBAL.widthWindow = '';
-
+        if (sliderCatalog) {
+            reInitSliderCatalog();
+        }
     }
 }
 
@@ -1165,7 +1315,6 @@ $(document).ready(function () {
     initSliderArticles();
     initMobileMenu();
     initForm();
-    initAjaxMore();
     initShowMore();
     initTooltip();
     initPopupProfile();
@@ -1181,4 +1330,9 @@ $(document).ready(function () {
     initMenu();
     initMainmenu();
     initPopupBuy();
+    initAccordion();
+    initSliderRange();
+    initPopupFilter();
+    initOpenFilter();
+    initAjaxMoreCatalog();
 });

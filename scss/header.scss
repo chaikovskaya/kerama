@@ -1,6 +1,9 @@
 
 .header {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    .main-page & {
+        margin-bottom: 20px;
+    }
     &-top {
         display: flex;
         align-items: center;
@@ -143,7 +146,10 @@
 
     @media screen
     and (max-width: $tablet){
-        margin-bottom: 14px;
+        margin-bottom: 15px;
+        .main-page & {
+            margin-bottom: 15px;
+        }
         &-top {
             padding-top: 11px;
             padding-bottom: 11px;
@@ -170,7 +176,6 @@
 
     @media screen
     and (max-width: $mobile){
-        margin-bottom: 15px;
         &-top {
             padding-top: 10px;
             padding-bottom: 13px;
@@ -408,6 +413,7 @@
         top: 29px;
         left: 0;
         width: 100%;
+        min-height: 100%;
         padding-left: 199px;
         padding-bottom: 30px;
         border-radius: 0 0 10px 10px;
@@ -452,12 +458,18 @@
     &-decor-right {
         position: absolute;
         top: 0;
-        left: 50%;
+        left: 49%;
         z-index: -1;
         width: 100vw;
         max-width: none;
         height: 100%;
         background-color: #fff;
+    }
+    &-block &-decor-left {
+        box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2);
+    }
+    &-block &-decor-right {
+        box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2);
     }
 
     @media screen
@@ -853,7 +865,7 @@
     &-block {
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1000;
         width: 100%;
         height: 100%;
@@ -890,6 +902,7 @@
         background-color: rgba(0, 0, 0, 0.4);
     }
     &-menu_active &-menu-decor {
+        display: block;
     }
     &-block.open {
         transform: translateX(0);
