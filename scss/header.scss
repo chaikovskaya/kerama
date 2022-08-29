@@ -105,6 +105,9 @@
     &-phone_active &-phone-dropdown {
         display: block;
     }
+    &-phone_active &-phone-icon {
+        transform: scaleY(-1);
+    }
     &-phone-number {
         margin-bottom: 4px;
         a {
@@ -564,15 +567,19 @@
         color: #111111;
         text-decoration: none;
     }
-    &-item:hover &-link {
-        font-weight: 700;
-    }
     &-icon {
         width: 9px;
         height: 5px;
         margin-left: 6px;
         margin-top: 3px;
     }
+    &-item:hover &-link {
+        font-weight: 700;
+    }
+    &-item:hover &-icon {
+        transform: scaleY(-1);
+    }
+
     @media screen
     and (max-width: $tablet){
         &-item {
@@ -620,6 +627,7 @@
 .search {
     flex-grow: 1;
     margin-left: auto;
+    width: 100%;
     max-width: 498px;
     transition: width 0.2s linear, visibility 0.2s linear;
     &-button {

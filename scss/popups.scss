@@ -567,9 +567,6 @@ body.mob-form-show .wrapper {
     }
     &-pic {
         display: block;
-        object-fit: contain;
-        min-width: 100%;
-        min-height: 100%;
     }
     &-buttons {
         display: flex;
@@ -888,9 +885,6 @@ body.mob-form-show .wrapper {
     }
     &-pic {
         display: block;
-        object-fit: contain;
-        min-width: 100%;
-        min-height: 100%;
     }
     &-name {
         text-decoration: none;

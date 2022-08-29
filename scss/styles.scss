@@ -686,6 +686,11 @@ blockquote {
 }
 /* /tooltip */
 
+.line {
+	background-color: #000;
+	margin-top: 0;
+	margin-bottom: 14px;
+}
 
 @media screen
 and (max-width: $desktop){

@@ -37,7 +37,7 @@
   };
 
   AjaxMore.prototype._getUrl = function _getUrl() {
-    var $url = this.$element.find('.JS-AjaxMore-Next').attr('href');
+    var $url = this.$more.data('ajaxmore-url');
     return $url;
   }
 
@@ -45,18 +45,21 @@
   }
 
   AjaxMore.prototype._done = function _done(data, $url) {
-    var className = $(this.$element).attr('class').split(' ').join('.'),
-        $itemNew = $(data).find('.'+ className).find('.JS-AjaxMore-Content').html(),
-        $pagerNew = $(data).find('.'+ className).find('.JS-AjaxMore-Pager').html();
+    var $itemNew = $(data).filter('.JS-AjaxMore-Content-New').html() || {},
+        $linkNew = $(data).filter('.JS-AjaxMore-Link-New') || {},
+        $pagerNew = $(data).filter('.JS-AjaxMore-Pager') || {};
 
     this.$content.append($itemNew);
-    this.$pager.html($pagerNew);
+    this.$pager.replaceWith($pagerNew);
 
-    history.pushState(null, null, $url);
+    //history.pushState(null, null, $url);
 
-    var $url = this._getUrl();
-    if ($url == undefined) {
+    var urlNew = $linkNew.data('ajaxmore-url');
+
+    if (urlNew == undefined) {
       this.$more.remove();
+    } else {
+      this.$more.attr('data-ajaxmore-url', urlNew);
     }
 
     this.success();

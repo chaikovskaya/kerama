@@ -147,6 +147,7 @@ function initSliderMainBanner() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderMainBanner = new Swiper($slider[0], {
+            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -154,17 +155,16 @@ function initSliderMainBanner() {
                 disabledClass: "slider-button_disabled",
             },
             slidesPerView: 'auto',
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
                     spaceBetween: 15,
-                    loop: false,
                 },
                 768: {
                     spaceBetween: 16,
                 },
                 992: {
-                    loop: isStart,
                     spaceBetween: 28,
                 },
             },
@@ -196,7 +196,7 @@ function initSliderMainCategory() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderMainCategory = new Swiper($list[0], {
-            loop: false,
+            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -204,13 +204,18 @@ function initSliderMainCategory() {
                 disabledClass: "slider-button_disabled",
             },
             slidesPerView: 'auto',
-            spaceBetween: 15,
             freeMode: true,
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
+                    spaceBetween: 15,
                 },
                 768: {
+                    spaceBetween: 15,
+                },
+                992: {
+                    spaceBetween: 20,
                 },
             },
             on: {
@@ -241,7 +246,7 @@ function initSliderMainActions() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderMainActions = new Swiper($list[0], {
-            loop: false,
+            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -249,6 +254,7 @@ function initSliderMainActions() {
                 disabledClass: "slider-button_disabled",
             },
             slidesPerView: 'auto',
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
@@ -256,9 +262,11 @@ function initSliderMainActions() {
                 },
                 768: {
                     spaceBetween: 15,
+                    loop: sliderLength > 2 ? true : false,
                 },
                 992: {
                     spaceBetween: 20,
+                    loop: sliderLength > 3 ? true : false,
                 },
             },
             on: {
@@ -289,7 +297,7 @@ function initSliderProducts() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderProducts = new Swiper($list[0], {
-            loop: false,
+            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -297,6 +305,7 @@ function initSliderProducts() {
                 disabledClass: "slider-button_disabled",
             },
             slidesPerView: 'auto',
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
@@ -304,9 +313,11 @@ function initSliderProducts() {
                 },
                 768: {
                     spaceBetween: 15,
+                    loop: sliderLength > 3 ? true : false,
                 },
                 992: {
                     spaceBetween: 20,
+                    loop: sliderLength > 5 ? true : false,
                 },
             },
             on: {
@@ -337,6 +348,7 @@ function initSliderProductsNav() {
             pagination: false,
             navigation: false,
             slidesPerView: 'auto',
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
@@ -369,7 +381,7 @@ function initSliderBrands() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderBrands = new Swiper($list[0], {
-            loop: false,
+            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -378,6 +390,7 @@ function initSliderBrands() {
             },
             slidesPerView: 'auto',
             freeMode: true,
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
@@ -423,6 +436,7 @@ function initSliderInspiration() {
                 disabledClass: "slider-button_disabled",
             },
             slidesPerView: 'auto',
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
@@ -433,7 +447,6 @@ function initSliderInspiration() {
                 },
                 992: {
                     spaceBetween: 20,
-                    //allowTouchMove: false,
                 },
             },
             on: {
@@ -469,7 +482,7 @@ function initSliderArticles() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderArticles = new Swiper($list[0], {
-            loop: false,
+            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -477,6 +490,7 @@ function initSliderArticles() {
                 disabledClass: "slider-button_disabled",
             },
             slidesPerView: 'auto',
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
@@ -484,9 +498,11 @@ function initSliderArticles() {
                     },
                 768: {
                     spaceBetween: 15,
+                    loop: sliderLength > 3 ? true : false,
                 },
                 992: {
                     spaceBetween: 20,
+                    loop: sliderLength > 5 ? true : false,
                 },
             },
             on: {
@@ -1180,7 +1196,7 @@ function initSliderCatalog() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderCatalog = new Swiper($list[0], {
-            loop: false,
+            loop: isStart,
             pagination: false,
             navigation: {
                 nextEl: $slider.find('.js-slider-next')[0],
@@ -1189,11 +1205,13 @@ function initSliderCatalog() {
             },
             slidesPerView: 'auto',
             spaceBetween: 15,
+            threshold: 10,
             breakpoints: {
                 0: {
                     simulateTouch: false,
                 },
                 768: {
+                    loop: sliderLength > 3 ? true : false,
                 },
                 992: {
                 },
@@ -1272,6 +1290,144 @@ function initAjaxMoreCatalog() {
     });
 }
 
+let sliderCategory;
+function initSliderCategory() {
+    jQuery('.js-slider-category').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderCategory = new Swiper($list[0], {
+            loop: isStart,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            threshold: 10,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 15,
+                },
+                768: {
+                    spaceBetween: 15,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                992: {
+                    spaceBetween: 20,
+                    loop: sliderLength > 3 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+
+let sliderCatalogSections;
+function initSliderCatalogSections() {
+    jQuery('.js-slider-catalog-sections').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderCatalogSections = new Swiper($list[0], {
+            loop: isStart,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            freeMode: true,
+            threshold: 10,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 15,
+                },
+                768: {
+                    spaceBetween: 15,
+                },
+                992: {
+                 },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+function reInitSliderCatalogSections() {
+    if (sliderCatalogSections) {
+        sliderCatalogSections.destroy();
+    }
+    sliderCatalogSections = undefined;
+}
+
+function initAjaxMoreCatalogSections() {
+    if (typeof(AjaxMore) === 'undefined' || !jQuery.isFunction(AjaxMore)) {
+        return false;
+    }
+
+    let lastElement;
+
+    let common = {
+        beforeSend: function () {
+            if ( GLOBAL.widthWindow == 'isTablet' || GLOBAL.widthWindow == 'isMobile') {
+                if (sliderCatalogSections != undefined) {
+                    reInitSliderCatalogSections();
+                }
+                lastElement = $(".js-slider-catalog-sections .swiper-slide").length;
+            }
+        },
+        success: function () {
+            if ( GLOBAL.widthWindow == 'isTablet' || GLOBAL.widthWindow == 'isMobile') {
+                if (sliderCatalogSections == undefined) {
+                    initSliderCatalogSections();
+                    sliderCatalogSections.slideTo(lastElement, 1000, false);
+                }
+            }
+        }
+    };
+
+    $('.JS-AjaxMoreCatalogSections').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('ajaxmore'));
+        new AjaxMore(this, jQuery.extend({}, common, local));
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1279,15 +1435,24 @@ function initResizeWindow() {
         if (sliderCatalog == undefined) {
             initSliderCatalog();
         }
+        if (sliderCatalogSections == undefined) {
+            initSliderCatalogSections();
+        }
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         if (sliderCatalog == undefined) {
             initSliderCatalog();
         }
+        if (sliderCatalogSections == undefined) {
+            initSliderCatalogSections();
+        }
     } else {
         GLOBAL.widthWindow = '';
         if (sliderCatalog) {
             reInitSliderCatalog();
+        }
+        if (sliderCatalogSections) {
+            reInitSliderCatalogSections();
         }
     }
 }
@@ -1335,4 +1500,6 @@ $(document).ready(function () {
     initPopupFilter();
     initOpenFilter();
     initAjaxMoreCatalog();
+    initSliderCategory();
+    initAjaxMoreCatalogSections();
 });
