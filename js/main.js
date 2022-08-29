@@ -1047,6 +1047,9 @@ function initPopupProduct() {
             initShowMore();
             initGalleryCard();
             initPopupBuy();
+            if(typeof initJsAfterAjax == 'function') {
+                initJsAfterAjax();
+            }
         },
     });
 }

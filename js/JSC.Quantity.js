@@ -59,7 +59,7 @@
 
     $numberValue --;
     if ($numberValue >= this.minNumber) {
-      this.$number.val($numberValue);
+      this.$number.val($numberValue).trigger('input');
       if ($numberValue == this.minNumber && !this.$element.hasClass(this.classDisabled)) {
         this.$element.addClass(this.classDisabled);
       }
@@ -71,7 +71,7 @@
 
     $numberValue ++;
     if ($numberValue <= this.maxNumber) {
-      this.$number.val($numberValue);
+      this.$number.val($numberValue).trigger('input');
     }
     if ($numberValue > this.minNumber) {
       this.$element.removeClass(this.classDisabled);
