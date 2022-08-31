@@ -674,13 +674,17 @@ label.form-error {
     margin-bottom: 25px;
     &-list {
         display: flex;
+        justify-content: space-between;
         height: 33px;
         background: #E9EDF5;
         border-radius: 17px;
     }
-    &-item {}
+    &-item {
+        flex-grow: 1;
+    }
     &-label {
         display: block;
+        height: 100%;
         position: relative;
     }
     &-name {

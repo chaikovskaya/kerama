@@ -54,6 +54,13 @@
         margin-bottom: 0;
         color: #FFFFFF;
         line-height: 33px;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    &_modified {}
+    &_modified &-title {
+        font-size: 20px;
+        line-height: 24px;
     }
 
     @media screen
@@ -65,11 +72,14 @@
             line-height: 25px;
         }
         &_simple {
-            height: 90px;
+            height: 79px;
         }
         &_simple &-title {
             font-size: 19px;
             line-height: 24px;
+        }
+        &_modified &-title {
+            font-size: 19px;
         }
     }
     @media screen
@@ -94,12 +104,12 @@
         }
         &_simple &-detail {
             display: flex;
-            min-height: 76px;
+            min-height: 89px;
             padding-top: 17px;
             padding-bottom: 13px;
         }
         &_simple &-img {
-            height: 76px;
+            height: 89px;
         }
     }
 }
@@ -114,7 +124,7 @@
         text-transform: none;
         height: 25px;
         padding: 0 14px 0 9px;
-        margin-bottom: 7px;
+        margin-bottom: auto;
     }
     &-icon {
         display: block;
@@ -123,6 +133,13 @@
         margin-top: -1px;
         margin-right: 6px;
         background: url("../images/icons/back-arrow.svg") no-repeat 0 0;
+    }
+
+    @media screen
+    and (max-width: $mobile){
+        &-link {
+            margin-bottom: 7px;
+        }
     }
 }
 
@@ -196,7 +213,7 @@
         text-transform: uppercase;
         color: #000000;
     }
-    &-category-link:hover &-category-label {
+    &-category-link:active &-category-label {
         font-weight: 700;
     }
 
@@ -665,8 +682,15 @@
         color: #000000;
         white-space: nowrap;
         &:hover {
+            font-weight: 700;
             color: #fff;
             background-color: #000000;
+            border-color: #000000;
+        }
+        &:active {
+            font-weight: 700;
+            color: #fff;
+            background-color: #333;
             border-color: #000000;
         }
     }

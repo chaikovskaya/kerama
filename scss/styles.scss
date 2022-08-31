@@ -499,14 +499,14 @@ blockquote {
 
 .breadcrumbs {
 	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
+	align-items: flex-start;
 	margin-bottom: 16px;
 	&-list {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		line-height: 19px;
+		padding-top: 3px;
 		margin-bottom: 7px;
 	}
 	&-item {
@@ -534,6 +534,7 @@ blockquote {
 	}
 	@media screen
 	and (max-width: $mobile){
+		flex-wrap: wrap;
 	}
 }
 
@@ -642,7 +643,7 @@ blockquote {
 		width: 9px;
 		height: 5px;
 		margin-top: -3px;
-		margin-left: 10px;
+		margin-left: 9px;
 		vertical-align: middle;
 		background: url("../images/catalog/catalog-icons/catalog-menu-arrow-bottom.svg") no-repeat 0 0;
 	}

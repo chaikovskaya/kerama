@@ -1102,18 +1102,18 @@ body.mob-form-show .wrapper {
         display: block;
         min-width: 24px;
         width: 24px;
-        height: 19px;
+        height: 22px;
         margin-right: 12px;
-        background: no-repeat 0 0;
+        background: no-repeat center top;
     }
     &-delivery-icon_auto {
         background-image: url(../images/product-popup/product-popup-icons/delivery-auto-icon.svg);
     }
     &-delivery-icon_pickup {
-        min-width: 20px;
-        width: 20px;
-        height: 22px;
         background-image: url(../images/product-popup/product-popup-icons/delivery-pickup-icon.svg);
+    }
+    &-delivery-icon_pay {
+        background-image: url(../images/product-popup/product-popup-icons/delivery-pay-icon.svg);
     }
     &-buttons {
         display: flex;

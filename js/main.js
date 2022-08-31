@@ -1070,11 +1070,16 @@ function initGalleryCard() {
             prevEl: ".js-slider-prev",
         },
         pagination: false,
-        spaceBetween: 8,
+        threshold: 10,
         breakpoints: {
             0: {
+                spaceBetween: 6,
             },
             720: {
+                spaceBetween: 6,
+            },
+            992: {
+                spaceBetween: 8,
             },
         }
     });
@@ -1088,6 +1093,7 @@ function initGalleryCard() {
             swiper: galleryThumbs
         },
         slidesPerView: "auto",
+        threshold: 10,
         breakpoints: {
             0: {
                 spaceBetween: 20,
@@ -1431,6 +1437,141 @@ function initAjaxMoreCatalogSections() {
     });
 }
 
+function initTab() {
+    if (typeof(Tab) === 'undefined' || !jQuery.isFunction(Tab)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-Tab').not('.JS-Tab-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('tab'));
+        new Tab(this, jQuery.extend({}, common, local));
+    });
+}
+
+var sliderFormat;
+function initSliderFormat() {
+    jQuery('.js-slider-format').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length;
+
+        var isStart = sliderLength > 2 ? true : false;
+
+        sliderFormat = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+              breakpoints: {
+                0: {
+                    simulateTouch: false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+function reInitSliderFormat() {
+    if (sliderFormat) {
+        sliderFormat.destroy();
+    }
+    sliderFormat = undefined;
+}
+
+var sliderCharacteristicsNav;
+function initSliderCharacteristicsNav() {
+    jQuery('.js-slider-characteristics-nav').each(function() {
+        var $slider = $(this),
+            $list = $slider.find('.js-slider-list');
+
+        sliderCharacteristicsNav = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: false,
+            slidesPerView: 'auto',
+            threshold: 10,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 39,
+                },
+                768: {
+                    spaceBetween: 39,
+                },
+                992: {
+                    spaceBetween: 60,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+
+function initPopupGallery() {
+    $(".js-popup-gallery").fancybox({
+        loop: true,
+        infobar: false,
+        toolbar  : false,
+        smallBtn : true,
+        arrows : false,
+        animationEffect: "fade",
+        hash : false,
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon"></i>' +
+                '</button>'
+        },
+        beforeClose: function (instance) {
+        },
+        afterShow: function(instance, current) {
+            if ( instance.group.length > 1 && current.$content ) {
+                current.$content.append('' +
+                    '<div class="fancybox-nav-block">' +
+                    '<button class="fancybox-button fancybox-button--arrow_left prev" data-fancybox-prev>' +
+                    '<span class="fancybox-button-icon fancybox-button-icon_left"><svg class="fancybox-button-arrow" width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '<path d="M5.51015 10.226C5.64934 10.0867 5.72754 9.8979 5.72754 9.70102C5.72754 9.50413 5.64934 9.31531 5.51015 9.17607L1.83477 5.5007L5.51015 1.82532C5.6454 1.68529 5.72024 1.49773 5.71855 1.30305C5.71685 1.10837 5.63877 0.922139 5.5011 0.784473C5.36344 0.646808 5.17721 0.568721 4.98253 0.567029C4.78785 0.565337 4.60029 0.640177 4.46025 0.77543L0.25993 4.97575C0.120733 5.11499 0.042536 5.30381 0.042536 5.5007C0.042536 5.69758 0.120733 5.88641 0.25993 6.02564L4.46025 10.226C4.59949 10.3652 4.78831 10.4434 4.9852 10.4434C5.18208 10.4434 5.37091 10.3652 5.51015 10.226Z" fill="white"/>\n' +
+                    '</svg></span>\n' +
+                    '</button>' +
+                    '<button class="fancybox-button fancybox-button--arrow_right next" data-fancybox-next>' +
+                    '<span class="fancybox-button-icon fancybox-button-icon_right"><svg class="fancybox-button-arrow" width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '<path d="M0.489855 10.226C0.350658 10.0867 0.272461 9.8979 0.272461 9.70102C0.272461 9.50413 0.350658 9.31531 0.489855 9.17607L4.16523 5.5007L0.489855 1.82532C0.354602 1.68529 0.279762 1.49773 0.281454 1.30305C0.283146 1.10837 0.361234 0.922139 0.498899 0.784473C0.636565 0.646808 0.822793 0.568721 1.01747 0.567029C1.21215 0.565337 1.39971 0.640177 1.53975 0.77543L5.74007 4.97575C5.87927 5.11499 5.95746 5.30381 5.95746 5.5007C5.95746 5.69758 5.87927 5.88641 5.74007 6.02564L1.53975 10.226C1.40051 10.3652 1.21169 10.4434 1.0148 10.4434C0.817918 10.4434 0.629094 10.3652 0.489855 10.226Z" fill="white"/>\n' +
+                    '</svg></span>\n' +
+                    '</button>' +
+                    '</div>'
+                );
+            }
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1441,6 +1582,9 @@ function initResizeWindow() {
         if (sliderCatalogSections == undefined) {
             initSliderCatalogSections();
         }
+        if (sliderFormat == undefined) {
+            initSliderFormat();
+        }
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         if (sliderCatalog == undefined) {
@@ -1449,6 +1593,9 @@ function initResizeWindow() {
         if (sliderCatalogSections == undefined) {
             initSliderCatalogSections();
         }
+        if (sliderFormat) {
+            reInitSliderFormat();
+        }
     } else {
         GLOBAL.widthWindow = '';
         if (sliderCatalog) {
@@ -1456,6 +1603,9 @@ function initResizeWindow() {
         }
         if (sliderCatalogSections) {
             reInitSliderCatalogSections();
+        }
+        if (sliderFormat) {
+            reInitSliderFormat();
         }
     }
 }
@@ -1505,4 +1655,7 @@ $(document).ready(function () {
     initAjaxMoreCatalog();
     initSliderCategory();
     initAjaxMoreCatalogSections();
+    initTab();
+    initSliderCharacteristicsNav();
+    initPopupGallery();
 });
