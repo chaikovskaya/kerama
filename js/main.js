@@ -1200,6 +1200,14 @@ function initSliderRange() {
             create: function() {
             },
         });
+
+        $element.find('.js-slider-range-min').on('change keyup', function() {
+            $track.slider('values', 0, this.value);
+        });
+
+        $element.find('.js-slider-range-max').on('change keyup', function() {
+            $track.slider('values', 1, this.value);
+        });
     });
 }
 
