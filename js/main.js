@@ -1183,6 +1183,7 @@ function initSliderRange() {
                 $element.find('.js-slider-range-max').val(ui.values[1]);
 
                 $element.find('.js-slider-range-min').trigger('keyup').trigger('change');
+                $element.find('.js-slider-range-max').trigger('keyup').trigger('change');
 
                 $textMin.html( $labelMin + " " + ui.values[0] + " " + $currency );
                 $textMax.html( $labelMax + " " + ui.values[1] + " " + $currency );
@@ -1194,6 +1195,7 @@ function initSliderRange() {
                 $element.find('.js-slider-range-max').val(ui.values[1]);
 
                 $element.find('.js-slider-range-min').trigger('keyup').trigger('change');
+                $element.find('.js-slider-range-max').trigger('keyup').trigger('change');
             },
             create: function() {
             },
