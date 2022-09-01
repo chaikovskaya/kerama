@@ -1162,13 +1162,16 @@ function initSliderRange() {
 
         var min = Number($(this).find('.min-price').attr('data-value'));
         var max = Number($(this).find('.max-price').attr('data-value'));
+        
+        var minValue = Number($(this).find('.min-price').val()) || min;
+        var maxValue = Number($(this).find('.max-price').val()) || max;
 
         $track.slider({
             range: true,
             min: min,
             max: max,
             drag: true,
-            values: [min, max],
+            values: [minValue, maxValue],
             classes: {
                 "ui-slider-handle": "slider-range-button",
                 "ui-slider-range": "slider-range-quantity"
