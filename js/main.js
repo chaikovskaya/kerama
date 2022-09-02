@@ -1167,13 +1167,16 @@ function initSliderRange() {
 
         var min = Number($(this).find('.min-price').attr('data-value'));
         var max = Number($(this).find('.max-price').attr('data-value'));
+        
+        var minValue = Number($(this).find('.min-price').val()) || min;
+        var maxValue = Number($(this).find('.max-price').val()) || max;
 
         $track.slider({
             range: true,
             min: min,
             max: max,
             drag: true,
-            values: [min, max],
+            values: [minValue, maxValue],
             classes: {
                 "ui-slider-handle": "slider-range-button",
                 "ui-slider-range": "slider-range-quantity"
@@ -1185,6 +1188,7 @@ function initSliderRange() {
                 $element.find('.js-slider-range-max').val(ui.values[1]);
 
                 $element.find('.js-slider-range-min').trigger('keyup').trigger('change');
+                $element.find('.js-slider-range-max').trigger('keyup').trigger('change');
 
                 $textMin.html( $labelMin + " " + ui.values[0] + " " + $currency );
                 $textMax.html( $labelMax + " " + ui.values[1] + " " + $currency );
@@ -1196,9 +1200,18 @@ function initSliderRange() {
                 $element.find('.js-slider-range-max').val(ui.values[1]);
 
                 $element.find('.js-slider-range-min').trigger('keyup').trigger('change');
+                $element.find('.js-slider-range-max').trigger('keyup').trigger('change');
             },
             create: function() {
             },
+        });
+
+        $element.find('.js-slider-range-min').on('change keyup', function() {
+            $track.slider('values', 0, this.value);
+        });
+
+        $element.find('.js-slider-range-max').on('change keyup', function() {
+            $track.slider('values', 1, this.value);
         });
     });
 }
