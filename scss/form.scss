@@ -622,6 +622,7 @@ label.form-error {
         text-decoration: none;
         border-radius: 50%;
         border: 1px solid #4F4F4F;
+        line-height: 0;
         &:hover {
             background-color: $color-red;
             border-width: 0;
@@ -631,7 +632,7 @@ label.form-error {
         }
     }
     &-icon {
-        margin-top: -1px;
+        margin-top: 1px;
         font-size: 20px;
         line-height: 0;
         color: #000000;
@@ -639,9 +640,6 @@ label.form-error {
     }
     &-counter:hover &-icon {
         color: #FFFFFF;
-    }
-    &-counter &-icon {
-        margin-left: -1px;
     }
     &-counter:first-child &-icon {
         margin-top: -2px;

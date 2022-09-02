@@ -5,7 +5,7 @@
 }
 
 .fancybox-slide {
-    padding: 30px 40px;
+    padding: 50px 40px;
 }
 
 .fancybox-content {
@@ -80,7 +80,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s linear;
     width: 33px;
     height: 33px;
     border-radius: 50%;
@@ -90,26 +89,25 @@
     }
 }
 .fancybox-button .fancybox-button-arrow {
-    width: 6px;
-    height: 11px;
-    path {
-        fill: #D50A0A;
-    }
+    width: 21px;
+    height: 12px;
+    background: url(../images/icons/arrow-left-dark.svg) no-repeat 0 0;
 }
-
+.fancybox-button--arrow_right .fancybox-button-arrow {
+    background-image: url("../images/icons/arrow-right-dark.svg");
+}
 .fancybox-button[disabled] .fancybox-button-icon {
 }
-
 .fancybox-button[disabled] .fancybox-button-icon {
 }
-
 .fancybox-button:hover .fancybox-button-icon {
-    background-color: #D50A0A;
+    background-color: $color-red;
 }
 .fancybox-button:hover .fancybox-button-arrow {
-    path {
-        fill: #fff;
-    }
+    background-image: url("../images/icons/arrow-left.svg");
+}
+.fancybox-button--arrow_right:hover .fancybox-button-arrow {
+    background-image: url("../images/icons/arrow-right.svg");
 }
 
 .fancybox-slide--image {
@@ -138,6 +136,12 @@ and (max-width: $mobile) {
     .fancybox-close {
         top: -32px;
         margin-left: -24px;
+    }
+    .fancybox-button--arrow_left {
+        margin-left: 10px;
+    }
+    .fancybox-button--arrow_right {
+        margin-right: 10px;
     }
 }
 /* /Fancybox */
@@ -700,7 +704,7 @@ body.mob-form-show .wrapper {
         background: no-repeat 0 0;
     }
     &-actions-icon_wishlist {
-        margin-top: 1px;
+        margin-top: 2px;
         background-image: url(../images/products/products-icons/wishlist-icon-light.svg);
         background-size: 100% auto;
     }
@@ -1147,8 +1151,8 @@ body.mob-form-show .wrapper {
         }
         &-gallery {
             float: none;
-            max-width: 100%;
-            width: 273px;
+            width: 100%;
+            max-width: 290px;
             margin-left: auto;
             margin-right: auto;
             padding-right: 0;

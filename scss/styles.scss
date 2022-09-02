@@ -295,6 +295,7 @@ blockquote {
 }
 
 .content {
+	color: #4F4F4F;
     b {
 	}
     ul {
@@ -506,13 +507,13 @@ blockquote {
 		align-items: center;
 		flex-wrap: wrap;
 		line-height: 19px;
-		padding-top: 3px;
+		padding-top: 2px;
 		margin-bottom: 7px;
 	}
 	&-item {
 		margin-right: 1px;
 		font-size: 13px;
-		line-height: 17px;
+		line-height: 19px;
 		color: #000000;
 		font-weight: 700;
 	}

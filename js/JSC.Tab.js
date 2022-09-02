@@ -10,6 +10,7 @@
     this.classReady = this.params.classReady || 'JS-Tab-ready';
     this.onInit = this.params.onInit || null;
     this.onReady = this.params.onReady || null;
+    this.onToggle = this.params.onToggle || null;
 
     this.__construct();
   };
@@ -86,6 +87,8 @@
         .addClass(this.classItemActive)
         .addClass('JS-Tab-Item-active');
     }
+
+    this.onToggle(jQuery(elem));
   };
   /*--/Tab--*/
 

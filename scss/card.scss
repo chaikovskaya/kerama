@@ -82,6 +82,9 @@
         position: relative;
         flex-flow: column nowrap;
         cursor: pointer;
+    }
+    &-gallery-thumbs-inner {
+        overflow: hidden;
         margin-left: 52px;
         margin-right: 52px;
     }
@@ -146,13 +149,12 @@
     &-gallery-slider-decor {
         position: absolute;
         top: 0;
-        left: -52px;
+        left: 0;
         z-index: 2;
-        background-color: #fff;
         height: 100%;
         width: 52px;
         &:last-child {
-            right: -52px;
+            right: 0;
             left: auto;
         }
     }
@@ -168,6 +170,7 @@
         justify-content: center;
         border-radius: 50%;
         border: 1px solid #333333;
+        background-color: #fff;
         &:hover {
             background-color: $color-red;
             border-width: 0;
@@ -204,33 +207,35 @@
 
     &-content {
         display: flex;
-        margin-bottom: 54px;
+        margin-bottom: 56px;
+        padding-top: 8px;
     }
     &-gallery {
-        width: 34.9%;
+        width: 407px;
         padding-right: 21px;
     }
     &-container {
-        width: 65.1%;
+        flex-grow: 1;
     }
     &-description-container {
-        width: 57.5%;
+        width: 59%;
         float: left;
         padding-right: 30px;
     }
     &-options-container {
-        width: 57.5%;
+        width: 59%;
         float: left;
         padding-right: 30px;
     }
     &-props-container {
-        width: 57.5%;
+        width: 59%;
         float: left;
         padding-right: 30px;
     }
     &-panel {
         display: flex;
-        margin-bottom: 11px;
+        margin-bottom: 5px;
+        margin-top: -3px;
     }
     &-brand {
         margin-bottom: 0;
@@ -239,8 +244,8 @@
         font-size: 14px;
     }
     &-title {
-        margin-bottom: 16px;
-        font-size: 24px;
+        margin-bottom: 10px;
+        font-size: 22px;
         line-height: 34px;
         color: #000000;
         font-weight: 400;
@@ -249,7 +254,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 24px;
+        margin-bottom: 18px;
     }
     &-rating-block {
         margin-right: 13px;
@@ -287,7 +292,7 @@
     &-buttons-img {
     }
     &-options {
-        margin-bottom: 15px;
+        margin-bottom: 18px;
     }
     &-options-name {
         display: block;
@@ -359,7 +364,7 @@
         align-items: center;
         min-width: 71px;
         height: 25px;
-        padding: 4px 13px 4px 4px;
+        padding: 3px 13px 3px 4px;
         border: 1px solid #4F4F4F;
         text-decoration: none;
         border-radius: 13px;
@@ -494,17 +499,27 @@
         color: #4F4F4F;
     }
     &-order {
-        width: 42.5%;
+        width: 41%;
         float: right;
         margin-bottom: 25px;
     }
+    &-order-panel {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     &-order-block {
-        padding: 20px 20px 25px;
+        padding: 16px 20px 25px;
         border: 1px solid #4F4F4F;
         border-radius: 10px;
+        &:hover {
+            box-shadow: 0px 0px 20px rgba(171, 171, 171, 0.25);
+            border-color: transparent;
+        }
     }
     &-price-wrapper {
-        margin-bottom: 13px;
+        margin-bottom: 16px;
+        margin-right: 10px;
     }
     &-discount-wrapper {}
     &-price-old {
@@ -582,11 +597,16 @@
         background-size: 100% auto;
     }
     &-amount {
+        margin-top: auto;
         margin-bottom: 17px;
+    }
+    &-amount .amount {
+        width: 115px;
     }
     &-delivery-container {
         float: right;
-        width: 42.5%;
+        width: 41%;
+        clear: right;
     }
     &-delivery {
         margin-bottom: 20px;
@@ -594,6 +614,7 @@
     &-delivery-item {
         display: flex;
         padding-bottom: 14px;
+        padding-left: 20px;
         margin-bottom: 14px;
         border-bottom: 1px solid #4F4F4F;
         &:last-child {
@@ -647,21 +668,55 @@
         filter: grayscale(0);
         opacity: 1;
     }
+    &-units .units {
+        display: block;
+        margin-bottom: 35px;
+    }
     &-units .units-price {
         top: calc(100% + 5px);
+    }
+    &-marks {
+        position: absolute;
+        top: 15px;
+        left: 15px
+    }
+    &-marks-item {
+        margin-bottom: 4px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     @media screen
     and (min-width: $tablet){
-        &-units .units {
-            display: block;
-        }
         &-units .units-list {
             height: 29px;
         }
         &-units .units-name {
             padding-top: 3px;
             padding-bottom: 4px;
+        }
+    }
+
+    @media screen
+    and (max-width: $notebook){
+        &-gallery {
+            width: 381px;
+            padding-right: 24px;
+        }
+        &-thumbs-item {
+            min-width: 37px;
+            width: 37px;
+        }
+        &-thumbs-item.swiper-slide {
+            height: 37px;
+        }
+        &-gallery-main_simple {
+            height: 380px;
+            margin-bottom: 19px;
+        }
+        &-delivery-item {
+            padding-left: 0;
         }
     }
 
@@ -683,26 +738,8 @@
         &-banner {
             margin-bottom: 42px;
         }
-        &-gallery {
-            width: 54.1%;
-            padding-right: 18px;
-        }
-        &-gallery-main_simple {
-            height: 380px;
-            margin-bottom: 19px;
-        }
         &-gallery-zoom-icon {
             display: none;
-        }
-        &-thumbs-item {
-            min-width: 37px;
-            width: 37px;
-        }
-        &-thumbs-item.swiper-slide {
-            height: 37px;
-        }
-        &-container {
-            width: 45.9%;
         }
         &-links-wrapper {
             display: none;
@@ -712,6 +749,7 @@
         }
         &-content {
             margin-bottom: 50px;
+            padding-top: 0;
         }
         &-description-container {
             width: 100%;
@@ -736,6 +774,9 @@
             float: none;
             padding-right: 0;
         }
+        &-amount {
+            margin-bottom: 20px;
+        }
         &-title {
             margin-bottom: 13px;
             font-size: 15px;
@@ -751,8 +792,9 @@
         &-order-block {
             padding: 0;
             border-width: 0;
-            display: flex;
-            flex-wrap: wrap;
+            &:hover {
+                box-shadow: none;
+            }
         }
         &-activity {
             display: flex;
@@ -778,14 +820,10 @@
         &-price-wrapper {
             order: -2;
             min-width: 127px;
-            margin-right: 20px;
-        }
-        &-units {
-            order: -1;
-            margin-top: 15px;
         }
         &-price {
             font-size: 20px;
+            line-height: 15px;
         }
         &-price-currency {
             font-size: 19px;
@@ -798,9 +836,6 @@
         }
         &-buttons {
             margin-bottom: 16px;
-        }
-        &-amount {
-            margin-bottom: 20px;
         }
         &-options {
             margin-bottom: 22px;
@@ -856,7 +891,8 @@
             flex-direction: column;
         }
         &-gallery {
-            width: 291px;
+            width: 100%;
+            max-width: 500px;
             padding-right: 0;
             margin-right: auto;
             margin-left: auto;
@@ -868,8 +904,19 @@
         &-gallery-main_simple {
             height: 332px;
         }
+        &-gallery-thumbs-inner {
+            max-width: 215px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-gallery &-gallery-thumbs-inner {
+
+        }
         &-container {
             width: 100%;
+        }
+        &-panel {
+            margin-top: 0;
         }
         &-activity {
             display: block;
@@ -883,7 +930,7 @@
             padding-right: 7px;
         }
         &-order {
-            max-width: none;
+            max-width: 420px;
         }
         &-delivery {
             margin-bottom: 26px;
@@ -928,6 +975,9 @@
 
 .format {
     margin-bottom: 55px;
+    &-h2 {
+        margin-bottom: 12px;
+    }
     &-title-mob {
         display: none;
         margin-bottom: 14px;
@@ -958,16 +1008,16 @@
     }
     &-img {
         display: flex;
-        width: 65%;
+        width: 66%;
     }
     &-color {
         width: 12%;
     }
     &-size {
-        width: 12%;
+        width: 11%;
     }
     &-surface {
-        width: 12%;
+        width: 11%;
     }
     &-name {
         font-weight: 700;
@@ -1175,10 +1225,11 @@
     margin-bottom: 37px;
     &-menu {
         display: flex;
-        margin-bottom: 12px;
+        padding-bottom: 16px;
     }
     &-menu-item {
         width: auto;
+        margin-right: 60px;
         &:last-child {
             margin-right: 0;
         }
@@ -1210,7 +1261,7 @@
     }
     &-list-item {
         display: flex;
-        margin-bottom: 14px;
+        margin-bottom: 15px;
     }
     &-name {
         width: 50%;
@@ -1246,7 +1297,10 @@
     @media screen
     and (max-width: $tablet){
         &-menu {
-            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        &-menu-item {
+            margin-right: 0;
         }
         &-menu-link {
             font-size: 24px;
