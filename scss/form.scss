@@ -331,6 +331,12 @@ label.form-error {
     }
 
     @media screen
+    and (max-width: 1600px){
+        &_simple {
+            line-height: 1.5em;
+        }
+    }
+    @media screen
     and (max-width: $tablet){
         &_simple {
             min-width: 156px;

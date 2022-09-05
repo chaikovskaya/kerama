@@ -1113,6 +1113,65 @@ function initGalleryCard() {
     });
 };
 
+function initPhotoCard() {
+    let $slider = $(".js-photo-card-thumbs"),
+        $list = $slider.find('.js-slider-list'),
+        sliderLength = $slider.find('.swiper-slide').length,
+        $buttonPrev = $slider.find('.js-gallery-card-prev'),
+        $buttonNext = $slider.find('.js-gallery-card-next');
+
+    let isStart = sliderLength > 1 ? true : false;
+
+    let galleryThumbs = new Swiper($list[0], {
+        loop: false,
+        slidesPerView: "auto",
+        autoHeight: true,
+        pagination: false,
+        threshold: 10,
+        watchSlidesProgress: true,
+        breakpoints: {
+            0: {
+                spaceBetween: 6,
+            },
+            720: {
+                spaceBetween: 6,
+            },
+            992: {
+                spaceBetween: 8,
+            },
+        }
+    });
+    let galleryTop = new Swiper(".js-photo-card-main", {
+        loop: isStart,
+        direction: "horizontal",
+        spaceBetween: 40,
+        navigation: false,
+        pagination: false,
+        thumbs: {
+            swiper: galleryThumbs
+        },
+        slidesPerView: "auto",
+        threshold: 10,
+        breakpoints: {
+            0: {
+                spaceBetween: 20,
+            },
+            720: {
+                spaceBetween: 15,
+            },
+            992: {
+                spaceBetween: 15,
+            },
+        },
+    });
+    $buttonPrev.on('click', function(e) {
+        galleryTop.slidePrev();
+    });
+    $buttonNext.on('click', function(e) {
+        galleryTop.slideNext();
+    });
+};
+
 function initMenu() {
     if (typeof(Menu) === 'undefined' || !jQuery.isFunction(Menu)) {
         return false;
@@ -1722,6 +1781,7 @@ $(document).ready(function () {
     initQuantity();
     initPopupProduct();
     initGalleryCard();
+    initPhotoCard();
     initMenu();
     initMainmenu();
     initPopupBuy();
