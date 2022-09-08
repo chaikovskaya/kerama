@@ -9,12 +9,12 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 49.5%;
+        width: 49.4%;
         padding: 20px;
         background-color: $color-red;
     }
     &-img {
-        width: 50.5%;
+        width: 50.6%;
     }
     &_green {}
     &_green &-detail {
@@ -104,12 +104,12 @@
         }
         &_simple &-detail {
             display: flex;
-            min-height: 89px;
+            height: 76px;
             padding-top: 17px;
             padding-bottom: 13px;
         }
         &_simple &-img {
-            height: 89px;
+            height: 76px;
         }
     }
 }
@@ -753,6 +753,12 @@
 
 .viewed-products {
     margin-bottom: 65px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .products-wrapper {
+        margin-bottom: 0;
+    }
 
     @media screen
     and (max-width: $tablet){

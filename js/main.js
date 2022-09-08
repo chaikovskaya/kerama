@@ -88,7 +88,7 @@ function initValidate($element) {
                 if (typeof(ajaxSubmit) == 'function') {
                     ajaxSubmit(form);
                 }
-            }
+            },
         });
 
         $.validator.messages.required = GLOBAL.FORMERROR.REQUIRED;
@@ -1691,6 +1691,113 @@ function initTabCharacteristics() {
     });
 }
 
+function initSticky() {
+    if (typeof(StickyFix) === 'undefined' || !jQuery.isFunction(StickyFix)) {
+        return false;
+    }
+
+    var common = {
+        update: function (){
+        }
+    };
+
+    $('.JS-Sticky').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('sticky'));
+        new StickyFix(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initTextareaSize() {
+    $('.js-textarea-size').on('input', function (e) {
+        e.target.style.innerHeight = 'auto';
+        e.target.style.height = e.target.scrollHeight + "px";
+    });
+}
+
+function initAjaxMore() {
+    if (typeof(AjaxMore) === 'undefined' || !jQuery.isFunction(AjaxMore)) {
+        return false;
+    }
+
+    var common = {
+        beforeSend: function () {
+        },
+        success: function () {
+        }
+    };
+
+    $('.JS-AjaxMore').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('ajaxmore'));
+        new AjaxMore(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initRadioSwitch() {
+    $(".js-radio-switch").each(function(){
+        var $element = $(this),
+            $input = $element.find('.js-radio-switch-input'),
+            $field = $element.find('.js-radio-switch-field'),
+            classActive = $element.data('radio-switch-class') || 'active';
+
+        $input.on('change.js-radio-active', function(e){
+            e.stopPropagation();
+            if ($input.is(':checked') && !$element.hasClass()) {
+                $element.addClass(classActive);
+            } else {
+                $element.removeClass(classActive);
+                $field.val('');
+            }
+        });
+    });
+}
+
+function initValidateOrder($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-form-validate-order');
+    }
+
+    function initValidateSection(element) {
+        var $parent = $(element).closest('.js-form-validate-order-item');
+        var $input = $parent.find('input[required]').filter(function( index ) {
+            if ($(this).val() == '') {
+                return $(this);
+            }
+        });
+
+        if ($input.length <= 0 && !$parent.hasClass()) {
+            $parent.addClass('order-list-item_active');
+        } else {
+            $parent.removeClass('order-list-item_active');
+        }
+    }
+
+    $element.each(function() {
+        var $element = jQuery(this),
+            validator;
+
+        validator = $element.validate({
+            errorClass: 'form-error',
+            validClass: 'form-success',
+            submitHandler: function(form) {
+                if (typeof(ajaxSubmit) == 'function') {
+                    ajaxSubmit(form);
+                }
+            },
+            onfocusout: function(element, event) {
+                initValidateSection(element);
+            },
+            onclick: function(element, event) {
+                initValidateSection(element);
+            },
+            success: function(label) {
+            },
+        });
+
+        $.validator.messages.required = GLOBAL.FORMERROR.REQUIRED;
+        $.validator.messages.email = GLOBAL.FORMERROR.EMAIL;
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1750,6 +1857,7 @@ $(document).ready(function () {
     initResizeWindow();
     $(window).resize(function(){
         initResizeWindow();
+        initSticky();
     });
 
     initDropdown();
@@ -1795,4 +1903,10 @@ $(document).ready(function () {
     initTab();
     initPopupGallery();
     initTabCharacteristics();
+    initSticky();
+    initTextareaSize();
+    ymaps.ready(initMap);
+    initAjaxMore();
+    initRadioSwitch();
+    initValidateOrder();
 });

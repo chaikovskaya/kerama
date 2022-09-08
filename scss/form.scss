@@ -2,7 +2,7 @@
 $colorPlaceholder: #4F4F4F;
 
 .field {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 
     @media screen
     and (max-width: $tablet){
@@ -15,36 +15,19 @@ $colorPlaceholder: #4F4F4F;
 .input {
     width: 100%;
     height: 33px;
-    padding: 9px 20px;
-    background-color: #fff;
+    padding: 7px 20px;
     color: #111111;
     font-weight: 300;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 13px;
+    line-height: 15px;
     border: 1px solid #BDBDBD;
     border-radius: 17px;
     &:focus {
         color: #202430;
         border-color: #333333;
     }
-    &::-webkit-input-placeholder {
-        font-size: 14px;
-        color: $colorPlaceholder;
-    }
-    &:-moz-placeholder {
-        font-size: 14px;
-        color: $colorPlaceholder;
-    }
-    &::-moz-placeholder {
-        font-size: 14px;
-        color: $colorPlaceholder;
-    }
-    &:-ms-input-placeholder {
-        font-size: 14px;
-        color: $colorPlaceholder;
-    }
     &::placeholder {
-        font-size: 14px;
+        font-size: 13px;
         color: $colorPlaceholder;
     }
     &:-webkit-autofill,
@@ -57,16 +40,8 @@ $colorPlaceholder: #4F4F4F;
     &_textarea {
         display: block;
         width: 100%;
-        height: 96px;
-        padding: 15px 17px;
         overflow: hidden;
         background-color: #fff;
-        color: #818A9E;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 19px;
-        border: 1px solid #C5C6C7;
-        border-radius: 8px;
         resize: none;
         transition: height 0.3s ease-in-out 0s;
         &:-webkit-autofill,
@@ -76,16 +51,23 @@ $colorPlaceholder: #4F4F4F;
         }
     }
 
+    &_number {
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
     @media screen
     and (max-width: $tablet){
-        &_simple {
-            font-size: 12px;
-            line-height: 16px;
-        }
-        &_simple::placeholder {
-            font-size: 12px;
-            line-height: 16px;
-            color: #818A9E;
+    }
+    @media screen
+    and (max-width: $mobile){
+        &_textarea {
+            overflow: auto;
+            min-height: 146px;
+            max-height: 146px;
         }
     }
 }
@@ -203,26 +185,27 @@ label.form-error {
     }
     &-check {
         position: relative;
-        width: 19px;
-        height: 19px;
+        width: 22px;
+        height: 22px;
         margin-right: 11px;
         border-radius: 50%;
         text-align: center;
         background-color: #fff;
+        box-shadow: 0 0 6px rgba(206, 206, 206, 0.8);
         &:after {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 9px;
-            height: 9px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
         }
     }
     &-input:checked + &-check {
         &:after {
-            background-color: #526295;
+            background-color: $color-red;
         }
     }
     &-input:checked ~ &-label {

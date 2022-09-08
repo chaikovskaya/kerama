@@ -170,6 +170,15 @@ and (max-width: $mobile) {
         border-radius: 50%;
         animation: preloader-animation 1s linear infinite;
     }
+    @media screen
+    and (max-width: $tablet) {
+        width: 70px;
+        height: 70px;
+        &-container {
+            width: 60px;
+            height: 60px;
+        }
+    }
 }
 
 .decor-popup {
@@ -410,7 +419,7 @@ and (max-width: $mobile) {
     &-block.open {
         transform: translateX(0%);
     }
-    .simplebar-track {
+    .simplebar-vertical {
         right: 0px;
     }
 }
@@ -697,6 +706,7 @@ body.mob-form-show .wrapper {
         box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.4);
         border-radius: 50%;
     }
+    &-actions-link_box {}
     &-actions-icon {
         display: block;
         width: 18px;
@@ -782,7 +792,7 @@ body.mob-form-show .wrapper {
             height: 60px;
         }
         &-price-value {
-            margin-bottom: 14px;
+            margin-bottom: 18px;
             line-height: 16px;
         }
         &-discount-wrapper {
@@ -1270,4 +1280,35 @@ body.mob-form-show .wrapper {
         padding-left: 18px;
         padding-right: 18px;
     }
+}
+
+
+.map-popup {
+    min-width: 80px;
+    max-width: 183px;
+    &-body {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+        color: #000000;
+    }
+
+    @media screen
+    and (max-width: $mobile){
+        max-width: 140px;
+        &-body {
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+}
+ymaps[class*="-balloon__content"] {
+    padding: 9px 13px;
+}
+ymaps[class*="-balloon_layout_normal"] {
+    box-shadow: 0 0 10px rgba(171, 171, 171, 0.3)!important;
+}
+ymaps[class*="-balloon__tail"] {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(171, 171, 171, 0.3);
 }
