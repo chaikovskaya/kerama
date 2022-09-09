@@ -1,0 +1,59 @@
+
+.brands-catalog {
+    &-schedule {
+        display: flex;
+        align-items: center;
+        border: solid #000;
+        border-width: 1px 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &-selection {
+        margin-right: 13px;
+        .units-list {
+            height: 29px;
+        }
+        .units-name {
+            min-width: 48px;
+            padding-top: 5px;
+            padding-bottom: 6px;
+            font-size: 15px;
+            line-height: 17px;
+        }
+    }
+    &-schedule-list {
+        display: flex;
+    }
+    &-schedule-item {
+        margin-right: 19px;
+        &:last-child {
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+    &-schedule-link {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 17px;
+        line-height: 19px;
+        color: #111111;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            font-weight: 700;
+            color: $color-red;
+        }
+    }
+
+    @media screen
+    and (max-width: $notebook){
+    }
+
+    @media screen
+    and (max-width: $tablet){
+    }
+
+    @media screen
+    and (max-width: $mobile){
+    }
+}

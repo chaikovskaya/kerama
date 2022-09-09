@@ -8,12 +8,18 @@ $gutter: $gutters/2;
 
 $color: #333;
 $color-red: #BA001A;
+$color-blue: #003589;
+$color-black: #0F0F0F;
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: none;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 html, body {
@@ -107,7 +113,7 @@ hr {
 	margin-bottom: 38px;
     border: 0;
     height: 1px;
-    background-color: #eee;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 img, svg {

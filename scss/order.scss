@@ -4,7 +4,6 @@
     &-line {
         margin-top: -4px;
         margin-bottom: 23px;
-        background-color: rgba(0, 0, 0, 0.4);
     }
     &-back-block {
         padding-top: 25px;
@@ -118,7 +117,7 @@
         letter-spacing: 0.022em;
     }
     &-switch-checkbox:checked ~ &-switch-label {
-        color: #111111;
+        color: #000;
     }
     &-radio-field {
         position: relative;
@@ -149,8 +148,7 @@
         border-radius: 10px;
     }
     &-radio-field:hover &-radio-decor {
-        box-shadow: 0px 0px 20px rgba(171, 171, 171, 0.25);
-        border-color: transparent;
+        border-color: #000;
     }
     &-obtain-radio-label {
         font-weight: 700;
@@ -163,7 +161,8 @@
         display: none;
     }
     &-obtain-radio-input:checked ~ &-radio-decor {
-        border-color: #333;
+        border-color: transparent;
+        box-shadow: 0px 0px 20px rgba(171, 171, 171, 0.25);
     }
     &-radio-field:hover &-obtain-radio-input:checked ~ &-radio-decor {
         box-shadow: 0px 0px 20px rgba(171, 171, 171, 0.25);
@@ -271,6 +270,10 @@
         line-height: 18px;
         letter-spacing: 0.022em;
         text-decoration: none;
+        @include fix-rows();
+        -ms-line-clamp: 2;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
     }
     &-elements-block {}
     &-elements-amount {
@@ -377,14 +380,11 @@
     }
     &-shop-radio-input {}
     &-shop-block:hover &-shop-decor {
-        border-color: transparent;
-        box-shadow: 0 0 20px rgba(171, 171, 171, 0.25);
+        border-color: #000;
     }
     &-shop-radio-input:checked ~ &-shop-decor {
-        border-color: #333333;
-    }
-    &-shop-block:hover &-shop-radio-input:checked ~ &-shop-decor {
-        box-shadow: none;
+        border-color: transparent;
+        box-shadow: 0 0 20px rgba(171, 171, 171, 0.25);
     }
 
     @media screen
@@ -514,8 +514,3 @@
         }
     }
 }
-
-label {
-    display: block;
-}
-

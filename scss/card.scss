@@ -32,9 +32,6 @@
         display: flex;
         margin-bottom: 10px;
     }
-    &-props_simple &-props-item {
-        margin-bottom: 15px;
-    }
     &-props-item_hide {
         display: none;
     }
@@ -56,6 +53,13 @@
         letter-spacing: 0.022em;
         color: #1C1D1D;
         text-align: right;
+    }
+    &-props-list_simple {}
+    &-props-list_simple &-props-item {
+        margin-bottom: 19px;
+    }
+    &-props_simple &-props-item {
+        margin-bottom: 15px;
     }
     &-props-decor {
         flex-grow: 1;
@@ -857,6 +861,9 @@
         }
         &-props_simple &-props-item {
             margin-bottom: 10px;
+        }
+        &-props-list_simple &-props-item {
+            margin-bottom: 12px;
         }
         &-more:first-letter {
             text-transform: capitalize;
