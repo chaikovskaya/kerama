@@ -144,6 +144,12 @@
         &-props {
             margin-bottom: 25px;
         }
+        &-props .card-props-name {
+            width: 40%;
+        }
+        &-props .card-props-value {
+            width: 60%;
+        }
         &-products-list {
             flex-wrap: nowrap;
             width: 100%;
@@ -277,8 +283,8 @@
     &-list-item_blue &-detail {
         background-color: $color-blue;
     }
-    &-list-item_black &-detail {
-        background-color: $color-black;
+    &-list-item_green &-detail {
+        background-color: $color-green;
     }
 
     @media screen

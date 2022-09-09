@@ -8271,6 +8271,10 @@ body.mob-menu-show {
     padding-right: 23px; }
   .collection-props {
     margin-bottom: 25px; }
+  .collection-props .card-props-name {
+    width: 40%; }
+  .collection-props .card-props-value {
+    width: 60%; }
   .collection-products-list {
     flex-wrap: nowrap;
     width: 100%;
@@ -8376,8 +8380,8 @@ body.mob-menu-show {
     background-color: #fff; }
   .solution-list-item_blue .solution-detail {
     background-color: #003589; }
-  .solution-list-item_black .solution-detail {
-    background-color: #0F0F0F; }
+  .solution-list-item_green .solution-detail {
+    background-color: #006733; }
   @media screen and (max-width: 992px) {
     .solution-list-item {
       width: 470px; }
