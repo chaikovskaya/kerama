@@ -1849,6 +1849,40 @@ function initSliderSolution() {
     });
 }
 
+var sliderSchedule;
+function initSliderSchedule() {
+    jQuery('.js-slider-schedule').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list');
+
+        sliderSchedule = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: false,
+            slidesPerView: 'auto',
+            threshold: 10,
+            freeMode: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 10,
+                },
+                768: {
+                    spaceBetween: 15,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1961,4 +1995,5 @@ $(document).ready(function () {
     initRadioSwitch();
     initValidateOrder();
     initSliderSolution();
+    initSliderSchedule();
 });

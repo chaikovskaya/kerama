@@ -35,6 +35,10 @@
     &-props-item_hide {
         display: none;
     }
+    &-list_simple {}
+    &-list_simple &-props-item {
+        margin-bottom: 19px;
+    }
     &-props-name {
         width: 50%;
         display: flex;
@@ -56,7 +60,7 @@
     }
     &-props-list_simple {}
     &-props-list_simple &-props-item {
-        margin-bottom: 19px;
+        margin-bottom: 14px;
     }
     &-props_simple &-props-item {
         margin-bottom: 15px;
@@ -78,6 +82,9 @@
         letter-spacing: 0.03em;
         text-decoration-line: underline;
         color: $color-red;
+        &:hover {
+            color: $color-red;
+        }
     }
     &-more-label-text {}
     &-more-icon {}
@@ -859,10 +866,16 @@
         &-props-tabs-menu-item {
             margin-bottom: 8px;
         }
+        &-props_simple &-props-item:nth-child(4) ~ &-props-item {
+            display: none;
+        }
         &-props_simple &-props-item {
             margin-bottom: 10px;
         }
         &-props-list_simple &-props-item {
+            margin-bottom: 12px;
+        }
+        &-list_simple &-props-item {
             margin-bottom: 12px;
         }
         &-more:first-letter {

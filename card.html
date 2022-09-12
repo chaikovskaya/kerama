@@ -1113,65 +1113,44 @@
                             </ul>
 
                             <div class="card-props-tabs-item card-props-tabs-item_active JS-Tab-Item">
-                                <div class="card-props card-props_simple JS-ShowMore-Props"  data-showmore="{
-                                    'amount': 8,
-                                    'classHide': 'card-props-item_hide'
-                                }" data-showmore-extra="{
-                                    'amount': 4
-                                }">
+                                <div class="card-props card-props_simple">
                                     <ul class="card-props-list">
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <!-- Выводить не более 8 эл-ов -->
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Артикул<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>172949786</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Производитель<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>MARAZZI ITALY</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Коллекция<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>Magic flowers</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Рисунок<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>под мрамор</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Основной цвет<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>Magic flowers</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Поверхность<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>Под мрамор</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Рисунок<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>Под мрамор</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
+                                        <li class="card-props-item">
                                             <div class="card-props-name">Категория<div class="card-props-decor"></div></div>
                                             <div class="card-props-value"><div class="card-props-decor"></div>Керамогранит</div>
                                         </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
-                                            <div class="card-props-name">Рисунок<div class="card-props-decor"></div></div>
-                                            <div class="card-props-value"><div class="card-props-decor"></div>под мрамор</div>
-                                        </li>
-                                        <li class="card-props-item JS-ShowMore-Item">
-                                            <div class="card-props-name">Основной цвет<div class="card-props-decor"></div></div>
-                                            <div class="card-props-value"><div class="card-props-decor"></div>Magic flowers</div>
-                                        </li>
                                     </ul>
-                                    <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                        <span class="show-more show-more_show">
-                                            <span class="card-more show-more-label">
-                                                <span class="card-more-label-text">Показать</span> все характеристики<span class="card-more-icon show-more-icon"></span>
-                                            </span>
-                                        </span>
-                                        <span class="show-more show-more_hide">
-                                            <span class="card-more show-more-label">
-                                                Свернуть<span class="show-more-icon"></span>
-                                            </span>
-                                        </span>
+                                    <a class="card-more show-more-label" href="#characteristics">
+                                        <span class="card-more-label-text">Показать</span> все характеристики<span class="card-more-icon show-more-icon"></span>
                                     </a>
                                 </div>
                             </div>
@@ -1305,7 +1284,7 @@
                 </div>
             </section>
 
-            <div class="characteristics JS-Tab-Characteristics" data-tab="{
+            <div id="characteristics" class="characteristics JS-Tab-Characteristics" data-tab="{
                  'classSwitcherActive': 'characteristics-menu-item_active',
                  'classItemActive': 'characteristics-item_active'
             }">

@@ -1,0 +1,99 @@
+
+.brands-detail {
+    &-panel {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    &-title {
+        margin-bottom: 0;
+    }
+    &-block {
+        display: flex;
+    }
+    &-content {
+        width: 50%;
+        padding-right: 53px;
+    }
+    &-pic {
+        width: 50%;
+    }
+    &-img {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+    }
+    &-line {
+        margin-top: 28px;
+        margin-bottom: 29px;
+    }
+    &-data {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    &-data-item {
+        margin-right: 14px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-data-country {
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.022em;
+    }
+    &-icon {
+        width: 16px;
+        height: 10px;
+        margin-right: 6px;
+    }
+    &-data-logo {
+        display: block;
+        max-width: 160px;
+        max-height: 45px;
+        border-radius: 3px;
+    }
+
+    @media screen
+    and (max-width: $notebook){
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        &-block {
+            flex-direction: column;
+        }
+        &-content {
+            width: 100%;
+            margin-bottom: 20px;
+            padding-right: 0;
+        }
+        &-pic {
+            width: 100%;
+        }
+        &-img {
+            height: 280px;
+            object-fit: cover;
+        }
+    }
+
+    @media screen
+    and (max-width: $mobile){
+        &-panel {
+            flex-direction: column;
+        }
+        &-title {
+            margin-bottom: 15px;
+        }
+        &-data {
+            margin-left: 0;
+        }
+        &-data-logo {
+            max-width: 140px;
+            max-height: 38px;
+        }
+        &-img {
+            height: 200px;
+        }
+    }
+}
