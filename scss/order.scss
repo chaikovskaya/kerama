@@ -148,7 +148,8 @@
         border-radius: 10px;
     }
     &-radio-field:hover &-radio-decor {
-        border-color: #000;
+        box-shadow: 0px 0px 20px rgba(171, 171, 171, 0.25);
+        border-color: transparent;
     }
     &-obtain-radio-label {
         font-weight: 700;
@@ -364,6 +365,9 @@
             border-color: #950216;
         }
     }
+    &-shop-button_selected {
+        display: none;
+    }
     &-shop-decor {
         position: absolute;
         top: 0;
@@ -380,11 +384,18 @@
     }
     &-shop-radio-input {}
     &-shop-block:hover &-shop-decor {
-        border-color: #000;
+        border-color: transparent;
+        box-shadow: 0 0 20px rgba(171, 171, 171, 0.25);
     }
     &-shop-radio-input:checked ~ &-shop-decor {
         border-color: transparent;
         box-shadow: 0 0 20px rgba(171, 171, 171, 0.25);
+    }
+    &-shop-radio-input:checked ~ &-shop-button {
+        display: none;
+    }
+    &-shop-radio-input:checked ~ &-shop-button_selected {
+        display: inline-block;
     }
 
     @media screen

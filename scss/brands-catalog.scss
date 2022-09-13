@@ -122,14 +122,11 @@
         height: 90px;
         padding: 5px;
         &:hover {
-            background-color: #E9EDF5;
-            border-color: #E9EDF5;
+            box-shadow: 0 0 20px rgba(171, 171, 171, 0.25);
+            border-color: transparent;
         }
     }
     &-list-img {}
-    &-load {
-        text-align: center;
-    }
 
     @media screen
     and (max-width: $desktop){

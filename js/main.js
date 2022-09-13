@@ -1883,6 +1883,91 @@ function initSliderSchedule() {
     });
 }
 
+var sliderActions;
+function initSliderActions() {
+    jQuery('.js-slider-actions').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderActions = new Swiper($list[0], {
+            loop: isStart,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            threshold: 10,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 15,
+                },
+                768: {
+                    spaceBetween: 15,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                992: {
+                    spaceBetween: 20,
+                    loop: sliderLength > 3 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+function reInitSliderActions() {
+    if (sliderActions) {
+        sliderActions.destroy();
+    }
+    sliderActions = undefined;
+}
+
+
+function initAjaxMoreActions() {
+    if (typeof(AjaxMore) === 'undefined' || !jQuery.isFunction(AjaxMore)) {
+        return false;
+    }
+
+    var lastElement;
+
+    var common = {
+        beforeSend: function () {
+            if ( GLOBAL.widthWindow == 'isTablet' || GLOBAL.widthWindow == 'isMobile') {
+                if (sliderActions != undefined) {
+                    reInitSliderActions();
+                }
+                lastElement = $(".js-slider-actions .swiper-slide").length;
+            }
+        },
+        success: function () {
+            if ( GLOBAL.widthWindow == 'isTablet' || GLOBAL.widthWindow == 'isMobile') {
+                if (sliderActions == undefined) {
+                    initSliderActions();
+                    sliderActions.slideTo(lastElement, 1000, false);
+                }
+            }
+        }
+    };
+
+    $('.JS-AjaxMore-Actions').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('ajaxmore'));
+        new AjaxMore(this, jQuery.extend({}, common, local));
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1902,6 +1987,9 @@ function initResizeWindow() {
         if (sliderCharacteristicsNav == undefined) {
             initSliderCharacteristicsNav();
         }
+        if (sliderActions == undefined) {
+            initSliderActions();
+        }
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         if (sliderCatalog == undefined) {
@@ -1920,6 +2008,9 @@ function initResizeWindow() {
         if (sliderCharacteristicsNav == undefined) {
             initSliderCharacteristicsNav();
         }
+        if (sliderActions == undefined) {
+            initSliderActions();
+        }
     } else {
         GLOBAL.widthWindow = '';
         if (sliderCatalog) {
@@ -1934,6 +2025,9 @@ function initResizeWindow() {
         initShowMoreProps();
         if (sliderCharacteristicsNav) {
             reInitSliderCharacteristicsNav();
+        }
+        if (sliderActions) {
+            reInitSliderActions();
         }
     }
 }
@@ -1996,4 +2090,5 @@ $(document).ready(function () {
     initValidateOrder();
     initSliderSolution();
     initSliderSchedule();
+    initAjaxMoreActions();
 });

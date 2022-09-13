@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Оформление заказа. Керама маркет</title>
+    <title>Акции. Керама маркет</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -650,15 +650,14 @@
         </header>
 
         <main class="main-content container">
-            <!-- Добавлен класс banner_blue -->
-            <div class="banner banner_blue">
+
+            <div class="banner banner_blue banner_simple banner_modified">
                 <div class="banner-detail">
-                    <div class="banner-name">Бренды</div>
-                    <div class="banner-description">Лучшие бренды представлены на нашем сайте. Яркое собрание керамических идей со всего света. Выберете любимый бренд.</div>
+                    <div class="banner-title">Купи плитку и получи скидку -10%</div>
                 </div>
                 <!-- Если здесь ссылка не нужна, замените на div: -->
                 <a class="banner-img" href="#">
-                    <img class="banner-pic" src="./images/brands-catalog/brands-catalog-banner.png" alt="" />
+                    <img class="banner-pic" src="./images/card/card-banner.jpg" alt="" />
                 </a>
             </div>
 
@@ -678,288 +677,157 @@
                         </a><span class="breadcrumbs-icon">/</span>
                     </li>
                     <li class="breadcrumbs-item">
-                        <span class="breadcrumbs-label">Бренды</span>
+                        <span class="breadcrumbs-label">Акции</span>
                     </li>
                 </ul>
             </div>
 
-            <div class="brands-catalog-schedule js-slider-schedule">
+            <h1>Акции</h1>
+
+            <div class="actions js-slider-actions JS-AjaxMore-Actions">
                 <div class="js-slider-list">
-                    <div class="brands-catalog-schedule-inner swiper-wrapper">
-                        <div class="brands-catalog-schedule-block swiper-slide">
-                            <div class="brands-catalog-selection">
-                                <ul class="brands-catalog-units-list">
-                                    <li class="brands-catalog-units-item">
-                                        <label class="brands-catalog-units-label">
-                                            <input class="brands-catalog-units-input units-input" type="radio" name="units-param-1" checked="checked" />
-                                            <span class="brands-catalog-units-name">А-Я</span>
-                                        </label>
-                                    </li>
-                                    <li class="brands-catalog-units-item">
-                                        <label class="brands-catalog-units-label">
-                                            <input class="brands-catalog-units-input units-input" type="radio" name="units-param-1" />
-                                            <span class="brands-catalog-units-name">А-Z</span>
-                                        </label>
-                                    </li>
-                                    <li class="brands-catalog-units-item">
-                                        <label class="brands-catalog-units-label">
-                                            <input class="brands-catalog-units-input units-input" type="radio" name="units-param-1" />
-                                            <span class="brands-catalog-units-name">1-10</span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul class="brands-catalog-schedule-list">
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">А</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">B</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">C</a>
-                            </li>
-                            <!-- Активный пункт -->
-                            <li class="brands-catalog-schedule-item brands-catalog-schedule-item_active">
-                                <a class="brands-catalog-schedule-link" href="#">D</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">E</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">F</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">G</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">H</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">I</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">J</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">K</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">L</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">M</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">N</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">O</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">P</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">Q</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">R</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">S</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">T</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">U</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">V</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">W</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">X</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">Y</a>
-                            </li>
-                            <li class="brands-catalog-schedule-item">
-                                <a class="brands-catalog-schedule-link" href="#">Z</a>
-                            </li>
-                        </ul>
+                    <div class="actions-list swiper-wrapper JS-AjaxMore-Content">
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                    <span class="main-actions-discount">-15%</span>
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-1.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Скидка 15% на всё по промокоду ЛЕТО.<br /> Успейте купить со скидкой.</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                    <!-- Добавлен класс main-actions-discount_white -->
+                                    <span class="main-actions-discount main-actions-discount_white">-15%</span>
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-2.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Впечатляющие скидки на коллекцию BRICK PLUS. Лучшие предложения по низким ценам.</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-14.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Ценопад на KERAMA MARAZZI.<br /> Успейте подобрать лучший вариант.</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                    <span class="main-actions-pic">
+                                        <span class="main-actions-discount main-actions-discount_orange">-15%</span>
+                                        <img class="main-actions-img" src="./images/main-actions/main-actions-img-5.png" alt="" />
+                                    </span>
+                                <span class="main-actions-detail">
+                                        <span class="main-actions-info content">Скидка 15% на всё по промокоду ЛЕТО.<br /> Успейте купить со скидкой.</span>
+                                    </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                    <span class="main-actions-pic">
+                                        <!-- Добавлен класс main-actions-discount_white -->
+                                        <span class="main-actions-discount main-actions-discount_white">-15%</span>
+                                        <img class="main-actions-img" src="./images/main-actions/main-actions-img-6.png" alt="" />
+                                    </span>
+                                <span class="main-actions-detail">
+                                        <span class="main-actions-info content">Впечатляющие скидки на коллекцию BRANS. Лучшие предложения по низким ценам.</span>
+                                    </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                    <span class="main-actions-pic">
+                                        <!-- Добавлен класс main-actions-discount_orange -->
+                                        <span class="main-actions-discount main-actions-discount_orange">-20%</span>
+                                        <img class="main-actions-img" src="./images/main-actions/main-actions-img-7.png" alt="" />
+                                    </span>
+                                <span class="main-actions-detail">
+                                        <span class="main-actions-info content">Ценопад на KERAMA MARAZZI.<br /> Успейте подобрать лучший вариант.</span>
+                                    </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-8.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Скидка 15% на всё по промокоду ЛЕТО.<br /> Успейте купить со скидкой.</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                    <!-- Добавлен класс main-actions-discount_white -->
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-9.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Впечатляющие скидки на коллекцию BRANS. Лучшие предложения по низким ценам.</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                    <span class="main-actions-pic">
+                                        <!-- Добавлен класс main-actions-discount_orange -->
+                                        <span class="main-actions-discount main-actions-discount_orange">-20%</span>
+                                        <img class="main-actions-img" src="./images/main-actions/main-actions-img-10.png" alt="" />
+                                    </span>
+                                <span class="main-actions-detail">
+                                        <span class="main-actions-info content">Ценопад на KERAMA MARAZZI.<br /> Успейте подобрать лучший вариант.</span>
+                                    </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                     <!-- Добавлен класс main-actions-discount_red -->
+                                    <span class="main-actions-discount main-actions-discount_red">-15%</span>
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-11.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Скидка 15% на всё по промокоду ЛЕТО.<br /> Успейте купить со скидкой.</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                <span class="main-actions-pic">
+                                    <!-- Добавлен класс main-actions-discount_white -->
+                                    <span class="main-actions-discount main-actions-discount_white">-15%</span>
+                                    <img class="main-actions-img" src="./images/main-actions/main-actions-img-12.png" alt="" />
+                                </span>
+                                <span class="main-actions-detail">
+                                    <span class="main-actions-info content">Впечатляющие скидки на коллекцию BRANS. Лучшие предложения по низким ценам.</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="actions-list-item swiper-slide">
+                            <a class="main-actions-link" href="#">
+                                    <span class="main-actions-pic">
+                                        <!-- Добавлен класс main-actions-discount_orange -->
+                                        <span class="main-actions-discount main-actions-discount_orange">-20%</span>
+                                        <img class="main-actions-img" src="./images/main-actions/main-actions-img-13.png" alt="" />
+                                    </span>
+                                <span class="main-actions-detail">
+                                        <span class="main-actions-info content">Ценопад на KERAMA MARAZZI.<br /> Успейте подобрать лучший вариант.</span>
+                                    </span>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="brands-catalog JS-AjaxMore">
-                <ul class="brands-catalog-content JS-AjaxMore-Content">
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">А</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-1.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-2.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-3.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-4.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-5.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-6.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">C</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-7.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-8.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-9.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">F</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-10.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">G</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-11.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">I</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-12.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-13.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-14.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-15.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-16.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">K</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-17.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-18.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">L</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-19.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-20.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="brands-catalog-item">
-                        <span class="brands-catalog-name">N</span>
-                        <ul class="brands-catalog-list">
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-21.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-22.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-23.png" alt="" />
-                                </a>
-                            </li>
-                            <li class="brands-catalog-list-item">
-                                <a class="brands-catalog-list-link" href="#">
-                                    <img class="brands-catalog-list-img" src="./images/brands-catalog/brands-catalog-img-24.png" alt="" />
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
                 <div class="load-more">
-                    <a class="button button_simple JS-AjaxMore-Link" href="javascript:;" data-ajaxmore-url="./ajax/brands.html">
+                    <a class="button button_simple JS-AjaxMore-Link" href="javascript:;" data-ajaxmore-url="./ajax/actions.html">
                         Показать ещё<i class="load-more-icon"></i>
                     </a>
                 </div>
@@ -1495,7 +1363,7 @@
                 </div>
             </section>
 
-            <div class="subscribe subscribe_catalog">
+            <div class="subscribe subscribe_simple">
                 <div class="subscribe-img">
                     <div class="subscribe-bgr"></div>
                     <div class="subscribe-pic"></div>

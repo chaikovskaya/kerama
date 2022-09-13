@@ -394,7 +394,7 @@
         font-weight: 700;
         font-size: 15px;
         line-height: 20px;
-        color: #FFFFFF;
+        color: #061E3A;
         border-radius: 50%;
         background-color: #F2D53B;
     }
@@ -404,6 +404,11 @@
     }
     &-discount_orange {
         background-color: #EF7D26;
+        color: #fff;
+    }
+    &-discount_red {
+        background-color: #C10D21;
+        color: #fff;
     }
 
     &-links {
@@ -1766,10 +1771,19 @@
         background-color: #F79E1B;
     }
 
+    &_catalog {}
     &_catalog &-bgr {
         background-image: url(../images/subscribe/subscribe-bgr-2.png);
     }
     &_catalog &-list {
+        display: none;
+    }
+
+    &_simple {}
+    &_simple &-bgr {
+        background-image: url(../images/subscribe/subscribe-bgr-3.png);
+    }
+    &_simple &-list {
         display: none;
     }
 
