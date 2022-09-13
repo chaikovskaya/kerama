@@ -120,7 +120,7 @@ hr {
   margin-bottom: 38px;
   border: 0;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 img, svg {
   max-height: 100%;
@@ -8712,3 +8712,278 @@ body.mob-menu-show {
     line-height: 18px; }
   .actions-detail-decor {
     top: -77px; } }
+
+.profile {
+  display: flex; }
+  .profile-side {
+    width: 24%;
+    padding-right: 50px; }
+  .profile-content {
+    width: 76%; }
+  .profile-line {
+    margin-top: 20px;
+    margin-bottom: 24px; }
+  .profile-menu-item {
+    margin-bottom: 16px; }
+  .profile-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.022em;
+    color: #000000;
+    border-radius: 17px; }
+  .profile-menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 33px;
+    width: 33px;
+    height: 33px;
+    margin-right: 11px;
+    border-radius: 50%; }
+  .profile-menu-icon-pic {
+    display: block;
+    width: 17px;
+    height: 19px;
+    background: no-repeat 0 0; }
+  .profile-menu-icon-pic_user {
+    margin-top: -1px;
+    background-image: url("../images/profile/profile-user-icon.svg"); }
+  .profile-menu-icon-pic_orders {
+    margin-top: -1px;
+    background-image: url("../images/profile/profile-orders-icon.svg"); }
+  .profile-menu-icon-pic_history {
+    width: 20px;
+    height: 21px;
+    background-image: url("../images/profile/profile-history-icon.svg"); }
+  .profile-menu-icon-pic_compare {
+    width: 20px;
+    height: 18px;
+    background-image: url("../images/profile/profile-compare-icon.svg");
+    background-position: -4px 0; }
+  .profile-menu-icon-pic_wishlist {
+    width: 20px;
+    height: 19px;
+    margin-top: 1px;
+    background-image: url("../images/profile/profile-wishlist-icon.svg"); }
+  .profile-menu-icon-pic_settings {
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/profile/profile-settings-icon.svg"); }
+  .profile-menu-item:hover .profile-menu-link {
+    background-color: #E9EDF5; }
+  .profile-menu-item:hover .profile-menu-icon {
+    background-color: #BA001A; }
+  .profile-menu-item_active .profile-menu-link {
+    background-color: #E9EDF5; }
+  .profile-menu-item_active .profile-menu-icon {
+    background-color: #BA001A; }
+  .profile-menu-item:hover .profile-menu-icon-pic_user,
+  .profile-menu-item_active .profile-menu-icon-pic_user {
+    background-image: url("../images/profile/profile-user-icon-light.svg"); }
+  .profile-menu-item:hover .profile-menu-icon-pic_orders,
+  .profile-menu-item_active .profile-menu-icon-pic_orders {
+    background-image: url("../images/profile/profile-orders-icon-light.svg"); }
+  .profile-menu-item:hover .profile-menu-icon-pic_history,
+  .profile-menu-item_active .profile-menu-icon-pic_history {
+    background-image: url("../images/profile/profile-history-icon-light.svg"); }
+  .profile-menu-item:hover .profile-menu-icon-pic_compare,
+  .profile-menu-item_active .profile-menu-icon-pic_compare {
+    background-image: url("../images/profile/profile-compare-icon-light.svg"); }
+  .profile-menu-item:hover .profile-menu-icon-pic_wishlist,
+  .profile-menu-item_active .profile-menu-icon-pic_wishlist {
+    background-image: url("../images/profile/profile-wishlist-icon-light.svg"); }
+  .profile-menu-item:hover .profile-menu-icon-pic_settings,
+  .profile-menu-item_active .profile-menu-icon-pic_settings {
+    background-image: url("../images/profile/profile-settings-icon-light.svg"); }
+  .profile-title {
+    display: flex;
+    align-items: center;
+    margin-top: -8px; }
+  .profile-title-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    margin-left: 11px;
+    padding: 2px 2px 1px;
+    border-radius: 50%;
+    background-color: #D10D25;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF; }
+  .profile-orders {
+    margin-bottom: 30px; }
+  .profile-orders-item {
+    margin-bottom: 25px; }
+    .profile-orders-item:last-child {
+      margin-bottom: 0; }
+  .profile-orders-block {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(171, 171, 171, 0.2); }
+  .profile-orders-panel {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    padding: 14px 20px 14px;
+    background-color: rgba(233, 237, 245, 0.7);
+    text-decoration: none; }
+  .profile-orders-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 18px 24px 20px 20px; }
+  .profile-orders-name {
+    margin-right: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000; }
+  .profile-orders-number {
+    margin-right: 30px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #D10D25; }
+  .profile-orders-price {
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 23px;
+    color: #111111; }
+  .profile-orders-delivery {
+    display: flex;
+    align-items: center;
+    margin-right: auto; }
+  .profile-orders-delivery-label {
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px; }
+  .profile-orders-status {
+    margin-right: 20px;
+    cursor: auto; }
+    .profile-orders-status:hover {
+      font-weight: normal; }
+  .profile-orders-activity {
+    margin-left: 70px; }
+  .profile-orders-link {
+    display: inline-block;
+    min-width: 90px;
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.085em;
+    text-decoration: underline;
+    color: #000000; }
+    .profile-orders-link:hover {
+      font-weight: 700;
+      color: #000000; }
+  .profile-orders-products {
+    display: flex;
+    margin-left: auto; }
+  .profile-orders-products-list {
+    display: flex; }
+  .profile-orders-products-item {
+    margin-right: 11px; }
+    .profile-orders-products-item:last-child {
+      margin-right: 0; }
+  .profile-orders-products-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    width: 54px;
+    height: 54px;
+    overflow: hidden;
+    border-radius: 4px; }
+  .profile-load-more .pager {
+    margin-right: 0; }
+  .profile-mob-menu {
+    display: none;
+    margin-top: -5px;
+    margin-left: auto; }
+  .profile-mob-menu-block {
+    max-width: 768px; }
+  .profile-mob-menu-switcher {
+    font-size: 14px;
+    line-height: 1.5em; }
+  .profile-mob-menu-icon {
+    margin-right: 13px; }
+  @media screen and (max-width: 992px) {
+    .profile {
+      flex-direction: column; }
+      .profile-side {
+        display: none; }
+      .profile-content {
+        width: 100%; }
+      .profile-line {
+        margin-top: 16px; }
+      .profile-title {
+        margin-top: 0;
+        margin-bottom: 20px; }
+      .profile-user {
+        margin-bottom: 10px;
+        font-size: 18px; }
+      .profile-orders {
+        margin-bottom: 20px; }
+      .profile-orders-item {
+        margin-bottom: 20px; }
+      .profile-orders-name {
+        font-size: 15px;
+        line-height: 24px; }
+      .profile-orders-price {
+        font-size: 15px;
+        line-height: 22px; }
+      .profile-orders-content {
+        padding-top: 16px; }
+      .profile-orders-delivery-label {
+        font-size: 14px;
+        line-height: 22px; }
+      .profile-orders-activity {
+        margin-left: 20px; }
+      .profile-orders-products-item {
+        margin-right: 8px; }
+      .profile-orders-products-pic {
+        min-width: 33px;
+        width: 33px;
+        height: 33px; }
+      .profile-orders-link {
+        margin-top: 4px; }
+      .profile-load-more .pager {
+        display: flex; }
+      .profile-mob-menu {
+        display: block; } }
+  @media screen and (max-width: 768px) {
+    .profile-mob-menu {
+      width: 100%;
+      margin-top: 14px;
+      margin-left: 0; }
+    .profile-line {
+      margin-top: 18px;
+      margin-bottom: 20px; }
+    .profile-load-more .pager {
+      display: none; }
+    .profile-orders-panel {
+      flex-wrap: wrap; }
+    .profile-orders-price {
+      width: 100%; }
+    .profile-orders-content {
+      flex-wrap: wrap; }
+    .profile-orders-delivery {
+      flex-wrap: wrap;
+      margin-bottom: 23px;
+      margin-right: 0; }
+    .profile-orders-delivery-label {
+      width: 100%;
+      margin-bottom: 10px; }
+    .profile-orders-products {
+      width: 100%;
+      margin-left: 0; }
+    .profile-orders-products-list {
+      margin-right: 20px; }
+    .profile-orders-activity {
+      margin-left: auto; } }
