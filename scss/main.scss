@@ -1056,6 +1056,7 @@
         }
     }
     &-button {
+        align-self: flex-end;
         padding-left: 13px;
         padding-right: 13px;
         margin-left: auto;
@@ -1068,10 +1069,18 @@
             border-width: 0;
         }
     }
+    &-button-icon {
+        display: none;
+        min-width: 19px;
+        width: 19px;
+        height: 18px;
+        margin-left: -2px;
+        background: url("../images/products/products-icons/basket-dark.svg") no-repeat center center;
+    }
+    &-button-label {}
     &-activity {
         display: flex;
         justify-content: space-between;
-        align-items: end;
     }
     &-price-wrapper {
         margin-right: 5px;
@@ -1126,6 +1135,7 @@
     &-basket {
         display: flex;
         align-items: center;
+        align-self: flex-end;
         margin-left: auto;
         font-size: 14px;
         line-height: 20px;
@@ -1156,11 +1166,45 @@
         height: auto;
         object-fit: initial;
     }
+    &_catalog {}
 
     @media screen
     and (max-width: $tablet) {
         &-link:hover &-img {
             transform: none;
+        }
+    }
+    @media screen
+    and (max-width: $mobile) {
+        &_catalog &-block {
+            margin-bottom: 7px;
+        }
+        &_catalog &-detail-name {
+            margin-bottom: 5px;
+        }
+        &_catalog &-price-wrapper {
+            margin-bottom: 5px;
+        }
+        &_catalog &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 33px;
+            width: 33px;
+            height: 33px;
+            padding: 0;
+        }
+        &_catalog &-button-icon {
+            display: block;
+        }
+        &_catalog &-button-label {
+            display: none;
+        }
+        &_catalog &-basket-icon {
+            margin-right: 0
+        }
+        &_catalog &-brand-logo {
+            max-width: 65px;
         }
     }
 }

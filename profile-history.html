@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Оформление заказа. Керама маркет</title>
+    <title>Личный кабинет. Личная информация. Керама маркет</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -650,7 +650,16 @@
         </header>
 
         <main class="main-content container">
-            <hr class="order-line" />
+
+            <div class="banner banner_simple">
+                <div class="banner-detail">
+                    <div class="banner-title">Личная информация</div>
+                </div>
+                <!-- Если здесь ссылка не нужна, замените на div: -->
+                <a class="banner-img" href="#">
+                    <img class="banner-pic" src="./images/profile/profile-history/profile-banner-2.png" alt="" />
+                </a>
+            </div>
 
             <div class="breadcrumbs js-expand" data-expand="{
                 'classActive': 'breadcrumbs_active',
@@ -666,438 +675,289 @@
                         </a><span class="breadcrumbs-icon">/</span>
                     </li>
                     <li class="breadcrumbs-item">
-                        <span class="breadcrumbs-label">Оформление заказа</span>
+                        <span class="breadcrumbs-label">Личный кабинет</span>
                     </li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
                 </ul>
+
+                <!-- Добавляется меню только в лич. кабинете -->
+                <div class="profile-mob-menu JS-MobileMenu" data-mobilemenu="{
+                            'classActive': 'open',
+                            'classShow': 'mob-menu-show',
+                            'classElementActive': 'mob-menu_active',
+                            'backgroundDisabled': 'true'
+                        }">
+                    <a class="profile-mob-menu-switcher button button_dark JS-MobileMenu-Burger" href="javascript:;">Личный кабинет</a>
+                    <div class="profile-mob-menu-block mob-block JS-MobileMenu-Dropdown">
+                        <div class="mob-close-panel">
+                            <span class="mob-catalog-category-name">Личный кабинет</span>
+                            <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                <span class="mob-menu-close-icon"></span>
+                            </a>
+                        </div>
+                        <div class="mob-nav">
+                            <ul class="mob-list">
+                                <li class="mob-list-item">
+                                    <a class="mob-list-link" href="#">
+                                        <span class="profile-mob-menu-icon profile-menu-icon-pic profile-menu-icon-pic_user"></span>Личная инфорамация
+                                    </a>
+                                </li>
+                                <li class="mob-list-item">
+                                    <a class="mob-list-link" href="#">
+                                        <span class="profile-mob-menu-icon profile-menu-icon-pic profile-menu-icon-pic_orders"></span>Текущие заказы
+                                    </a>
+                                </li>
+                                <li class="mob-list-item mob-list-item_active">
+                                    <a class="mob-list-link" href="#">
+                                        <span class="profile-mob-menu-icon profile-menu-icon-pic profile-menu-icon-pic_history"></span>История заказов
+                                    </a>
+                                </li>
+                                <li class="mob-list-item">
+                                    <a class="mob-list-link" href="#">
+                                        <span class="profile-mob-menu-icon profile-menu-icon-pic profile-menu-icon-pic_compare"></span>Сравнение товаров
+                                    </a>
+                                </li>
+                                <li class="mob-list-item">
+                                    <a class="mob-list-link" href="#">
+                                        <span class="profile-mob-menu-icon profile-menu-icon-pic profile-menu-icon-pic_wishlist"></span>Избранные товары
+                                    </a>
+                                </li>
+                                <li class="mob-list-item">
+                                    <a class="mob-list-link" href="#">
+                                        <span class="profile-mob-menu-icon profile-menu-icon-pic profile-menu-icon-pic_settings"></span>Настройки профиля
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mob-menu-decor JS-MobileMenu-Close"></div>
+                </div>
             </div>
 
-            <form class="js-form-validate-order" action="/">
-                <div class="order">
-                    <div class="order-content">
-                        <h1 class="order-title">Оформление заказа</h1>
-                        <ol class="order-list">
-                            <!-- Добавить класс order-list-item_active если все поля верно заполнены -->
-                            <li class="order-list-item js-form-validate-order-item">
-                                <div class="order-list-panel">
-                                    <span class="order-number">1</span><span class="order-name">Информация о покупателе</span>
-                                </div>
+            <hr class="profile-line" />
 
-                                <div class="order-row">
-                                    <div class="order-col order-col-user">
-                                        <div class="field js-form-validate-field">
-                                            <input class="order-input input" type="text" placeholder="*Имя" id="order-name" name="order-name" required />
-                                        </div>
-                                        <div class="field js-form-validate-field">
-                                            <input class="order-input input js-mask-phone" type="text" placeholder="Телефон для связи" id="order-phone" name="order-phone" />
-                                        </div>
-                                    </div>
-                                    <div class="order-col order-col-user">
-                                        <div class="field js-form-validate-field">
-                                            <input class="order-input input" type="text" placeholder="*Фамилия" id="order-surname" name="order-surname" required />
-                                        </div>
-                                        <div class="field js-form-validate-field">
-                                            <input class="order-input input js-mask-email" type="text" placeholder="Электроннная почта" id="order-email" name="order-email" />
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="profile-user h2">Александр Иванов</div>
 
-                                <div class="order-switch-field">
-                                    <div class="order-switch-inner">
-                                        <label class="switch">
-                                            <input class="order-switch-checkbox switch-checkbox" type="checkbox" name="order-agreement" />
-                                            <span class="switch-decor">
-                                                <span class="switch-icon"></span>
-                                            </span>
-                                            <span class="order-switch-label order-switch-label_simple">Я хочу получать рекламные сообщения и новости о товарах и услугах</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="order-list-item js-form-validate-order-item">
-                                <div class="order-list-panel">
-                                    <span class="order-number">2</span><span class="order-name">Способ плолучения заказа</span>
-                                </div>
-                                <div class="order-obtain order-row">
-                                    <div class="order-obtain-item order-col">
-                                        <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" />
-                                                        <i class="order-obtain-radio-check radio-check"></i>
-                                                        <span class="order-obtain-icon order-obtain-icon_export"></span>
-                                                        <span class="order-obtain-radio-label">Самовывоз</span>
-                                                        <span class="order-radio-decor"></span>
-                                                    </span>
-                                                </span>
-                                            <span class="order-obtain-info">Сегодня, Бесплатно</span>
-                                            <a class="order-obtain-link order-link" href="#">Показать все магазины на карте</a>
-                                        </label>
-                                    </div>
-                                    <div class="order-obtain-item order-col">
-                                        <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" checked="checked" />
-                                                        <i class="order-obtain-radio-check radio-check"></i>
-                                                        <span class="order-obtain-icon order-obtain-icon_delivery"></span>
-                                                        <span class="order-obtain-radio-label">Доставка</span>
-                                                        <span class="order-radio-decor"></span>
-                                                    </span>
-                                                </span>
-                                            <span class="order-obtain-info">Доставим с 15 июля 2022</span>
-                                            <span class="order-obtain-price">от 990 р</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="order-list-item js-form-validate-order-item">
-                                <div class="order-list-panel">
-                                    <span class="order-number">3</span><span class="order-name">Адрес доставки</span>
-                                </div>
-                                <div class="order-row">
-                                    <div class="order-col order-col-street">
-                                        <div class="field js-form-validate-field">
-                                            <input class="order-input input" type="text" placeholder="*Улица" id="order-street" name="order-street" required />
-                                        </div>
-                                    </div>
-                                    <div class="order-col order-col-home">
-                                        <div class="field js-form-validate-field">
-                                            <input class="order-input input" type="text" placeholder="*Дом" id="order-home" name="order-home" value="178" required />
-                                        </div>
-                                    </div>
-                                    <div class="order-col order-col-home">
-                                        <div class="field js-form-validate-field">
-                                            <input class="order-input input input_number" type="number" placeholder="Квартира" id="order-flat" name="order-flat" />
-                                        </div>
-                                    </div>
-                                    <div class="order-col order-col-wide">
-                                        <div class="field js-form-validate-field">
-                                            <textarea class="order-input input input_textarea js-textarea-size" placeholder="Добавить комментарий курьеру" name="order-comment-1"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="order-map-values js-map"
-                                     data-objectcoord="[59.8672,30.2595]"
-                                     data-map-id="map"
-                                     data-map-icon="./images/order/map-icon.svg"
-                                     data-map-icon-hover="./images/order/map-icon-hover.svg"
-                                     data-icon-size="[33, 33]"
-                                     data-map-zoom="12"
-                                >
-                                    <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
-                                        <span class="js-map-item-value">
-                                            Адрес 1
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="order-map" id="map"></div>
-
-                                <div class="order-floor js-radio-switch" data-radio-switch-class="order-floor_active">
-                                    <div class="order-switch-field">
-                                        <div class="order-switch-inner">
-                                            <label class="switch">
-                                                <input class="switch-checkbox js-radio-switch-input" type="checkbox" name="order-floor-required" />
-                                                <span class="switch-decor">
-                                                    <span class="switch-icon"></span>
-                                                </span>
-                                                <span class="order-switch-label">Требуется подъем на этаж</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="order-row-floor order-row">
-                                        <div class="order-col">
-                                            <div class="order-floor-field field js-form-validate-field">
-                                                <input class="order-input-floor order-input input input_number js-radio-switch-field" type="number" placeholder="Этаж" id="order-floor" name="order-floor" />
-                                            </div>
-                                        </div>
-                                        <div class="order-col order-col-floor">
-                                            <div class="order-floor-field field js-form-validate-field">
-                                                <input class="order-input-floor order-input input js-radio-switch-field" type="text" placeholder="Подъезд" id="order-entrance" name="order-entrance" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- Самовывоз -->
-
-                            <li class="order-list-item js-form-validate-order-item">
-                                <div class="order-list-panel">
-                                    <span class="order-number">3</span><span class="order-name">Выберете магазин</span>
-                                </div>
-                                <ul class="order-shop">
-                                    <li class="order-shop-item">
-                                        <div class="order-shop-block">
-                                            <div class="order-shop-detail">
-                                                <div class="order-shop-info">
-                                                    <div class="order-shop-info-item">
-                                                        <div class="order-shop-title">ТЦ Южный</div>
-                                                        <div class="order-shop-content content">г. Москва, ул. Нагорная 57</div>
-                                                        <div class="order-shop-date content">Забрать 15 февраля после 14.00</div>
-                                                    </div>
-                                                    <div class="order-shop-info-item">
-                                                        <div class="order-shop-title">Режим работы</div>
-                                                        <div class="order-shop-content content">пн-вс с 8.00 до&nbsp;19.00</div>
-                                                    </div>
-                                                </div>
-                                                <label class="order-shop-radio-label">
-                                                    <input class="order-shop-radio-input radio-input" type="radio" name="order-shop-param-1" />
-                                                    <span class="order-shop-button button button_modified">Выбрать</span>
-                                                    <span class="order-shop-button order-shop-button_selected button button_modified">Выбран</span>
-                                                    <span class="order-shop-decor"></span>
-                                                </label>
-                                            </div>
-                                            <div class="order-shop-map">
-                                                <div class="order-map-values js-map"
-                                                     data-objectcoord="[59.8672,30.2595]"
-                                                     data-map-id="map-1"
-                                                     data-map-icon="./images/order/map-icon.svg"
-                                                     data-map-icon-hover="./images/order/map-icon-hover.svg"
-                                                     data-icon-size="[33, 33]"
-                                                     data-map-zoom="12"
-                                                >
-                                                    <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
-                                                        <span class="js-map-item-value">г. Москва, ул. Нагорная 57</span>
-                                                    </div>
-                                                </div>
-                                                <div class="order-shop-map-element" id="map-1"></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="order-shop-item">
-                                        <div class="order-shop-block">
-                                            <div class="order-shop-detail">
-                                                <div class="order-shop-info">
-                                                    <div class="order-shop-info-item">
-                                                        <div class="order-shop-title">ТЦ Южный</div>
-                                                        <div class="order-shop-content content">г. Москва, ул. Нагорная 57</div>
-                                                        <div class="order-shop-date content">Забрать 15 февраля после 14.00</div>
-                                                    </div>
-                                                    <div class="order-shop-info-item">
-                                                        <div class="order-shop-title">Режим работы</div>
-                                                        <div class="order-shop-content content">пн-вс с 8.00 до&nbsp;19.00</div>
-                                                    </div>
-                                                </div>
-                                                <label class="order-shop-radio-label">
-                                                    <input class="order-shop-radio-input radio-input" type="radio" name="order-shop-param-1" />
-                                                    <span class="order-shop-button button button_modified">Выбрать</span>
-                                                    <span class="order-shop-button order-shop-button_selected button button_modified">Выбран</span>
-                                                    <span class="order-shop-decor"></span>
-                                                </label>
-                                            </div>
-                                            <div class="order-shop-map">
-                                                <div class="order-map-values js-map"
-                                                     data-objectcoord="[59.8672,30.2595]"
-                                                     data-map-id="map-2"
-                                                     data-map-icon="./images/order/map-icon.svg"
-                                                     data-map-icon-hover="./images/order/map-icon-hover.svg"
-                                                     data-icon-size="[33, 33]"
-                                                     data-map-zoom="12"
-                                                >
-                                                    <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
-                                                        <span class="js-map-item-value">г. Москва, ул. Нагорная 57</span>
-                                                    </div>
-                                                </div>
-                                                <div class="order-shop-map-element" id="map-2"></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <div class="field js-form-validate-field">
-                                    <textarea class="order-input input input_textarea js-textarea-size" placeholder="Добавить комментарий курьеру" name="order-comment-2"></textarea>
-                                </div>
-                            </li>
-
-                            <!-- /Самовывоз -->
-                            <li class="order-list-item js-form-validate-order-item order-list-item_active">
-                                <div class="order-list-panel">
-                                    <span class="order-number">4</span><span class="order-name">Состав заказа</span>
-                                </div>
-                                <div class="JS-AjaxMore">
-                                    <ul class="order-elements JS-AjaxMore-Content">
-                                        <li class="order-elements-item">
-                                            <a class="order-elements-link" href="#">
-                                                <span class="order-elements-img">
-                                                    <img src="./images/order/order-img-1.png" alt="" />
-                                                </span>
-                                                <span class="order-elements-detail">
-                                                    <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
-                                                    <span class="order-elements-block">
-                                                        <span class="order-elements-amount">Количество: 256</span>
-                                                        <span class="order-elements-price-wrapper">
-                                                            <!-- Если скидки нет,блок order-discount-wrapper не убирать -->
-                                                            <span class="order-discount-wrapper">
-                                                                <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
-                                                                <span class="product-discount">sale</span>
-                                                            </span>
-                                                            <span class="order-elements-price">123 800 <span class="currency">i</span></span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="order-elements-item">
-                                            <a class="order-elements-link" href="#">
-                                                <span class="order-elements-img">
-                                                    <img src="./images/order/order-img-2.png" alt="" />
-                                                </span>
-                                                <span class="order-elements-detail">
-                                                    <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
-                                                    <span class="order-elements-block">
-                                                        <span class="order-elements-amount">Количество: 256</span>
-                                                        <span class="order-elements-price-wrapper">
-                                                            <span class="order-discount-wrapper">
-                                                                <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
-                                                                <span class="product-discount">sale</span>
-                                                            </span>
-                                                            <span class="order-elements-price">123 800 <span class="currency">i</span></span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="order-elements-item">
-                                            <a class="order-elements-link" href="#">
-                                                <span class="order-elements-img">
-                                                    <img src="./images/order/order-img-3.png" alt="" />
-                                                </span>
-                                                <span class="order-elements-detail">
-                                                    <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
-                                                    <span class="order-elements-block">
-                                                        <span class="order-elements-amount">Количество: 256</span>
-                                                        <span class="order-elements-price-wrapper">
-                                                            <span class="order-discount-wrapper">
-                                                                <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
-                                                                <span class="product-discount">sale</span>
-                                                            </span>
-                                                            <span class="order-elements-price">123 800 <span class="currency">i</span></span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="order-elements-item">
-                                            <a class="order-elements-link" href="#">
-                                                <span class="order-elements-img">
-                                                    <img src="./images/order/order-img-4.png" alt="" />
-                                                </span>
-                                                <span class="order-elements-detail">
-                                                    <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
-                                                    <span class="order-elements-block">
-                                                        <span class="order-elements-amount">Количество: 256</span>
-                                                        <span class="order-elements-price-wrapper">
-                                                            <span class="order-discount-wrapper"></span>
-                                                            <span class="order-elements-price">123 800 <span class="currency">i</span></span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <a class="order-more-link button button_modified JS-AjaxMore-Link" href="javascript:;" data-ajaxmore-url="./ajax/order.html">
-                                        Показать ещё<i class="load-more-icon"></i>
+            <div class="profile">
+                <aside class="profile-side">
+                    <ul class="profile-menu">
+                        <li class="profile-menu-item">
+                            <a class="profile-menu-link" href="#">
+                                <span class="profile-menu-icon"><span class="profile-menu-icon-pic profile-menu-icon-pic_user"></span></span>Личная инфорамация
+                            </a>
+                        </li>
+                        <li class="profile-menu-item">
+                            <a class="profile-menu-link" href="#">
+                                <span class="profile-menu-icon"><span class="profile-menu-icon-pic profile-menu-icon-pic_orders"></span></span>Текущие заказы
+                            </a>
+                        </li>
+                        <li class="profile-menu-item profile-menu-item_active">
+                            <a class="profile-menu-link" href="#">
+                                <span class="profile-menu-icon"><span class="profile-menu-icon-pic profile-menu-icon-pic_history"></span></span>История заказов
+                            </a>
+                        </li>
+                        <li class="profile-menu-item">
+                            <a class="profile-menu-link" href="#">
+                                <span class="profile-menu-icon"><span class="profile-menu-icon-pic profile-menu-icon-pic_compare"></span></span>Сравнение товаров
+                            </a>
+                        </li>
+                        <li class="profile-menu-item">
+                            <a class="profile-menu-link" href="#">
+                                <span class="profile-menu-icon"><span class="profile-menu-icon-pic profile-menu-icon-pic_wishlist"></span></span>Избранные товары
+                            </a>
+                        </li>
+                        <li class="profile-menu-item">
+                            <a class="profile-menu-link" href="#">
+                                <span class="profile-menu-icon"><span class="profile-menu-icon-pic profile-menu-icon-pic_settings"></span></span>Настройки профиля
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+                <div class="profile-content">
+                    <h1 class="profile-title">Мои заказы<span class="profile-title-amount">13</span></h1>
+                    <div class="JS-AjaxMore">
+                        <ul class="profile-orders JS-AjaxMore-Content">
+                            <li class="profile-orders-item">
+                                <div class="profile-orders-block">
+                                    <a class="profile-orders-panel" href="#">
+                                        <span class="profile-orders-name">Заказ от 22 ноября 2022</span>
+                                        <span class="profile-orders-number">№ 567</span>
+                                        <span class="profile-orders-price">45 900 <span class="currency">i</span>, оплачено</span>
                                     </a>
-                                </div>
-                            </li>
-                            <li class="order-list-item js-form-validate-order-item">
-                                <div class="order-list-panel">
-                                    <span class="order-number">5</span><span class="order-name">Способ оплаты</span>
-                                </div>
-                                <div class="order-obtain order-row">
-                                    <div class="order-obtain-item order-col">
-                                        <label class="order-radio-field">
-                                            <span class="radio-field">
-                                                <span class="order-obtain-radio radio">
-                                                    <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param2" />
-                                                    <i class="order-obtain-radio-check radio-check"></i>
-                                                    <span class="order-obtain-radio-label">Наличными</span>
-                                                    <span class="order-radio-decor"></span>
-                                                </span>
-                                            </span>
-                                            <span class="order-obtain-info">Оплата наличными при получении заказа</span>
-                                        </label>
-                                    </div>
-                                    <div class="order-obtain-item order-col">
-                                        <label class="order-radio-field">
-                                            <span class="radio-field">
-                                                <span class="order-obtain-radio radio">
-                                                    <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param2" checked="checked" />
-                                                    <i class="order-obtain-radio-check radio-check"></i>
-                                                    <span class="order-obtain-radio-label">Картой на сайте</span>
-                                                    <span class="order-radio-decor"></span>
-                                                </span>
-                                            </span>
-                                            <span class="order-pay">
-                                                <span class="pay">
-                                                    <span class="pay-item">
-                                                        <img class="pay-img" src="./images/footer/mastercard.png" alt="" />
+                                    <div class="profile-orders-content">
+                                        <div class="profile-orders-delivery profile-orders-col">
+                                            <div class="profile-orders-delivery-label">Доставка в пункт выдачи</div>
+                                        </div>
+                                        <div class="profile-orders-status profile-orders-col">
+                                            <span class="profile-orders-status-label button button_modified">Заказ получен</span>
+                                        </div>
+                                        <div class="profile-orders-products profile-orders-col">
+                                            <ul class="profile-orders-products-list">
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-1.png" alt="" />
                                                     </span>
-                                                    <span class="pay-item">
-                                                        <img class="pay-img" src="./images/footer/visa.png" alt="" />
+                                                </li>
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-2.png" alt="" />
                                                     </span>
-                                                    <span class="pay-item">
-                                                        <img class="pay-img" src="./images/footer/mir.png" alt="" />
+                                                </li>
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-3.png" alt="" />
                                                     </span>
-                                                    <span class="pay-item">
-                                                        <img class="pay-img" src="./images/footer/union-pay.png" alt="" />
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="profile-orders-activity profile-orders-col">
+                                            <a class="profile-orders-link" href="#">Подробнее</a>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
-                        </ol>
-                    </div>
-                    <div class="order-side JS-Sticky" data-sticky="{
-                            'classActive': 'basket-side-block_fix',
-                            'classBottom': 'basket-side-block_bottom'
-                    }">
-                        <div class="basket-side-block JS-Sticky-Item">
-                            <div class="order-back-block">
-                                <a class="order-back order-link" href="#">Вернуться в корзину</a>
-                            </div>
-                            <div class="basket-sum">
-                                <div class="basket-sum-inner">
-                                    <dl class="basket-sum-item basket-sum-item_order">
-                                        <dt class="basket-sum-name">Ваш заказ</dt>
-                                        <dd class="basket-sum-value">
-                                            <a class="order-link basket-sum-link" href="#">3 товара</a>
-                                        </dd>
-                                    </dl>
-                                    <dl class="basket-sum-item">
-                                        <dt class="basket-sum-name">Товары</dt>
-                                        <dd class="basket-sum-value">
-                                            25 790 <span class="currency">i</span>
-                                        </dd>
-                                    </dl>
-                                    <dl class="basket-sum-item">
-                                        <dt class="basket-sum-name">Курьерская доставка</dt>
-                                        <dd class="basket-sum-value">
-                                            900 <span class="currency">i</span>
-                                        </dd>
-                                    </dl>
-                                    <dl class="basket-sum-item basket-sum-item_total">
-                                        <dt class="basket-sum-name">Итого:</dt>
-                                        <dd class="basket-sum-value">
-                                            134 800 <span class="basket-sum-value-currency currency">i</span>
-                                        </dd>
-                                    </dl>
+                            <li class="profile-orders-item">
+                                <div class="profile-orders-block">
+                                    <a class="profile-orders-panel" href="#">
+                                        <span class="profile-orders-name">Заказ от 22 ноября 2022</span>
+                                        <span class="profile-orders-number">№ 567</span>
+                                        <span class="profile-orders-price">45 900 <span class="currency">i</span>, оплачено</span>
+                                    </a>
+                                    <div class="profile-orders-content">
+                                        <div class="profile-orders-delivery profile-orders-col">
+                                            <div class="profile-orders-delivery-label">Доставка в пункт выдачи</div>
+                                        </div>
+                                        <div class="profile-orders-status profile-orders-col">
+                                            <span class="profile-orders-status-label button button_modified">Заказ получен</span>
+                                        </div>
+                                        <div class="profile-orders-products profile-orders-col">
+                                            <ul class="profile-orders-products-list">
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-2.png" alt="" />
+                                                    </span>
+                                                </li>
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-3.png" alt="" />
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="profile-orders-activity profile-orders-col">
+                                            <a class="profile-orders-link" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button class="basket-sum-button button button_dark">Оформить заказ</button>
-                            </div>
-                            <div class="basket-important">
-                                <span class="basket-important-icon"></span>
-                                <div>Бесплатная доставка от 2000 тыс рублей, самовывоз без ограничений</div>
-                            </div>
+                            </li>
+                            <li class="profile-orders-item">
+                                <div class="profile-orders-block">
+                                    <a class="profile-orders-panel" href="#">
+                                        <span class="profile-orders-name">Заказ от 22 ноября 2022</span>
+                                        <span class="profile-orders-number">№ 567</span>
+                                        <span class="profile-orders-price">45 900 <span class="currency">i</span>, оплачено</span>
+                                    </a>
+                                    <div class="profile-orders-content">
+                                        <div class="profile-orders-delivery profile-orders-col">
+                                            <div class="profile-orders-delivery-label">Доставка в пункт выдачи</div>
+                                        </div>
+                                        <div class="profile-orders-status profile-orders-col">
+                                            <span class="profile-orders-status-label button button_modified">Заказ получен</span>
+                                        </div>
+                                        <div class="profile-orders-products profile-orders-col">
+                                            <ul class="profile-orders-products-list">
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-1.png" alt="" />
+                                                    </span>
+                                                </li>
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-2.png" alt="" />
+                                                    </span>
+                                                </li>
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-3.png" alt="" />
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="profile-orders-activity profile-orders-col">
+                                            <a class="profile-orders-link" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="profile-orders-item">
+                                <div class="profile-orders-block">
+                                    <a class="profile-orders-panel" href="#">
+                                        <span class="profile-orders-name">Заказ от 22 ноября 2022</span>
+                                        <span class="profile-orders-number">№ 567</span>
+                                        <span class="profile-orders-price">45 900 <span class="currency">i</span>, оплачено</span>
+                                    </a>
+                                    <div class="profile-orders-content">
+                                        <div class="profile-orders-delivery profile-orders-col">
+                                            <div class="profile-orders-delivery-label">Доставка в пункт выдачи</div>
+                                        </div>
+                                        <div class="profile-orders-status profile-orders-col">
+                                            <span class="profile-orders-status-label button button_modified">Заказ получен</span>
+                                        </div>
+                                        <div class="profile-orders-products profile-orders-col">
+                                            <ul class="profile-orders-products-list">
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-1.png" alt="" />
+                                                    </span>
+                                                </li>
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-2.png" alt="" />
+                                                    </span>
+                                                </li>
+                                                <li class="profile-orders-products-item">
+                                                    <span class="profile-orders-products-pic">
+                                                        <img src="./images/profile/profile-data/profile-products-3.png" alt="" />
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="profile-orders-activity profile-orders-col">
+                                            <a class="profile-orders-link" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="profile-load-more load-more">
+                            <a class="load-more-link button button_modified JS-AjaxMore-Link" href="javascript:;" data-ajaxmore-url="./ajax/profile-history.html">
+                                Показать ещё<i class="load-more-icon"></i>
+                            </a>
+                            <ul class="pager JS-AjaxMore-Pager">
+                                <!-- Если не куда листать, добавляется класс pager-item_disabled -->
+                                <li class="pager-item pager-item_prev">
+                                    <a class="pager-link" href="#">
+                                        <span class="pager-icon pager-icon_prev"></span>
+                                    </a>
+                                </li>
+                                <li class="pager-item pager-item_active"><span class="pager-link">1</span></li>
+                                <li class="pager-item"><a class="pager-link" href="#">2</a></li>
+                                <li class="pager-item"><a class="pager-link" href="#">3</a></li>
+                                <li class="pager-item"><a class="pager-link" href="#">4</a></li>
+                                <li class="pager-item"><a class="pager-link" href="#">5</a></li>
+                                <li class="pager-item pager-item_next" href="#">
+                                    <a class="pager-link" href="#">
+                                        <span class="pager-icon pager-icon_next"></span>
+                                    </a>
+                                </li>
+                                <!-- Если не куда листать, добавляется класс pager-item_disabled -->
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
 
         </main>
 

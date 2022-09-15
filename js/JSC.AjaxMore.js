@@ -59,7 +59,7 @@
     if (urlNew == undefined) {
       this.$more.remove();
     } else {
-      this.$more.attr('data-ajaxmore-url', urlNew);
+      this.$more.data('ajaxmore-url', urlNew);
     }
 
     this.success();

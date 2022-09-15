@@ -311,6 +311,7 @@ label.form-error {
 
     &_modified {
         text-transform: none;
+        line-height: 1.3em;
     }
 
     @media screen
@@ -346,7 +347,8 @@ label.form-error {
     border-radius: 22px;
     background-color: transparent;
     padding: 7px 21px 8px 20px;
-    border: 1px solid #333333;
+    border: 0;
+    box-shadow: 0 0 15px rgba(171, 171, 171, 0.25);
 }
 .selectric .label {
     margin: 0;
@@ -441,6 +443,59 @@ label.form-error {
 }
 .select-simple .selectric-items li {
     text-align: left;
+}
+
+@media screen
+and (max-width: $mobile) {
+    .selectric-items {
+        display: block;
+        position: fixed;
+        top: auto;
+        bottom: -100%;
+        left: 0;
+        z-index: 1000;
+        width: 100%!important;
+        padding: 25px 23px 15px;
+        border-radius: 15px 15px 0 0;
+        transition: bottom 0.3s ease-in-out;
+    }
+    .selectric-above .selectric-items {
+        top: auto;
+        bottom: -100%;
+    }
+    .selectric-items .selectric-hidden {
+        display: block;
+        border-bottom-width: 0;
+        padding-top: 0;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .selectric-items li {
+        padding: 13px 0 14px;
+        border-bottom: 1px solid #E1E1E4;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 17px;
+        &:last-child {
+            border-bottom-width: 0;
+        }
+    }
+    .selectric-open {
+        &:after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+    .selectric-open .selectric-items {
+        bottom: 0;
+    }
 }
 /*selectric*/
 
@@ -582,6 +637,7 @@ label.form-error {
         border-width: 0;
         height: auto;
         padding: 0;
+        box-shadow: none;
     }
 
     @media screen
@@ -829,3 +885,25 @@ label.form-error {
     }
 }
 /* /slider-range */
+
+
+.form {
+    &-row {
+        display: flex;
+        margin-right: -$gutter;
+        margin-left: -$gutter;
+    }
+    &-col {
+        padding-right: $gutter;
+        padding-left: $gutter;
+    }
+    &-col-2 {
+        width: 50%;
+    }
+    &-col-3 {
+        width: 33.3%;
+    }
+    &-buttons {
+        margin-top: 5px;
+    }
+}

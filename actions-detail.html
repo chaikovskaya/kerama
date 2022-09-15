@@ -661,11 +661,14 @@
                 </a>
             </div>
 
-            <div class="breadcrumbs">
+            <div class="breadcrumbs js-expand" data-expand="{
+                'classActive': 'breadcrumbs_active',
+                'classShow': 'breadcrumbs_show'
+            }">
                 <a class="back-link button" href="#">
                     <span class="back-icon"></span>Назад
                 </a>
-                <ul class="breadcrumbs-list">
+                <ul class="breadcrumbs-list js-expand-block">
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="/">
                             <span class="breadcrumbs-label">Главная</span>
@@ -683,6 +686,9 @@
                     </li>
                     <li class="breadcrumbs-item">
                         <span class="breadcrumbs-label">Лето ярких скидок с Grespania Ceramica</span>
+                    </li>
+                    <li class="breadcrumbs-item breadcrumbs-item_more">
+                        <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
                 </ul>
             </div>
@@ -1329,575 +1335,40 @@
                                     </a>
                                 </div>
                                 <div class="mob-catalog-category-container">
-                                    <!-- Здесь будет все элементы свернуты, т.е. класса catalog-menu-category-item_active не будет после загрузки стр. -->
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <div class="catalog-menu-category-item">
+                                        <a class="catalog-menu-category-switcher" href="javascript:;">
                                             <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Плитка</span>
                                         </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
+                                        <div class="catalog-menu-category-block">
                                             <ul class="catalog-submenu-category">
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Керамогранит</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item catalog-submenu-category-item_active JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item catalog-submenu-category-item_active">
                                                     <a class="catalog-submenu-category-link" href="#">Керамическая плитка</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Мозаика</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Для стен</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Для пола</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Для ванной</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Для кухни</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Керамогранит</a>
                                                 </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
+                                                <li class="catalog-submenu-category-item">
                                                     <a class="catalog-submenu-category-link" href="#">Керамическая плитка</a>
                                                 </li>
                                             </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 3<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Стиль</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-checkboxes">
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>3D плитка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 10<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Коллекция</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-category">
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Название 1</a>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 3<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Поверхность</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-category">
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Название 1</a>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 3<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item_price catalog-menu-category-item">
-                            <span class="catalog-menu-category-switcher">
-                                <span class="catalog-menu-category-link">Цена</span>
-                            </span>
-                                        <div class="catalog-menu-category-block">
-                                            <div class="slider-range js-slider-range" data-code="price">
-                                                <div class="slider-range-panel">
-                                                    <div class="slider-range-panel-item">
-                                                        <input id="minCost_price"
-                                                               type="text"
-                                                               class="slider-range-input input js-slider-range-min min-price"
-                                                               name="arrFilter_P1_MIN"
-                                                               placeholder=""
-                                                               value="10"
-                                                               data-value="10"
-                                                        />
-                                                        <span class="slider-range-label js-slider-range-label-min">от</span>
-                                                        <span class="slider-range-currency js-slider-range-currency"><span class="currency">i</span></span>
-                                                    </div>
-                                                    <div class="slider-range-panel-item">
-                                                        <input id="maxCost_price"
-                                                               type="text"
-                                                               class="slider-range-input input js-slider-range-max max-price"
-                                                               name="arrFilter_P1_MAX"
-                                                               placeholder=""
-                                                               value="5000"
-                                                               data-value="5000"
-                                                        />
-                                                        <span class="slider-range-label js-slider-range-label-max">до</span>
-                                                        <span class="slider-range-currency js-slider-range-currency"><span class="currency">i</span></span>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-range-track js-slider-range-track">
-                                                    <div class="ui-slider-handle js-ui-slider-handle">
-                                                        <div class="slider-range-text js-slider-rating-text-min"></div>
-                                                    </div>
-                                                    <div class="ui-slider-handle js-ui-slider-handle">
-                                                        <div class="slider-range-text slider-range-text_max js-slider-rating-text-max"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Страна</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-checkboxes">
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param2" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>Название 1
-                                            </span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 3<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Цвет</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-checkboxes">
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" checked="checked" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-1.png" alt="" />Бежевый
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-2.png" alt="" />Красный
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-3.png" alt="" />Бордовый
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-4.png" alt="" />Фиолетовый
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-5.png" alt="" />Оранжевый
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-6.png" alt="" />Голубой
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-7.png" alt="" />Синий
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param3" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>
-                                                <img class="catalog-submenu-color" src="./images/catalog/colors/color-1.png" alt="" />Бежевый
-                                            </span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 10<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item">
-                            <span class="catalog-menu-category-switcher">
-                                <span class="catalog-menu-category-link">
-                                    <label class="catalog-menu-category-switch switch">
-                                        Акционные товары
-                                        <input class="switch-checkbox" type="checkbox" name="param4" />
-                                        <span class="catalog-menu-category-switch-decor switch-decor switch-decor_simple">
-                                            <span class="switch-icon"></span>
-                                        </span>
-                                    </label>
-                                </span>
-                            </span>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Размер</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-checkboxes">
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param5" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>Назание 1
-                                            </span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 10<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Тип помещения</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-checkboxes">
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param6" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>Назание 1
-                                            </span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 10<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
-                                        <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
-                                            <i class="catalog-menu-category-icon"></i><span class="catalog-menu-category-link">Назначение</span>
-                                        </a>
-                                        <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
-                                'amount': 7,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-checkboxes">
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param7" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>Для пола
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>Для стенF
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>Для стен и пола
-                                            </span>
-                                                    </label>
-                                                </li>
-                                                <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
-                                                    <label class="catalog-submenu-checkboxes-label">
-                                            <span class="checkbox">
-                                                <input class="checkbox-input" type="checkbox" name="param1" />
-                                                <span class="checkbox-check" aria-hidden="true">
-                                                    <span class="checkbox-icon"></span>
-                                                </span>Утолщёнка
-                                            </span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 10<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-menu-category-item">
-                            <span class="catalog-menu-category-switcher">
-                                <span class="catalog-menu-category-link">
-                                    <label class="catalog-menu-category-switch switch">
-                                        Рекомендуем
-                                        <input class="switch-checkbox" type="checkbox" name="param8" />
-                                        <span class="catalog-menu-category-switch-decor switch-decor switch-decor_simple">
-                                            <span class="switch-icon"></span>
-                                        </span>
-                                    </label>
-                                </span>
-                            </span>
-                                    </div>
-                                    <ul class="catalog-menu-category-reset">
-                                        <li class="catalog-menu-category-reset-item catalog-menu-category-reset-item_reset">
-                                            <button class="catalog-menu-category-reset-button button button_modified" type="reset">Сбросить</button>
-                                        </li>
-                                    </ul>
-                                    <div class="catalog-menu-category-activity">
-                                        <button class="catalog-menu-category-button button button_dark" type="button">Показать</button>
-                                    </div>
-                                    <div class="catalog-menu-category-item">
-                            <span class="catalog-menu-category-switcher">
-                                <!-- Иконки нет -->
-                                <span class="catalog-menu-category-link catalog-menu-category-link_simple">Популярные подборки</span>
-                            </span>
-                                        <div class="catalog-menu-category-block JS-ShowMore" data-showmore="{
-                                'amount': 4,
-                                'classHide': 'catalog-submenu-category-item_hide'
-                            }">
-                                            <ul class="catalog-submenu-category">
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Керамогранит</a>
-                                                </li>
-                                                <li class="catalog-submenu-category-item catalog-submenu-category-item_active JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Стиль Италии</a>
-                                                </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Французкая плитка</a>
-                                                </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Лучшее из новинок</a>
-                                                </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Керамогранит</a>
-                                                </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Стиль Италии</a>
-                                                </li>
-                                                <li class="catalog-submenu-category-item JS-ShowMore-Item">
-                                                    <a class="catalog-submenu-category-link" href="#">Французкая плитка</a>
-                                                </li>
-                                            </ul>
-                                            <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                    <span class="show-more show-more_show">
-                                        <span class="catalog-submenu-category-more show-more-label">Ещё 3<span class="show-more-icon"></span></span>
-                                    </span>
-                                                <span class="show-more show-more_hide">
-                                        <span class="catalog-submenu-category-more show-more-label">Свернуть<span class="show-more-icon"></span></span>
-                                    </span>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1950,7 +1421,7 @@
                     </div>
 
                     <div class="catalog-panel">
-                        <span class="catalog-panel-name h2"><span class="catalog-panel-name-label">Коллекций 34</span> / Товары 25</span>
+                        <span class="catalog-panel-name h2"><a class="catalog-panel-name-link" href="#">Коллекций 34</a> / <span class="catalog-panel-name-label">Товары 25</span></span>
                         <ul class="catalog-activity">
                             <li class="catalog-activity-item">
                                 <select name="products-sort" class="js-select">
@@ -2158,8 +1629,8 @@
                                                     </ul>
                                                 </div>
                                                 <div class="products-popup-buttons">
-                                                    <button class="catalog-filter-button button button_modified" type="reset">Сбросить</button>
                                                     <button class="catalog-filter-button button button_dark" type="button">Показать</button>
+                                                    <button class="catalog-filter-button button button_modified" type="reset">Сбросить</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -2214,11 +1685,11 @@
                         </ul>
                     </div>
 
-                    <div class="catalog-list-wrapper js-slider-catalog JS-AjaxMoreCatalog">
-                        <div class="catalog-list-inner js-slider-list">
-                            <div class="catalog-list swiper-wrapper JS-AjaxMore-Content">
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                    <div class="catalog-list-wrapper JS-AjaxMoreCatalog">
+                        <div class="catalog-list-inner">
+                            <div class="catalog-list JS-AjaxMore-Content">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-24.png" alt="" />
@@ -2253,7 +1724,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
@@ -2266,13 +1739,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">123 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-25.png" alt="" />
@@ -2307,7 +1782,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
@@ -2323,14 +1800,15 @@
                                                     <span class="product-detail-price">127 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
                                                 <span class="product-basket">
-                                                <span class="product-basket-icon"><span class="product-basket-icon-element"></span></span>Добавлено
-                                            </span>
+                                                    <span class="product-basket-icon"><span class="product-basket-icon-element"></span></span>
+                                                    <span class="product-button-label">Добавлено</span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-26.png" alt="" />
@@ -2365,7 +1843,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -2377,13 +1857,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">42 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-27.png" alt="" />
@@ -2418,7 +1900,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
@@ -2433,13 +1917,15 @@
                                                     </div>
                                                     <span class="product-detail-price">132 700 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-29.png" alt="" />
@@ -2474,7 +1960,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -2489,13 +1977,15 @@
                                                     </div>
                                                     <span class="product-detail-price">133 700 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-30.png" alt="" />
@@ -2530,7 +2020,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
@@ -2543,13 +2035,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">123 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-31.png" alt="" />
@@ -2584,7 +2078,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
@@ -2599,13 +2095,15 @@
                                                     </div>
                                                     <span class="product-detail-price">127 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-32.png" alt="" />
@@ -2640,7 +2138,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -2652,13 +2152,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">42 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-33.png" alt="" />
@@ -2693,7 +2195,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
@@ -2706,13 +2210,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">123 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-25.png" alt="" />
@@ -2747,7 +2253,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
@@ -2763,14 +2271,15 @@
                                                     <span class="product-detail-price">127 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
                                                 <span class="product-basket">
-                                                <span class="product-basket-icon"><span class="product-basket-icon-element"></span></span>Добавлено
-                                            </span>
+                                                    <span class="product-basket-icon"><span class="product-basket-icon-element"></span></span>
+                                                    <span class="product-button-label">Добавлено</span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-34.png" alt="" />
@@ -2805,7 +2314,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -2817,13 +2328,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">42 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-35.png" alt="" />
@@ -2858,7 +2371,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
@@ -2873,13 +2388,15 @@
                                                     </div>
                                                     <span class="product-detail-price">132 700 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-36.png" alt="" />
@@ -2914,7 +2431,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -2929,13 +2448,15 @@
                                                     </div>
                                                     <span class="product-detail-price">133 700 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-28.png" alt="" />
@@ -2970,7 +2491,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
@@ -2983,13 +2506,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">123 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-37.png" alt="" />
@@ -3024,7 +2549,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
@@ -3039,13 +2566,15 @@
                                                     </div>
                                                     <span class="product-detail-price">127 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-24.png" alt="" />
@@ -3080,7 +2609,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -3092,13 +2623,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">42 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-38.png" alt="" />
@@ -3133,7 +2666,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -3148,13 +2683,15 @@
                                                     </div>
                                                     <span class="product-detail-price">133 700 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-39.png" alt="" />
@@ -3189,7 +2726,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
@@ -3202,13 +2741,15 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">123 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-40.png" alt="" />
@@ -3243,7 +2784,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
@@ -3258,13 +2801,15 @@
                                                     </div>
                                                     <span class="product-detail-price">127 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog-list-item swiper-slide">
-                                    <div class="product product_detail">
+                                <div class="catalog-list-item">
+                                    <div class="product product_detail product_catalog">
                                         <div class="product-block">
                                             <a class="product-link" href="#">
                                                 <img class="product-img" src="./images/products/products-img-32.png" alt="" />
@@ -3299,7 +2844,9 @@
                                         <div class="product-info">
                                             <ul class="product-brand">
                                                 <li class="product-brand-item">
-                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    <div class="product-brand-wrapper">
+                                                        <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                    </div>
                                                 </li>
                                                 <li class="product-brand-item">
                                                     <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
@@ -3311,7 +2858,9 @@
                                                     <div class="product-discount-wrapper"></div>
                                                     <span class="product-detail-price">42 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
                                                 </div>
-                                                <a class="product-button button" href="#">В корзину</a>
+                                                <a class="product-button button" href="#">
+                                                    <span class="product-button-icon"></span><span class="product-button-label">В корзину</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

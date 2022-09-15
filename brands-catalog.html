@@ -662,11 +662,14 @@
                 </a>
             </div>
 
-            <div class="breadcrumbs">
+            <div class="breadcrumbs js-expand" data-expand="{
+                'classActive': 'breadcrumbs_active',
+                'classShow': 'breadcrumbs_show'
+            }">
                 <a class="back-link button" href="#">
                     <span class="back-icon"></span>Назад
                 </a>
-                <ul class="breadcrumbs-list">
+                <ul class="breadcrumbs-list js-expand-block">
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="/">
                             <span class="breadcrumbs-label">Главная</span>
@@ -679,6 +682,9 @@
                     </li>
                     <li class="breadcrumbs-item">
                         <span class="breadcrumbs-label">Бренды</span>
+                    </li>
+                    <li class="breadcrumbs-item breadcrumbs-item_more">
+                        <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
                 </ul>
             </div>
