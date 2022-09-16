@@ -653,11 +653,11 @@
 
             <div class="banner banner_simple">
                 <div class="banner-detail">
-                    <div class="banner-title">Личная информация</div>
+                    <div class="banner-title">Личный кабинет</div>
                 </div>
                 <!-- Если здесь ссылка не нужна, замените на div: -->
                 <a class="banner-img" href="#">
-                    <img class="banner-pic" src="./images/profile/profile-data/profile-banner-3.png" alt="" />
+                    <img class="banner-pic" src="./images/profile/profile-data/profile-banner-1.png" alt="" />
                 </a>
             </div>
 
@@ -738,12 +738,10 @@
 
             <hr class="profile-line" />
 
-            <div class="profile-user h2">Александр Иванов</div>
-
             <div class="profile">
                 <aside class="profile-side">
                     <ul class="profile-menu">
-                        <li class="profile-menu-item profile-menu-item_active">
+                        <li class="profile-menu-item">
                             <a class="profile-menu-link" href="#">
                                 <span class="profile-menu-icon"><span class="profile-menu-icon-pic profile-menu-icon-pic_user"></span></span>Личная инфорамация
                             </a>
@@ -776,157 +774,142 @@
                     </ul>
                 </aside>
                 <div class="profile-content">
-                    <div class="profile-data-form">
-                        <form class="js-form-validate">
-                            <span class="profile-title h1">Личные данные</span>
 
-                            <div class="profile-data-avatar-wrapper">
-                                <div class="profile-data-avatar js-file" data-file-active="profile-data-avatar_active">
-                                    <span class="profile-data-avatar-img js-file-img"></span>
-                                    <!-- Если фото загружено, то указать путь в value: -->
-                                    <input type="file" class="profile-data-file file-input with-preview max-1 js-file-input" accept="jpg|jpeg|png" size="5242880" name="myfile" title="" value="./images/profile/profile-data/profile-avatar.jpg" />
-                                    <a class="profile-data-link" href="#">Изменить фото</a>
-                                </div>
-                            </div>
+                    <ul class="profile-sections">
+                        <li class="profile-sections-item">
+                            <a class="profile-sections-block" href="#">
+                                <span class="profile-sections-panel">
+                                    <span class="profile-sections-img">
+                                        <img class="profile-sections-pic" src="./images/profile/profile-data/profile-avatar.jpg" alt="" />
+                                    </span>
+                                    <span class="profile-sections-name-wrapper">
+                                        <span class="profile-sections-name">Иван Петровский</span>
+                                        <span class="profile-sections-name-label">Внести изменения</span>
+                                    </span>
+                                    <span class="profile-sections-notice">
+                                        <span class="profile-sections-notice-icon"></span><span class="profile-sections-notice-amount">13</span>
+                                    </span>
+                                </span>
+                                <span class="profile-sections-footer">Телефон : +7 948 487-34-56</span>
+                            </a>
+                        </li>
+                        <li class="profile-sections-item profile-sections-item_orders">
+                            <a class="profile-sections-block" href="#">
+                                <span class="profile-sections-panel">
+                                    <span class="profile-sections-icon">
+                                        <span class="profile-sections-icon-pic"></span>
+                                    </span>
+                                    <span class="profile-sections-name-wrapper">
+                                        <span class="profile-sections-name">Текущие заказы</span>
+                                    </span>
+                                </span>
+                                <span class="profile-sections-footer">Ожидается заказ на сумму:
+                                    <span class="profile-sections-price">220 660 <span class="profile-sections-price-currency currency">i</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="profile-sections-item profile-sections-item_history">
+                            <a class="profile-sections-block" href="#">
+                                <span class="profile-sections-panel">
+                                    <span class="profile-sections-icon">
+                                        <span class="profile-sections-icon-pic"></span>
+                                    </span>
+                                    <span class="profile-sections-name-wrapper">
+                                        <span class="profile-sections-name">История заказов</span>
+                                    </span>
+                                </span>
+                                <span class="profile-sections-footer">Вы купили товары на сумму:
+                                    <span class="profile-sections-price">120 660 <span class="profile-sections-price-currency currency">i</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="profile-sections-item profile-sections-item_compare">
+                            <a class="profile-sections-block" href="#">
+                                <span class="profile-sections-panel">
+                                    <span class="profile-sections-icon">
+                                        <span class="profile-sections-icon-pic"></span>
+                                    </span>
+                                    <span class="profile-sections-name-wrapper">
+                                        <span class="profile-sections-name">Сравнение товаров</span>
+                                    </span>
+                                </span>
+                                <span class="profile-sections-products-label">Вы выбрали для сравнения 6 товаров:</span>
+                                <ul class="profile-sections-products">
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-1.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-2.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-3.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-4.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-5.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-6.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-6.png" alt="" />
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="profile-sections-item profile-sections-item_wishlist">
+                            <a class="profile-sections-block" href="#">
+                                <span class="profile-sections-panel">
+                                    <span class="profile-sections-icon">
+                                        <span class="profile-sections-icon-pic"></span>
+                                    </span>
+                                    <span class="profile-sections-name-wrapper">
+                                        <span class="profile-sections-name">Избранные товары</span>
+                                    </span>
+                                </span>
+                                <span class="profile-sections-products-label">Вам понравилось 7 товаров:</span>
+                                <ul class="profile-sections-products">
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-1.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-2.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-3.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-4.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-5.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-6.png" alt="" />
+                                    </li>
+                                    <li class="profile-sections-products-item">
+                                        <img class="profile-sections-products-img" src="./images/profile/profile-sections/profile-sections-products-6.png" alt="" />
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="profile-sections-item profile-sections-item_settings">
+                            <a class="profile-sections-block" href="#">
+                                <span class="profile-sections-panel">
+                                    <span class="profile-sections-icon">
+                                        <span class="profile-sections-icon-pic"></span>
+                                    </span>
+                                    <span class="profile-sections-name-wrapper">
+                                        <span class="profile-sections-name">Настройки профиля</span>
+                                    </span>
+                                </span>
+                                <span class="profile-sections-footer">Вы можете упарвлять своими заказами</span>
+                            </a>
+                        </li>
+                    </ul>
 
-                            <div class="form-row">
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="*Имя" id="profile-name" name="profile-name" required />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="*Фамилия" id="profile-surname" name="profile-surname" required />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="profile-data-row-modified form-row">
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="День Рождения" id="profile-data" name="profile-data" />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <div class="profile-data-gender">
-                                            <span class="profile-data-gender-name">Пол</span>
-                                            <label class="switch">
-                                                <input class="profile-data-gender-switch-checkbox switch-checkbox js-form-checkbox" type="checkbox" name="agreement" checked="checked" />
-                                                <span class="switch-decor">
-                                                    <span class="switch-icon"></span>
-                                                </span>
-                                                <span class="profile-data-gender-label profile-data-gender-label_man">Мужской</span>
-                                                <span class="profile-data-gender-label">Женский</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <input class="input js-mask-email" type="text" placeholder="Электроннная почта" id="profile-email-1" name="profile-email-1" />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <input class="input js-mask-email" type="text" placeholder="Электроннная почта" id="profile-email-2" name="profile-email-2" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-buttons">
-                                <button class="profile-data-button button button_dark">Сохранить</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="profile-data-form">
-                        <form class="js-form-validate">
-                            <span class="profile-title h1">Адреса доставки</span>
-                            <div class="profile-data-address">
-                                <div class="profile-data-address-item">
-                                    <div class="profile-data-address-content">440064, г. Пенза, ул. Перспективная, 9-158</div>
-                                    <ul class="profile-data-address-activity">
-                                        <li class="profile-data-address-activity-item">
-                                            <a class="profile-data-address-link profile-data-address-edit" href="#">Изменить</a>
-                                        </li>
-                                        <li class="profile-data-address-activity-item">
-                                            <a class="profile-data-address-link profile-data-address-delete" href="#">Удалить адрес<span class="profile-data-address-delete-icon"></span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="profile-data-address-item">
-                                    <div class="profile-data-address-content">440064, г. Пенза, ул. Перспективная, 9-158</div>
-                                    <ul class="profile-data-address-activity">
-                                        <li class="profile-data-address-activity-item">
-                                            <a class="profile-data-address-link profile-data-address-edit" href="#">Изменить</a>
-                                        </li>
-                                        <li class="profile-data-address-activity-item">
-                                            <a class="profile-data-address-link profile-data-address-delete" href="#">Удалить адрес<span class="profile-data-address-delete-icon"></span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <span class="profile-data-address-label">Добавить адрес:</span>
-                            <div class="form-row">
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="Город" id="profile-city-1" name="profile-city-1" required />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-2">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="Улица" id="profile-street-1" name="profile-street-1" required />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-col form-col-3">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="Индекс" id="profile-index-1" name="profile-index-1" />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-3">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="Дом" id="profile-home-1" name="profile-home-1" required />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-3">
-                                    <div class="field">
-                                        <input class="input" type="text" placeholder="Квартира" id="profile-flat-1" name="profile-flat-1" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-buttons">
-                                <button class="profile-data-button button button_dark">Сохранить</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="profile-data-form">
-                        <form class="js-form-validate">
-                            <span class="profile-title h1">Изменить пароль</span>
-                            <div class="form-row">
-                                <div class="form-col form-col-3">
-                                    <div class="field">
-                                        <input class="input" type="password" placeholder="Введите старый пароль" id="profile-password-old" name="profile-password-old" />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-3">
-                                    <div class="field">
-                                        <input class="input" type="password" placeholder="Новый пароль" id="profile-password-new" name="profile-password-new" />
-                                    </div>
-                                </div>
-                                <div class="form-col form-col-3">
-                                    <div class="field">
-                                        <input class="input" type="password" placeholder="Подтверждение пароля" id="profile-password-confirm" name="profile-password-confirm" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-buttons">
-                                <button class="profile-data-button button button_dark">Сохранить</button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
 

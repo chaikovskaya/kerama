@@ -906,4 +906,17 @@ and (max-width: $mobile) {
     &-buttons {
         margin-top: 5px;
     }
+
+    @media screen
+    and (max-width: $mobile){
+        &-row {
+            flex-direction: column;
+        }
+        &-col-2 {
+            width: 100%;
+        }
+        &-col-3 {
+            width: 100%;
+        }
+    }
 }
