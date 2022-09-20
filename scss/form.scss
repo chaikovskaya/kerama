@@ -315,7 +315,7 @@ label.form-error {
     }
 
     @media screen
-    and (max-width: 1600px){
+    and (max-width: $desktop){
         &_simple {
             line-height: 1.5em;
         }

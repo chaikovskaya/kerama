@@ -1,0 +1,13 @@
+
+.wishlist-catalog {
+    &-item {
+        margin-bottom: 50px;
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        &-item {
+            margin-bottom: 45px;
+        }
+    }
+}

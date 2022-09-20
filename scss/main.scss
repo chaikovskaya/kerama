@@ -1628,6 +1628,10 @@
         font-size: 14px;
         line-height: 20px;
         color: #000000;
+        text-decoration: none;
+        &:hover {
+            color: #000000;
+        }
     }
     &-list-block {
         position: relative;
@@ -1684,6 +1688,9 @@
         font-size: 16px;
         line-height: 22px;
         color: rgba(255, 255, 255, 0.95);
+    }
+    &-list-name_dark {
+        color: #333333;
     }
 
 

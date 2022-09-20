@@ -874,7 +874,6 @@
 }
 
 .profile-wishlist {
-    position: relative;
     margin-bottom: 52px;
     overflow: hidden;
     &-panel {
@@ -893,7 +892,7 @@
         display: flex;
     }
     &-list-item {
-        width: 25%;
+        width: 218px;
     }
 
     @media screen
@@ -909,9 +908,6 @@
     @media screen
     and (max-width: $tablet){
         overflow: visible;
-        &-list-item {
-            width: 218px;
-        }
     }
 }
 
