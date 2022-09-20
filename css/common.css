@@ -885,7 +885,7 @@ label.form-error {
   .button_modified {
     text-transform: none;
     line-height: 1.3em; }
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1340px) {
     .button_simple {
       line-height: 1.5em; } }
   @media screen and (max-width: 992px) {
@@ -5006,7 +5006,10 @@ body.mob-menu-show {
   .articles-list-info {
     font-size: 14px;
     line-height: 20px;
-    color: #000000; }
+    color: #000000;
+    text-decoration: none; }
+    .articles-list-info:hover {
+      color: #000000; }
   .articles-list-block {
     position: relative;
     display: block;
@@ -5054,6 +5057,8 @@ body.mob-menu-show {
     font-size: 16px;
     line-height: 22px;
     color: rgba(255, 255, 255, 0.95); }
+  .articles-list-name_dark {
+    color: #333333; }
   @media screen and (max-width: 992px) {
     .articles {
       margin-bottom: 49px; }
@@ -9589,7 +9594,6 @@ body.mob-menu-show {
       font-size: 16px; } }
 
 .profile-wishlist {
-  position: relative;
   margin-bottom: 52px;
   overflow: hidden; }
   .profile-wishlist-panel {
@@ -9604,7 +9608,7 @@ body.mob-menu-show {
   .profile-wishlist-list {
     display: flex; }
   .profile-wishlist-list-item {
-    width: 25%; }
+    width: 218px; }
   @media screen and (min-width: 992px) and (max-width: 1340px) {
     .profile-wishlist-list-item .product-activity {
       flex-wrap: wrap; }
@@ -9612,9 +9616,7 @@ body.mob-menu-show {
       height: 181px; } }
   @media screen and (max-width: 992px) {
     .profile-wishlist {
-      overflow: visible; }
-      .profile-wishlist-list-item {
-        width: 218px; } }
+      overflow: visible; } }
 
 .profile-card-panel {
   display: flex;
@@ -9841,3 +9843,86 @@ body.mob-menu-show {
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 15px; } }
+
+.articles-catalog {
+  margin-bottom: 60px; }
+  .articles-catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px; }
+  .articles-catalog-item {
+    width: 20%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-bottom: 25px; }
+  .articles-catalog-date {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px; }
+  .articles-catalog-date-item {
+    position: relative;
+    margin-right: 7px;
+    padding-right: 5px;
+    color: #4F4F4F;
+    font-size: 12px;
+    line-height: 17px; }
+    .articles-catalog-date-item:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -1px;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background-color: #4F4F4F; }
+    .articles-catalog-date-item:last-child:after {
+      display: none; }
+    .articles-catalog-date-item:last-child {
+      margin-right: 0;
+      padding-right: 0; }
+  .articles-catalog-link {
+    height: 264px; }
+  .articles-catalog-more-link {
+    padding-left: 31px;
+    padding-right: 31px; }
+  @media screen and (max-width: 1340px) {
+    .articles-catalog-more-link {
+      line-height: 1.5em; } }
+  @media screen and (max-width: 992px) {
+    .articles-catalog-list {
+      margin-right: -7px;
+      margin-left: -7px; }
+    .articles-catalog-item {
+      width: 25%;
+      padding-right: 7px;
+      padding-left: 7px; } }
+  @media screen and (max-width: 768px) {
+    .articles-catalog-item {
+      width: 33.3%; }
+    .articles-catalog-link {
+      height: 210px; }
+    .articles-catalog-date {
+      margin-bottom: 5px; }
+    .articles-catalog-date-item {
+      font-size: 11px; }
+    .articles-catalog-list .articles-list-name {
+      font-size: 14px;
+      line-height: 21px; }
+    .articles-catalog-list .articles-list-info {
+      font-size: 13px; }
+    .articles-catalog-more-link {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (max-width: 560px) {
+    .articles-catalog-item {
+      width: 50%; } }
+
+.wishlist-catalog-item {
+  margin-bottom: 50px; }
+
+@media screen and (max-width: 992px) {
+  .wishlist-catalog-item {
+    margin-bottom: 45px; } }
