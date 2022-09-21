@@ -10,7 +10,8 @@ function initMap() {
             iconSize = element.data('icon-size') || [0,0],
             iconOffset = element.data('icon-offset') || [0,0],
             zoom = element.data('map-zoom') || 15,
-            classActive = element.data('class-active') || 'active';
+            classActive = element.data('class-active') || 'active',
+            linkClass = 'js-map-link';
 
         var myMap = new ymaps.Map(idMap, {
             center: centerCoord,
@@ -83,9 +84,12 @@ function initMap() {
         });
 
         [].forEach.call(document.querySelectorAll('[data-objectId]'), function(el) {
-            el.addEventListener('click', function() {
+            el.addEventListener('click', function(e) {
                 var objectId=el.getAttribute("data-objectId");
-                viewObject(objectId);
+
+                if ( $(e.target).hasClass(linkClass) ) {
+                    viewObject(objectId);
+                }
             });
         });
 
@@ -95,12 +99,12 @@ function initMap() {
             document.querySelector('[data-objectId="'+objectId+'"]').classList.add(classActive);
 
             objectManager.objects.each(function (item) {
-                    objectManager.objects.setObjectOptions(item.id, {
-                    preset: 'islands#blueIcon'
+                objectManager.objects.setObjectOptions(item.id, {
+                    iconImageHref: iconUrl
                 });
             });
             objectManager.objects.setObjectOptions(objectId, {
-                preset: 'islands#redIcon'
+                iconImageHref: iconUrlHover
             });
         }
 

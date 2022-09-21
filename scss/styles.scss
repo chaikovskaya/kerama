@@ -400,6 +400,9 @@ blockquote {
 .swiper-button-lock {
 	display: none!important;
 }
+.swiper-button-lock + .slider-count {
+	display: none;
+}
 /* /swiper */
 
 /* slider */

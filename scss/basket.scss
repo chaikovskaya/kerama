@@ -368,6 +368,13 @@
         background: url("../images/basket/basket-icons/important-icon.svg") no-repeat 0 0;
     }
 
+    &-empty {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.022em;
+        color: #000000;
+    }
+
     @media screen
     and (max-width: $notebook){
     }
