@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Контактная информация. Керама маркет</title>
+    <title>Результаты поиска. Не найдено. Керама маркет</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -651,16 +651,6 @@
 
         <main class="main-content container">
 
-            <div class="banner banner_blue banner_simple">
-                <div class="banner-detail">
-                    <h1 class="banner-title">Контактная информация</h1>
-                </div>
-                <!-- Если здесь ссылка не нужна, замените на div: -->
-                <div class="banner-img">
-                    <img class="banner-pic" src="./images/contacts/contacts-banner.png" alt="" />
-                </div>
-            </div>
-
             <div class="breadcrumbs js-expand" data-expand="{
                 'classActive': 'breadcrumbs_active',
                 'classShow': 'breadcrumbs_show'
@@ -675,7 +665,7 @@
                         </a><span class="breadcrumbs-icon">/</span>
                     </li>
                     <li class="breadcrumbs-item">
-                        <span class="breadcrumbs-label">Контакты</span>
+                        <span class="breadcrumbs-label">Каталог</span>
                     </li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
@@ -683,73 +673,565 @@
                 </ul>
             </div>
 
-            <div class="contacts js-slider-contacts">
-                <div class="contacts-panel">
-                    <h2 class="contacts-title h1">Наши магазины</h2>
-                    <div class="slider-nav">
+            <!-- Добавить класс search-result_not-found, если результаты не найдены -->
+            <div class="search-result search-result_not-found">
+                <div class="search-result-form">
+                    <span class="search-result-title h1">Что вы ищете?</span>
+                    <div class="search-result-wrapper">
+                        <input class="search-result-input input" type="text" placeholder="" />
+                        <button class="search-button" type="submit">
+                            <svg class="search-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7753 14.6511L12.8091 11.7067C13.9605 10.2699 14.5181 8.44635 14.3672 6.61085C14.2164 4.77535 13.3685 3.06745 11.998 1.83834C10.6275 0.609226 8.83851 -0.0476794 6.9989 0.00269722C5.15928 0.0530739 3.40887 0.806903 2.10758 2.10918C0.806291 3.41146 0.0530336 5.1632 0.00269517 7.00421C-0.0476432 8.84523 0.608763 10.6356 1.83694 12.0071C3.06512 13.3787 4.77172 14.2272 6.60583 14.3781C8.43994 14.5291 10.2621 13.9711 11.6978 12.8188L14.64 15.7633C14.7143 15.8383 14.8028 15.8978 14.9002 15.9385C14.9976 15.9791 15.1021 16 15.2077 16C15.3132 16 15.4177 15.9791 15.5152 15.9385C15.6126 15.8978 15.701 15.8383 15.7753 15.7633C15.9194 15.6141 16 15.4147 16 15.2072C16 14.9997 15.9194 14.8003 15.7753 14.6511ZM7.21243 12.8188C6.10552 12.8188 5.02346 12.4903 4.10309 11.8749C3.18272 11.2595 2.46538 10.3847 2.04178 9.36129C1.61818 8.33786 1.50735 7.2117 1.7233 6.12523C1.93925 5.03875 2.47228 4.04076 3.25499 3.25746C4.0377 2.47416 5.03493 1.94072 6.12058 1.72461C7.20622 1.50849 8.33153 1.61941 9.35419 2.04333C10.3768 2.46725 11.2509 3.18514 11.8659 4.10621C12.4809 5.02727 12.8091 6.11015 12.8091 7.21791C12.8091 8.70337 12.2195 10.128 11.1699 11.1784C10.1203 12.2287 8.69676 12.8188 7.21243 12.8188Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="search-result-info search-result-info_not-found content">По запросу “лимон” ничего не найдено</div>
+                <div class="search-result-help content">
+                    <b class="search-result-help-label">Советы:</b>
+                    <ul>
+                        <li>Убедитесь, что все слова написаны правильно.</li>
+                        <li>Попробуйте ввесети другие ключевые слова.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="viewed-products products">
+                <div class="products-panel">
+                    <h2 class="products-title h1">Вы недавно смотрели</h2>
+                </div>
+
+                <div class="js-slider-products">
+                    <div class="products-wrapper js-slider-list">
+                        <ul class="products-list swiper-wrapper">
+                            <li class="products-list-item swiper-slide" data-slider-index="1">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-23.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <div class="product-discount-wrapper">
+                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                    <span class="product-discount">sale</span>
+                                                </div>
+                                                <span class="product-detail-price">133 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="2">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-24.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <!-- Если нет скидки, не убирать сам блок product-discount-wrapper -->
+                                                <div class="product-discount-wrapper"></div>
+                                                <span class="product-detail-price">123 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="3">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-25.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark product-mark_simple">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <div class="product-discount-wrapper">
+                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                    <span class="product-discount">sale</span>
+                                                </div>
+                                                <span class="product-detail-price">127 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <span class="product-basket">
+                                                <span class="product-basket-icon"><span class="product-basket-icon-element"></span></span>Добавлено
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="4">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-26.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <div class="product-discount-wrapper"></div>
+                                                <span class="product-detail-price">42 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="5">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-35.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <div class="product-discount-wrapper">
+                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                    <span class="product-discount">sale</span>
+                                                </div>
+                                                <span class="product-detail-price">132 700 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="6">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-28.png" alt="" />
+                                        </a>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <div class="product-discount-wrapper">
+                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                    <span class="product-discount">sale</span>
+                                                </div>
+                                                <span class="product-detail-price">12 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="7">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-23.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo.svg" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <div class="product-discount-wrapper">
+                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                    <span class="product-discount">sale</span>
+                                                </div>
+                                                <span class="product-detail-price">133 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="8">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-24.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <!-- Если нет скидки, не убирать сам блок product-discount-wrapper -->
+                                                <div class="product-discount-wrapper"></div>
+                                                <span class="product-detail-price">123 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list-item swiper-slide" data-slider-index="9">
+                                <div class="product product_detail">
+                                    <div class="product-block">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="./images/products/products-img-25.png" alt="" />
+                                        </a>
+                                        <div class="product-marks">
+                                            <div class="product-marks-item">
+                                                <span class="product-mark product-mark_simple">Акция</span>
+                                            </div>
+                                        </div>
+                                        <ul class="links">
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_wishlist"></span>
+                                                </a>
+                                            </li>
+                                            <li class="links-item">
+                                                <!-- Добавляется класс links-label_active, если активна -->
+                                                <a class="links-label" href="javascript:;">
+                                                    <span class="links-icon links-icon_compare"></span>
+                                                </a>
+                                            </li>
+                                            <!-- Добавлен класс links-item_search только для этой иконки -->
+                                            <li class="links-item links-item_search">
+                                                <a class="links-label js-popup-product" href="javascript:;" data-src="./ajax/product.html">
+                                                    <span class="links-icon links-icon_search"></span>
+                                                    <span class="links-info">Быстрый просмотр</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-info">
+                                        <ul class="product-brand">
+                                            <li class="product-brand-item">
+                                                <div class="product-brand-wrapper">
+                                                    <img class="product-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
+                                                </div>
+                                            </li>
+                                            <li class="product-brand-item">
+                                                <img class="product-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
+                                            </li>
+                                        </ul>
+                                        <div class="product-detail-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</div>
+                                        <div class="product-activity">
+                                            <div class="product-price-wrapper">
+                                                <div class="product-discount-wrapper">
+                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                    <span class="product-discount">sale</span>
+                                                </div>
+                                                <span class="product-detail-price">127 800 <span class="currency">i</span>/ м<span class="product-detail-price-symbol">2</span></span>
+                                            </div>
+                                            <a class="product-button button" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products-slider-nav slider-nav">
                         <div class="slider-button slider-button_prev js-slider-prev">
                             <span class="slider-button-icon"></span>
                         </div>
                         <div class="slider-count">
-                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">03</span>
+                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">07</span>
                         </div>
                         <div class="slider-button slider-button_next js-slider-next">
                             <span class="slider-button-icon slider-button-icon_right"></span>
                         </div>
                     </div>
                 </div>
-                <div class="js-slider-list">
-                    <ul class="contacts-list swiper-wrapper js-map"
-                        data-objectcoord="[53.248153, 45.019933]"
-                        data-map-id="contacts-map"
-                        data-map-icon="./images/order/map-icon.svg"
-                        data-map-icon-hover="./images/order/map-icon-hover.svg"
-                        data-icon-size="[33, 33]"
-                        data-map-zoom="12"
-                    >
-                        <li class="contacts-list-item swiper-slide js-map-item" data-slider-index="1" data-objectid="1" data-objectcoord="[53.248153, 45.019933]">
-                            <img class="contacts-list-img" src="./images/contacts/contacts-img-1.png" alt="" />
-                            <div class="contacts-list-info">
-                                <div class="contacts-list-name">ТЦ “Прибрежный”</div>
-                                <div class="contacts-list-address content js-map-item-value">г. Пенза, ул. Аустрина, 10 вход с торца, 3 этаж, 307 помещение</div>
-                                <div class="contacts-list-time content">Режим работы: ПН-ВС 10:00 - 22:00</div>
-                                <div class="contacts-list-time content">Телефон: +7 8412 76-75-05</div>
-                                <div class="contacts-list-link">
-                                    <a href="javascript:;" class="button button_modified js-map-link">Как проехать</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contacts-list-item swiper-slide js-map-item" data-slider-index="2" data-objectid="2" data-objectcoord="[53.205253, 44.995993]">
-                            <img class="contacts-list-img" src="./images/contacts/contacts-img-2.png" alt="" />
-                            <div class="contacts-list-info">
-                                <div class="contacts-list-name">ТЦ “Изумрудные горы”</div>
-                                <div class="contacts-list-address content js-map-item-value">г. Пенза, ул. Ворошилова, 12 вход со стороны парковки, 3 этаж, 307</div>
-                                <div class="contacts-list-time content">Режим работы: ПН-ВС 10:00 - 22:00</div>
-                                <div class="contacts-list-time content">Телефон: +7 8412 76-75-05</div>
-                                <div class="contacts-list-link">
-                                    <a href="javascript:;" class="button button_modified js-map-link">Как проехать</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contacts-list-item swiper-slide js-map-item" data-slider-index="3" data-objectid="3" data-objectcoord="[53.214766, 44.985779]">
-                            <img class="contacts-list-img" src="./images/contacts/contacts-img-3.png" alt="" />
-                            <div class="contacts-list-info">
-                                <div class="contacts-list-name">KERAMA MERKET на Ворошилова</div>
-                                <div class="contacts-list-address content js-map-item-value">г. Пенза, ул. Иванова, 19 , 3 этаж, 307 помещение</div>
-                                <div class="contacts-list-time content">Режим работы: ПН-ВС 10:00 - 22:00</div>
-                                <div class="contacts-list-time content">Телефон: +7 8412 76-75-05</div>
-                                <div class="contacts-list-link">
-                                    <a href="javascript:;" class="button button_modified js-map-link">Как проехать</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </section>
 
-            <h2 class="h1">Магазины на карте</h2>
-
-            <div class="contacts-map" id="contacts-map"></div>
         </main>
 
         <footer class="footer">

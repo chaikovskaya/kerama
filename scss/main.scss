@@ -330,6 +330,9 @@
 
 .main-actions {
     margin-bottom: 65px;
+    &:last-child {
+        margin-bottom: 0;
+    }
     &-panel {
         display: flex;
         justify-content: space-between;
