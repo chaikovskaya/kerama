@@ -70,8 +70,8 @@ a.h1 {
 
 h2,
 .h2 {
-  margin-bottom: 20px;
-  font: 700 24px/26px 'Aeonik Pro TRIAL', sans-serif;
+  margin-bottom: 15px;
+  font: 700 20px/24px 'Aeonik Pro TRIAL', sans-serif;
   color: #000000; }
 
 h3,
@@ -347,11 +347,13 @@ blockquote {
 
 .img-right {
   float: right;
-  margin-left: 20px; }
+  margin-left: 24px;
+  margin-bottom: 10px; }
 
 .img-left {
   float: left;
-  margin-right: 20px; }
+  margin-right: 24px;
+  margin-bottom: 10px; }
 
 .clearfix:after {
   content: "";
@@ -689,12 +691,10 @@ blockquote {
     padding-bottom: 50px; }
   .img-right {
     float: none;
-    margin-left: 0;
-    margin-bottom: 10px; }
+    margin-left: 0; }
   .img-left {
     float: none;
-    margin-right: 0;
-    margin-bottom: 10px; } }
+    margin-right: 14px; } }
 
 .field {
   margin-bottom: 20px; }
@@ -5459,7 +5459,9 @@ body.mob-menu-show {
 .catalog-panel-name {
   margin-top: 4px;
   margin-bottom: 0;
-  font-weight: 700; }
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px; }
 
 .catalog-panel-name-link {
   text-decoration: none;
@@ -5929,7 +5931,9 @@ body.mob-menu-show {
   display: flex;
   margin-bottom: 49px; }
   .info-title {
-    margin-top: -4px; }
+    margin-top: -10px;
+    font-size: 28px;
+    line-height: 40px; }
   .info-detail {
     width: 51%;
     padding-right: 44px; }
@@ -5943,6 +5947,10 @@ body.mob-menu-show {
     position: relative;
     right: -18px; }
   @media screen and (max-width: 992px) {
+    .info-title {
+      margin-top: -5px;
+      font-size: 24px;
+      line-height: 29px; }
     .info-pic {
       height: 100%;
       object-fit: cover; }
@@ -5953,6 +5961,8 @@ body.mob-menu-show {
     .info {
       display: block;
       margin-bottom: 40px; }
+      .info-title {
+        margin-top: 0; }
       .info-detail {
         width: 100%;
         padding-right: 0;
@@ -8951,6 +8961,8 @@ body.mob-menu-show {
   .profile-line {
     margin-top: 20px;
     margin-bottom: 24px; }
+  .profile-user {
+    margin-bottom: 20px; }
   .profile-menu {
     max-width: 224px; }
   .profile-menu-item {
@@ -10538,6 +10550,15 @@ body.mob-menu-show {
     color: #fff;
     font-weight: 600;
     background-color: #000; }
+
+.typical {
+  padding-top: 11px; }
+  @media screen and (max-width: 992px) {
+    .typical {
+      padding-top: 5px; } }
+  @media screen and (max-width: 768px) {
+    .typical {
+      padding-top: 5px; } }
 
 .search-result {
   margin-bottom: 20px; }

@@ -225,6 +225,8 @@
         margin-top: 4px;
         margin-bottom: 0;
         font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
     }
     &-panel-name-label {
     }
@@ -795,7 +797,9 @@
     display: flex;
     margin-bottom: 49px;
     &-title {
-        margin-top: -4px;
+        margin-top: -10px;
+        font-size: 28px;
+        line-height: 40px;
     }
     &-detail {
         width: 51%;
@@ -817,6 +821,11 @@
 
     @media screen
     and (max-width: $tablet){
+        &-title {
+            margin-top: -5px;
+            font-size: 24px;
+            line-height: 29px;
+        }
         &-pic {
             height: 100%;
             object-fit: cover;
@@ -830,6 +839,9 @@
     and (max-width: $mobile){
         display: block;
         margin-bottom: 40px;
+        &-title {
+            margin-top: 0;
+        }
         &-detail {
             width: 100%;
             padding-right: 0;
