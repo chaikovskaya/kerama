@@ -121,8 +121,8 @@ footer {
   flex: 0 0 auto; }
 
 hr {
-  margin-top: 38px;
-  margin-bottom: 38px;
+  margin-top: 28px;
+  margin-bottom: 28px;
   border: 0;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.5); }
@@ -10443,6 +10443,9 @@ body.mob-menu-show {
     border: 1px solid #000000;
     border-radius: 10px;
     padding: 20px 19px 23px; }
+    .articles-detail-block:hover {
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(171, 171, 171, 0.25); }
   .articles-detail-block-name {
     display: block;
     margin-bottom: 15px;
@@ -10637,6 +10640,9 @@ body.mob-menu-show {
     padding: 21px 20px 20px;
     border: 1px solid #000000;
     border-radius: 10px; }
+    .guarantees-sertif:hover {
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(171, 171, 171, 0.25); }
   .guarantees-sertif-name {
     margin-bottom: 19px;
     font-weight: 700;
@@ -10687,3 +10693,70 @@ body.mob-menu-show {
         line-height: 22px; }
       .guarantees-content {
         margin-bottom: 10px; } }
+
+.delivery {
+  margin-bottom: 60px; }
+  .delivery-radiobuttons {
+    margin-bottom: 30px; }
+  .delivery-radiobuttons-info {
+    max-width: none; }
+  .delivery-important {
+    max-width: 874px;
+    margin-bottom: 54px;
+    padding: 19px 20px;
+    background-color: #E9EDF5;
+    opacity: 0.7;
+    border-radius: 10px; }
+  .delivery-important-item {
+    display: flex;
+    margin-bottom: 19px; }
+    .delivery-important-item:last-child {
+      margin-bottom: 0; }
+  .delivery-important-icon {
+    display: inline-block;
+    min-width: 18px;
+    width: 18px;
+    height: 17px;
+    margin-right: 11px;
+    margin-bottom: -3px;
+    background: url("../images/delivery/delivery-important-icon.svg") no-repeat 0 0; }
+  .delivery-circumstances {
+    display: flex;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
+  .delivery-circumstances-content {
+    flex-grow: 1;
+    padding-right: 78px; }
+  .delivery-banner {
+    min-width: 235px;
+    width: 235px;
+    margin-top: 59px;
+    margin-bottom: 40px; }
+  .delivery-banner-link {
+    display: block;
+    margin-bottom: 20px; }
+    .delivery-banner-link:last-child {
+      margin-bottom: 0; }
+  .delivery-banner-img {
+    display: block;
+    width: 100%; }
+  @media screen and (max-width: 992px) {
+    .delivery-important {
+      margin-bottom: 45px; }
+    .delivery-circumstances-content {
+      padding-right: 20px; }
+    .delivery-banner {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0; } }
+  @media screen and (max-width: 768px) {
+    .delivery-circumstances {
+      flex-direction: column;
+      padding-bottom: 30px; }
+    .delivery-circumstances-content {
+      width: 100%;
+      margin-bottom: 20px;
+      padding-right: 0; }
+    .delivery-banner {
+      margin-top: 0; } }
