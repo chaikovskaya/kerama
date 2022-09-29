@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Доставка. Керама маркет</title>
+    <title>Клиентам. Керама маркет</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -651,13 +651,13 @@
 
         <main class="main-content container">
 
-            <div class="banner banner_blue banner_simple">
+            <div class="banner banner_simple">
                 <div class="banner-detail">
-                    <h1 class="banner-title">Доставка и оплата</h1>
+                    <h1 class="banner-title">Клиентам</h1>
                 </div>
                 <!-- Если здесь ссылка не нужна, замените на div: -->
                 <div class="banner-img">
-                    <img class="banner-pic" src="./images/delivery/delivery-banner.png" alt="" />
+                    <img class="banner-pic" src="./images/clients/clients-banner.png" alt="" />
                 </div>
             </div>
 
@@ -675,7 +675,7 @@
                         </a><span class="breadcrumbs-icon">/</span>
                     </li>
                     <li class="breadcrumbs-item">
-                        <span class="breadcrumbs-label">Доставка и оплата</span>
+                        <span class="breadcrumbs-label">Клиентам</span>
                     </li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
@@ -683,91 +683,245 @@
                 </ul>
             </div>
 
-            <div class="delivery content">
-                <h2 class="h1">Доставка</h2>
-                <p>Выберите способ получения:</p>
-                <div class="delivery-radiobuttons">
-                    <div class="order-obtain order-row">
-                    <div class="order-obtain-item order-col">
-                        <label class="order-radio-field">
-                            <span class="radio-field">
-                                <span class="order-obtain-radio radio">
-                                    <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" checked="checked" />
-                                    <i class="order-obtain-radio-check radio-check"></i>
-                                    <span class="order-obtain-icon order-obtain-icon_delivery"></span>
-                                    <span class="order-obtain-radio-label">Доставка</span>
-                                    <span class="order-radio-decor"></span>
-                                </span>
-                            </span>
-                            <span class="delivery-radiobuttons-info order-obtain-info">Служба доставки привезет заказ вам домой, в офис или на дачу</span>
-                        </label>
-                    </div>
-                    <div class="order-obtain-item order-col">
-                        <label class="order-radio-field">
-                            <span class="radio-field">
-                                <span class="order-obtain-radio radio">
-                                    <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" />
-                                    <i class="order-obtain-radio-check radio-check"></i>
-                                    <span class="order-obtain-icon order-obtain-icon_export"></span>
-                                    <span class="order-obtain-radio-label">Самовывоз</span>
-                                    <span class="order-radio-decor"></span>
-                                </span>
-                            </span>
-                            <span class="delivery-radiobuttons-info order-obtain-info">Заберите заказ бесплатно из магазина KERAMA MARKET</span>
-                        </label>
-                    </div>
-                </div>
-                </div>
-                <div class="delivery-important">
-                    <div class="delivery-important-item"><span class="delivery-important-icon"></span>Бесплатная доставка по Москве. Доставка осуществляется бесплатно по Москве от ТТК до МКАД при условии покупки товара от 50 тыс. рублей.</div>
-                    <div class="delivery-important-item"><span class="delivery-important-icon"></span>Сроки доставки оговариваются отдельно при подтверждении заказа и, как правило, составляет от 1 до 3 дней.</div>
-                </div>
+            <hr class="line">
 
-                <div class="delivery-circumstances">
-                    <div class="delivery-banner">
-                        <a class="delivery-banner-link" href="#">
-                            <img class="delivery-banner-img" src="./images/delivery/delivery-banner-1.png" alt="" />
-                        </a>
-                        <a class="delivery-banner-link" href="#">
-                            <img class="delivery-banner-img" src="./images/delivery/delivery-banner-2.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="delivery-circumstances-content">
-                        <h2 class="h1">Условия доставки</h2>
-                        <h2>Стоимость доставки</h2>
-                        <p>Стоимость доставки рассчитывается автоматически при оформлении заказа на сайте или сотрудником KERAMA MARAZZI на стойке оформления доставки при покупке в магазине.</p>
-                        <p>Итоговая стоимость зависит от:</p>
-                        <ul>
-                            <li>Доставка по Москве в пределах Садового кольца составит <b>1500 рублей.</b></li>
-                            <li>Доставка по Москве от Садового кольца до ТТК составит <b>1300 рублей.</b></li>
-                            <li>Доставка по Москве от ТТК до МКАД составит <b>1000 рублей.</b></li>
-                            <li>Доставка за пределы МКАД: <b>+30 рублей за 1 км от МКАД.</b></li>
-                        </ul>
-                        <h2>Сроки доставки</h2>
-                        <p>Сроки доставки оговариваются отдельно при подтверждении заказа и, как правило, составляет от 1 до 3 дней. Если покупатель не может принять заказ в оговоренное с оператором время, необходимо уведомить оператора интернет-магазина не менее чем за 2 часа до времени доставки, а при переносе даты доставки не менее чем за 24 часа.</p>
-                        <h2>Доставка по Москве и Московской области</h2>
-                        <p>Доставка осуществляется до подъезда. Для Вашего удобства в наших магазинах есть услуга разгрузки с заносом в квартиру/дом. Воспользовавшись данной услугой, покупатель сможет получить заказ без каких-либо физических усилий. Наша компания несет ответственность за подъем и сдачу товара покупателю, тем самым, мы берем все риски, связанные с разгрузкой и поднятием, на себя. При сдаче заказа водитель-экспедитор с бригадой осуществляют демонстрацию целостности декоративных изделий/сантехники.</p>
-                        <h2>Доставка товара в любой населенный пункт России</h2>
-                        <p>Мы доставляем керамическую плитку KERAMA MARKET до транспортных компаний Москвы. Мы работаем со следующими транспортными компаниями: Деловые Линии, ПЭК, ЖелДорЭкспедиция, КИТ, РАТЭК, Энергия и др.Стоимость доставки при отправлении транспортными компаниями оплачивает клиент при получении заказа.</p>
-                        <hr />
-                        <h2 class="h1">Оплата</h2>
-                        <h2>Способы оплаты</h2>
-                        <p>Заказывайте товары из нашего онлайн-каталога и оплачивайте их любым удобным способом:</p>
-                        <ul>
-                            <li><b>Наличный расчет.</b> Оплатите товар наличными в кассе магазина или курьеру при получении товара.При оплате наличными или банковской картой продавец-консультант свяжется с вами, чтобы подтвердить заказ и уточнить срок доставки. После этого вы можете самостоятельно забрать заказ, произведя оплату при самовывозе, или к вам приедет курьер, который доставит заказ и примет платеж по предоставленному чеку об оплате.</li>
-                            <li><b>Оплата банковской картой.</b> Оплата на сайте. Оплатите товар банковской картой через корзину сайта при оформлении заказа.Оплатите товар банковской картой в кассе магазина или курьеру при получении товара с помощью специального терминала оплаты. Мы принимаем карты «Мир», Visa, Mastercard. Оплата через Google Pay / Apple Pay недоступна.</li>
-                            <li><b>Безналичный расчет.</b> Если оплата производится по безналичному расчету, наш сотрудник вышлет Вам копию счета по факсу или электронной почте.</li>
-                            <li>Счет действителен к оплате в трехдневный срок. Отгрузка товара осуществляется после поступления денежных средств на расчетный счет нашей компании.</li>
-                            <li>В случае, если безналичная оплата производится от имени юридического лица, при получении Вы должны предъявить доверенность фирмы-плательщика.</li>
-                        </ul>
-                        <h2>Способы оплаты</h2>
-                        <p>При покупке через интернет-магазин в корзине автоматически учитываются скидки в зависимости от суммы покупки. В магазинах КЕРАМА MARKET действует единая система скидок:</p>
-                        <p>При покупке от 100, 200 и 300 тысяч рублей действуют скидки. Скидка применяется автоматически при заказе товара через корзину сайта.</p>
-                        <p>Размер скидки вы также можете уточнить в магазине и по телефону или у менеджеров в магазине.</p>
-                    </div>
-                </div>
+            <ul class="clients-gallery">
+                <li class="clients-gallery-item">
+                    <a class="clients-gallery-link" href="#">
+                        <img class="clients-gallery-img" src="./images/clients/clients-gallery-img-1.png" alt="" />
+                        <span class="clients-gallery-info">
+                            <span class="clients-gallery-name h1">Доставка и оплата</span>
+                            <span class="clients-gallery-description content">Стоимость доставки рассчитывается автоматически при оформлении заказа на сайте или сотрудником KERAMA MARKET на стойке оформления доставки при покупке в магазине.</span>
+                        </span>
+                        <span class="clients-gallery-arrow">
+                            <span class="clients-gallery-icon"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="clients-gallery-item">
+                    <a class="clients-gallery-link" href="#">
+                        <img class="clients-gallery-img" src="./images/clients/clients-gallery-img-3.png" alt="" />
+                        <span class="clients-gallery-info">
+                            <span class="clients-gallery-name h1">Гарантии и возврат</span>
+                            <span class="clients-gallery-description content">Все поставщики – проверенные производители и официальные дилеры мировых брендов, заказывая у нас, будьте уверены в подлинности товаров.</span>
+                        </span>
+                        <span class="clients-gallery-arrow">
+                            <span class="clients-gallery-icon"></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="clients-gallery-item">
+                    <a class="clients-gallery-link" href="#">
+                        <img class="clients-gallery-img" src="./images/clients/clients-gallery-img-2.png" alt="" />
+                        <span class="clients-gallery-info">
+                            <span class="clients-gallery-name h1">Акции</span>
+                            <span class="clients-gallery-description content">Все лучшие предложения в&nbsp;одном месте</span>
+                        </span>
+                        <span class="clients-gallery-arrow">
+                            <span class="clients-gallery-icon"></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
 
+            <h2 class="h1">Как оформить заказ</h2>
+            <div class="clients-content content">
+                <p>Классическое сочетание черного и белого впишется в любой стиль. Подходящими направлениями будут хай-тек, техно, минимализм.</p>
+                <p>В интерьере преобладает белый цвет, черный же используется локально – выбран для акцентной стены в зоне умывальника, раковины Fantasy, для смесителя и душевой системы Infinity бренда Allen Brau.</p>
+                <p>Ванная комната выполнена в современном минималистичном стиле, где удалось разместить все самое необходимое. Вместительная система хранения представлена подвесной мебелью в белом матовом цвете. Особая роль отведена зоне душевой, которая представлена ограждением Priority Allen Brau из прозрачного закаленного стекла в обрамлении матового хромированного профиля. В основе черный поддон прямоугольной формы Aquanet Pleasure.</p>
             </div>
+
+            <div class="clients-stages js-slider-clients-stages">
+                <div class="clients-stages-panel">
+                    <h2 class="clients-stages-title">Алгоритм заказа</h2>
+                    <div class="slider-nav">
+                        <div class="slider-button slider-button_prev js-slider-prev">
+                            <span class="slider-button-icon"></span>
+                        </div>
+                        <div class="slider-count">
+                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">07</span>
+                        </div>
+                        <div class="slider-button slider-button_next js-slider-next">
+                            <span class="slider-button-icon slider-button-icon_right"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="clients-stages-list-inner js-slider-list">
+                    <ul class="clients-stages-list swiper-wrapper">
+                        <li class="clients-stages-list-item swiper-slide" data-slider-index="1">
+                            <div class="clients-stages-pic">
+                                <img class="clients-stages-img" src="./images/clients/clients-img-1.png" alt="" />
+                            </div>
+                            <div class="clients-stages-info">
+                                <span class="clients-stages-number">1</span><div class="clients-stages-detail content">Lorem vulputate felis malesuada vel odio dignissim in  iinterdum vel blandit egestas accumsan feugiat vel</div>
+                            </div>
+                        </li>
+                        <li class="clients-stages-list-item swiper-slide" data-slider-index="2">
+                            <div class="clients-stages-pic">
+                                <img class="clients-stages-img" src="./images/clients/clients-img-2.png" alt="" />
+                            </div>
+                            <div class="clients-stages-info">
+                                <span class="clients-stages-number">2</span><div class="clients-stages-detail content">Lorem vulputate felis malesuada vel odio dignissim in  iinterdum vel blandit egestas accumsan feugiat vel</div>
+                            </div>
+                        </li>
+                        <li class="clients-stages-list-item swiper-slide" data-slider-index="3">
+                            <div class="clients-stages-pic">
+                                <img class="clients-stages-img" src="./images/clients/clients-img-3.png" alt="" />
+                            </div>
+                            <div class="clients-stages-info">
+                                <span class="clients-stages-number">3</span><div class="clients-stages-detail content">Lorem vulputate felis malesuada vel odio dignissim in  iinterdum vel blandit egestas accumsan feugiat vel</div>
+                            </div>
+                        </li>
+                        <li class="clients-stages-list-item swiper-slide" data-slider-index="1">
+                            <div class="clients-stages-pic">
+                                <img class="clients-stages-img" src="./images/clients/clients-img-1.png" alt="" />
+                            </div>
+                            <div class="clients-stages-info">
+                                <span class="clients-stages-number">4</span><div class="clients-stages-detail content">Lorem vulputate felis malesuada vel odio dignissim in  iinterdum vel blandit egestas accumsan feugiat vel</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="articles js-slider-articles">
+                <div class="articles-panel">
+                    <h2 class="articles-title h1">Полезные статьи</h2>
+                    <div class="slider-nav">
+                        <div class="slider-button slider-button_prev js-slider-prev">
+                            <span class="slider-button-icon"></span>
+                        </div>
+                        <div class="slider-count">
+                            <span class="slider-count-current js-slider-count">01</span>/<span class="slider-count-common">03</span>
+                        </div>
+                        <div class="slider-button slider-button_next js-slider-next">
+                            <span class="slider-button-icon slider-button-icon_right"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articles-wrapper js-slider-list">
+                    <ul class="articles-list swiper-wrapper">
+                        <li class="articles-list-item swiper-slide" data-slider-index="1">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-1.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-name">ЧТО НУЖНО ЗНАТЬ О КЕРАМИЧЕСКОЙ ПЛИТКЕ?</span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Как правильно выбрать  керамическую плитку.</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="2">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-2.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Поможем подобрать средства для плитки</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="3">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-3.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-marks">
+                                        <span class="articles-list-marks-item">
+                                            <span class="articles-list-mark">Уют</span>
+                                        </span>
+                                    </span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Создаем уют в доме, советы дизайнеров.</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="4">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-4.jpg" alt="" />
+                                <span class="articles-list-block">
+                                <span class="articles-list-name">ЛУЧШИЕ ИДЕИ ЖДУТ ВАС!</span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Лучшие средства для очистки плитки</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="5">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-5.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Советы по уходу за керамической плиткой</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="6">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-6.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-marks">
+                                        <span class="articles-list-marks-item">
+                                            <span class="articles-list-mark">Мозаика</span>
+                                        </span>
+                                    </span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Лучшие средства для очистки плитки</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="7">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-1.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-name">ЧТО НУЖНО ЗНАТЬ О КЕРАМИЧЕСКОЙ ПЛИТКЕ?</span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Как правильно выбрать  керамическую плитку.</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="8">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-2.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Поможем подобрать средства для плитки</div>
+                        </li>
+                        <li class="articles-list-item swiper-slide" data-slider-index="9">
+                            <a class="articles-list-link" href="#">
+                                <img class="articles-list-img" src="./images/articles/articles-img-3.jpg" alt="" />
+                                <span class="articles-list-block">
+                                    <span class="articles-list-marks">
+                                        <span class="articles-list-marks-item">
+                                            <span class="articles-list-mark">Уют</span>
+                                        </span>
+                                    </span>
+                                    <span class="articles-list-more">
+                                         <span class="articles-list-more-icon"></span>
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="articles-list-info">Создаем уют в доме, советы дизайнеров.</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
             <div class="subscribe subscribe_simple">
                 <div class="subscribe-img">

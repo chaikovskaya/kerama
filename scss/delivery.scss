@@ -32,20 +32,17 @@
         background: url("../images/delivery/delivery-important-icon.svg") no-repeat 0 0;
     }
     &-circumstances {
-        display: flex;
-        padding-bottom: 6px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     }
     &-circumstances-content {
         flex-grow: 1;
-        padding-right: 78px;
     }
     &-banner {
+        float: right;
+        margin-left: 78px;
         min-width: 235px;
         width: 235px;
-        margin-top: 59px;
-        margin-bottom: 40px;
+        margin-top: 65px;
+        margin-bottom: 80px;
     }
     &-banner-link {
         display: block;
@@ -68,21 +65,18 @@
         &-important {
             margin-bottom: 45px;
         }
-        &-circumstances-content {
-            padding-right: 20px;
-        }
         &-banner {
-            margin-left: auto;
+            margin-left: 20px;
             margin-right: auto;
-            margin-bottom: 0;
+            margin-bottom: 30px;
         }
     }
 
     @media screen
     and (max-width: $mobile){
         &-circumstances {
+            display: flex;
             flex-direction: column;
-            padding-bottom: 30px;
         }
         &-circumstances-content {
             width: 100%;
@@ -90,7 +84,10 @@
             padding-right: 0;
         }
         &-banner {
+            order: 1;
+            margin-left: auto;
             margin-top: 0;
+            margin-bottom: 0;
         }
     }
 }

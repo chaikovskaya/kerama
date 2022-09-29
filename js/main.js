@@ -2109,6 +2109,55 @@ function initSliderContacts() {
     });
 }
 
+var sliderClientsStages;
+function initSliderClientsStages() {
+    jQuery('.js-slider-clients-stages').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderClientsStages = new Swiper($list[0], {
+            loop: false,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            threshold: 10,
+            spaceBetween: 9,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    slidesPerView: "auto",
+                },
+                768: {
+                    slidesPerView: "auto",
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                },
+            },
+        });
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -2236,4 +2285,5 @@ $(document).ready(function () {
     initFiles();
     initSliderWishlist();
     initSliderContacts();
+    initSliderClientsStages();
 });
