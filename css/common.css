@@ -344,6 +344,12 @@ blockquote {
     display: block; }
   .content .list {
     overflow: hidden; }
+  .content img[align="left"] {
+    margin-right: 24px;
+    margin-bottom: 15px; }
+  .content img[align="right"] {
+    margin-left: 24px;
+    margin-bottom: 15px; }
 
 .img-right {
   float: right;
@@ -689,6 +695,12 @@ blockquote {
     padding-left: 23px; }
   .main-content {
     padding-bottom: 50px; }
+  .content img[align="left"] {
+    float: none;
+    margin-right: 14px; }
+  .content img[align="right"] {
+    float: none;
+    margin-left: 0; }
   .img-right {
     float: none;
     margin-left: 0; }
@@ -5013,7 +5025,9 @@ body.mob-menu-show {
       height: 12px; } }
   @media screen and (max-width: 768px) {
     .inspiration {
-      display: none; } }
+      display: none; }
+      .inspiration-tpd-tooltip {
+        transform: translate(0, -8px); } }
 
 .articles {
   margin-bottom: 65px; }
@@ -10926,3 +10940,53 @@ body.mob-menu-show {
     height: 244px; }
   .clients-stages-list-item {
     width: 287px; } }
+
+.inspiration-catalog {
+  margin-bottom: 65px; }
+  .inspiration-catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px; }
+  .inspiration-catalog-list-item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .inspiration-catalog-list-item:nth-child(3n) {
+      width: 100%; }
+  @media screen and (max-width: 768px) {
+    .inspiration-catalog-list-item {
+      width: 100%; } }
+
+.inspiration-detail-main {
+  margin-bottom: 24px; }
+
+.inspiration-detail-content {
+  margin-bottom: 45px; }
+  .inspiration-detail-content:after {
+    content: "";
+    clear: both;
+    display: table;
+    line-height: 0; }
+
+.inspiration-detail-img-right {
+  margin-top: 137px; }
+
+.inspiration-detail-projects {
+  margin-bottom: 58px; }
+
+.inspiration-detail-list-item {
+  width: 575px; }
+
+@media screen and (max-width: 992px) {
+  .inspiration-detail-img-right {
+    float: none;
+    margin-top: 0;
+    margin-left: 0 !important; } }
+
+@media screen and (max-width: 768px) {
+  .inspiration-detail-content {
+    margin-bottom: 30px; }
+  .inspiration-detail-list-item {
+    width: 250px; } }

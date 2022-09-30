@@ -2158,6 +2158,82 @@ function initSliderClientsStages() {
     });
 }
 
+function initAjaxMoreInspiration() {
+    if (typeof(AjaxMore) === 'undefined' || !jQuery.isFunction(AjaxMore)) {
+        return false;
+    }
+
+    var common = {
+        beforeSend: function () {
+        },
+        success: function () {
+            initTooltip();
+            initPopupProduct();
+        }
+    };
+
+    $('.JS-AjaxMore-Inspiration').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('ajaxmore'));
+        new AjaxMore(this, jQuery.extend({}, common, local));
+    });
+}
+
+var sliderInspirationProjects;
+function initSliderInspirationProjects() {
+    jQuery('.js-slider-inspiration-projects').each(function() {
+        var $slider = $(this),
+            $list = $(this).find('.js-slider-list'),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $count = $slider.find('.js-slider-count');
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderInspirationProjects = new Swiper($list[0], {
+            loop: isStart,
+            pagination: false,
+            navigation: {
+                nextEl: $slider.find('.js-slider-next')[0],
+                prevEl: $slider.find('.js-slider-prev')[0],
+                disabledClass: "slider-button_disabled",
+            },
+            slidesPerView: 'auto',
+            threshold: 10,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 15,
+                },
+                768: {
+                    spaceBetween: 15,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                992: {
+                    spaceBetween: 20,
+                    loop: sliderLength > 2 ? true : false,
+                },
+            },
+            on: {
+                afterInit: function () {
+                },
+                init: function () {
+                    initTooltip();
+                },
+                slideChangeTransitionEnd: function () {
+                    var index = $slider.find('.swiper-slide-active').data('slider-index');
+                    if (index < 10) {
+                        index = '0' + index;
+                    }
+                    $count.text(index);
+                    initTooltip();
+                },
+                touchMove: function () {
+                    Tipped.hide(".js-tooltip");
+                },
+            },
+        });
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -2286,4 +2362,6 @@ $(document).ready(function () {
     initSliderWishlist();
     initSliderContacts();
     initSliderClientsStages();
+    initAjaxMoreInspiration();
+    initSliderInspirationProjects();
 });

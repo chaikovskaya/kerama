@@ -1,0 +1,34 @@
+
+.inspiration-catalog {
+    margin-bottom: 65px;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    &-list-item {
+        width: 50%;
+        margin-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        &:nth-child(3n) {
+            width: 100%;
+        }
+    }
+
+    @media screen
+    and (max-width: $notebook){
+    }
+
+    @media screen
+    and (max-width: $tablet){
+    }
+
+    @media screen
+    and (max-width: $mobile){
+        &-list-item {
+            width: 100%;
+        }
+    }
+}

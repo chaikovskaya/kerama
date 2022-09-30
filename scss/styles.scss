@@ -370,6 +370,14 @@ blockquote {
 	.list {
 		overflow: hidden;
 	}
+	img[align="left"]{
+		margin-right: 24px;
+		margin-bottom: 15px;
+	}
+	img[align="right"]{
+		margin-left: 24px;
+		margin-bottom: 15px;
+	}
 }
 
 .img-right {
@@ -804,6 +812,16 @@ and (max-width: $mobile){
 	}
 	.main-content {
 		padding-bottom: 50px;
+	}
+	.content {
+		img[align="left"]{
+			float: none;
+			margin-right: 14px;
+		}
+		img[align="right"]{
+			float: none;
+			margin-left: 0;
+		}
 	}
 	.img-right {
 		float: none;

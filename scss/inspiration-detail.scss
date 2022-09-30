@@ -1,0 +1,44 @@
+
+.inspiration-detail {
+    &-main {
+        margin-bottom: 24px;
+    }
+    &-content {
+        @include clearfix();
+        margin-bottom: 45px;
+    }
+    &-img-right {
+        margin-top: 137px;
+    }
+
+    &-projects {
+        margin-bottom: 58px;
+    }
+    &-list {}
+    &-list-item {
+        width: 575px;
+    }
+
+    @media screen
+    and (max-width: $notebook){
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        &-img-right {
+            float: none;
+            margin-top: 0;
+            margin-left: 0!important;
+        }
+    }
+
+    @media screen
+    and (max-width: $mobile){
+        &-content {
+            margin-bottom: 30px;
+        }
+        &-list-item {
+            width: 250px;
+        }
+    }
+}

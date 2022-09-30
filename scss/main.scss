@@ -1587,6 +1587,9 @@
     @media screen
     and (max-width: $mobile){
         display: none;
+        &-tpd-tooltip {
+            transform: translate(0, -8px);
+        }
     }
 }
 
