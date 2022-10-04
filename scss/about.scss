@@ -143,6 +143,10 @@
 
     @media screen
     and (max-width: $notebook){
+        &-advantages-digit-add {
+            font-size: 64px;
+            line-height: 86px;
+        }
     }
 
     @media screen
@@ -180,6 +184,9 @@
         }
         &-advantages-list-item_simple {
             width: 40%;
+        }
+        &-certificates {
+            padding-top: 2px;
         }
         &-certificates-img {
             width: 50%;

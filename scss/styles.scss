@@ -378,6 +378,14 @@ blockquote {
 		margin-left: 24px;
 		margin-bottom: 15px;
 	}
+	.paragraph {
+		clear: both;
+		margin-bottom: 3px;
+	}
+	.paragraph-middle {
+		clear: both;
+		margin-bottom: 17px;
+	}
 }
 
 .img-right {
@@ -396,6 +404,10 @@ blockquote {
     clear: both;
     display: table;
     line-height: 0;
+}
+
+.clear {
+	clear: both;
 }
 
 .switcher {
@@ -800,6 +812,12 @@ and (max-width: $tablet){
 		&-video-img {
 			min-height: 230px;
 			object-fit: cover;
+		}
+		.paragraph {
+			margin-bottom: 0;
+		}
+		.paragraph-middle {
+			margin-bottom: 0;
 		}
 	}
 }

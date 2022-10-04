@@ -7,7 +7,7 @@
         width: 377px;
         margin-top: 30px;
         margin-left: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 18px;
         padding: 21px 20px 20px;
         border: 1px solid #000000;
         border-radius: 10px;
@@ -17,6 +17,13 @@
         }
     }
     &-content {}
+    &-content-paragraph {
+        clear: both;
+        margin-bottom: 0;
+    }
+    &-content-img {
+        margin-bottom: 26px!important;
+    }
     &-sertif-name {
         margin-bottom: 19px;
         font-weight: 700;

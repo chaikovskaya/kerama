@@ -10,6 +10,7 @@
     &-side {
         position: relative;
         width: 26.6%;
+        min-height: 286px;
     }
     &-side-block {
         position: static;
@@ -404,6 +405,7 @@
         }
         &-side {
             width: 100%;
+            min-height: auto;
         }
         &-side-block {
             width: 100%!important;

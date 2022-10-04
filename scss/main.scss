@@ -497,7 +497,6 @@
     }
     &-detail {
         width: 49%;
-        padding-bottom: 20px;
     }
     &-title {
         margin-top: 5px;
@@ -620,7 +619,6 @@
         }
         &-detail {
             width: 49%;
-            padding-bottom: 20px;
         }
         &-link {
             height: 372px;
@@ -654,7 +652,6 @@
         &-detail {
             order: -1;
             width: 100%;
-            padding-bottom: 0;
             margin-bottom: 22px;
         }
         &-link {
@@ -701,12 +698,14 @@
     }
     &-nav {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        margin-bottom: 23px;
+        margin-bottom: 13px;
     }
     &-nav-item {
         width: auto;
         margin-right: 15px;
+        margin-bottom: 10px;
         &:last-child {
             margin-right: 0;
         }
@@ -762,6 +761,9 @@
         &-wrapper {
             margin-bottom: 17px;
         }
+        &-nav {
+            flex-wrap: nowrap;
+        }
     }
     @media screen
     and (max-width: $mobile){
@@ -770,7 +772,7 @@
             margin-bottom: 16px;
         }
         &-nav {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         &-nav-item {
             margin-right: 10px;

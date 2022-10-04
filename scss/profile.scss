@@ -741,6 +741,7 @@
         background: no-repeat 0 0;
     }
     &-price {
+        white-space: nowrap;
         margin-left: 5px;
         font-weight: 700;
         font-size: 20px;
@@ -867,7 +868,7 @@
             width: 100%;
         }
         &-price {
-            font-size: 17px;
+            font-size: 16px;
         }
         &-price-currency {
             font-size: 16px;
@@ -942,13 +943,14 @@
     }
     &-info-item {
         width: 58%;
-        margin-bottom: 13px;
-        padding-bottom: 13px;
+        margin-bottom: 14px;
+        padding-bottom: 14px;
         border-bottom: 1px solid #D6DBE6;
         &:nth-child(odd) {
             width: 42%;
         }
     }
+    &-info-item_empty {}
     &-info-list {
         padding-right: 20px;
         font-size: 14px;
@@ -1051,17 +1053,16 @@
         margin-top: -5px;
         margin-left: 28px;
         font-weight: 700;
+        line-height: 26px;
         color: #111111;
     }
     &-elements-sum-name {
         font-size: 20px;
-        line-height: 26px;
     }
     &-elements-sum-value {
         white-space: nowrap;
         margin-left: 9px;
         font-size: 22px;
-        line-height: 26px;
         letter-spacing: 0.085em;
     }
     &-elements-link {
@@ -1080,9 +1081,6 @@
     }
     @media screen
     and (max-width: $tablet){
-        &-panel-status {
-            margin-left: 0;
-        }
         &-elements-link {
             padding-left: 27px;
             padding-right: 27px;
@@ -1127,9 +1125,15 @@
                 width: 100%;
             }
         }
+        &-info-item_empty {
+            display: none;
+        }
         &-status {
             flex-wrap: wrap;
             flex-direction: column;
+        }
+        &-panel-status {
+            margin-left: 0;
         }
         &-status-item {
             display: flex;
