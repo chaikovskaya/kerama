@@ -1618,6 +1618,7 @@ function initPopupGallery() {
         arrows : false,
         animationEffect: "fade",
         hash : false,
+        backFocus: false,
         btnTpl: {
             smallBtn:
                 '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
