@@ -88,7 +88,9 @@
         .addClass('JS-Tab-Item-active');
     }
 
-    this.onToggle(jQuery(elem));
+    if(!!this.onToggle) {
+      this.onToggle(jQuery(elem));
+    }
   };
   /*--/Tab--*/
 
