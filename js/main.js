@@ -868,7 +868,13 @@ function openPopupBuy($element) {
         $element = $('.js-popup-buy');
     }
 
-    var url = $element.data('src') + '?id=' + $element.attr('data-id') + '&quantity=' + $element.attr('data-quantity');
+    var query = [];
+    var url = $element.data('src');
+    if ($element.attr('data-id')) query.push('id=' + $element.attr('data-id'));
+    if ($element.attr('data-quantity')) query.push('quantity=' + $element.attr('data-quantity'));
+    if ($element.attr('data-measure')) query.push('measure=' + $element.attr('data-measure'));
+    if ($element.attr('data-basket')) query.push('basket=' + $element.attr('data-basket'));
+    if (query.length) url += '?'+query.join('&');
 
     $.fancybox.open({
         src  : url,
@@ -899,7 +905,7 @@ function initPopupBuy() {
     $(".js-open-buy").on('click', function() {
         console.log("true");
         $.fancybox.close();
-        openPopupBuy($(".js-open-buy"));
+        openPopupBuy($(this));
     });
 }
 
