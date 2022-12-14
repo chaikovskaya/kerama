@@ -139,7 +139,7 @@ function initSelect() {
 
 var sliderMainBanner;
 function initSliderMainBanner() {
-    jQuery('.js-slider-main-banner').each(function() {
+    jQuery('.js-slider-main-banner').not('.is-initialized').addClass('is-initialized').each(function() {
         var $slider = $(this),
             sliderLength = $slider.find('.swiper-slide').length,
             $count = $slider.find('.js-slider-count');
@@ -237,7 +237,7 @@ function initSliderMainCategory() {
 
 var sliderMainActions;
 function initSliderMainActions() {
-    jQuery('.js-slider-main-actions').each(function() {
+    jQuery('.js-slider-main-actions').not('.is-initialized').addClass('is-initialized').each(function() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
@@ -288,7 +288,7 @@ function initSliderMainActions() {
 
 var sliderProducts;
 function initSliderProducts() {
-    jQuery('.js-slider-products').each(function() {
+    jQuery('.js-slider-products').not('.is-initialized').addClass('is-initialized').each(function() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
@@ -378,7 +378,7 @@ function reInitSliderProductsNav() {
 
 var sliderBrands;
 function initSliderBrands() {
-    jQuery('.js-slider-brands').each(function() {
+    jQuery('.js-slider-brands').not('.is-initialized').addClass('is-initialized').each(function() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
@@ -425,7 +425,7 @@ function initSliderBrands() {
 
 var sliderInspiration;
 function initSliderInspiration() {
-    jQuery('.js-slider-inspiration').each(function() {
+    jQuery('.js-slider-inspiration').not('.is-initialized').addClass('is-initialized').each(function() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
@@ -479,7 +479,7 @@ function initSliderInspiration() {
 
 var sliderArticles;
 function initSliderArticles() {
-    jQuery('.js-slider-articles').each(function() {
+    jQuery('.js-slider-articles').not('.is-initialized').addClass('is-initialized').each(function() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
@@ -1801,7 +1801,7 @@ function initValidateOrder($element) {
 
 var sliderSolution;
 function initSliderSolution() {
-    jQuery('.js-slider-solution').each(function() {
+    jQuery('.js-slider-solution').not('.is-initialized').addClass('is-initialized').each(function() {
         var $slider = $(this),
             $list = $(this).find('.js-slider-list'),
             sliderLength = $slider.find('.swiper-slide').length,
