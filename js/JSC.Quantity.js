@@ -55,11 +55,12 @@
   };
 
   Quantity.prototype._decrease = function _decrease() {
-    var $numberValue = this.$number.val();
+    var $numberValue = parseFloat(this.$number.val());
+    var $step = parseFloat(this.$number.attr('step')) || 1;
 
-    $numberValue --;
+    $numberValue -= $step;
     if ($numberValue >= this.minNumber) {
-      this.$number.val($numberValue).trigger('input');
+      this.$number.val(+$numberValue.toFixed(3)).trigger('change');
       if ($numberValue == this.minNumber && !this.$element.hasClass(this.classDisabled)) {
         this.$element.addClass(this.classDisabled);
       }
@@ -67,11 +68,12 @@
   };
 
   Quantity.prototype._increase = function _increase() {
-    var $numberValue = this.$number.val();
+    var $numberValue = parseFloat(this.$number.val());
+    var $step = parseFloat(this.$number.attr('step')) || 1;
 
-    $numberValue ++;
+    $numberValue += $step;
     if ($numberValue <= this.maxNumber) {
-      this.$number.val($numberValue).trigger('input');
+      this.$number.val(+$numberValue.toFixed(3)).trigger('change');
     }
     if ($numberValue > this.minNumber) {
       this.$element.removeClass(this.classDisabled);
